@@ -18,19 +18,23 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Global="*res://scripts/global.gd"
 
 [dialogic]
 
 directories/dch_directory={
 "protagonist": "res://dialogic_stuff/protagonist.dch",
+"statue": "res://dialogic_stuff/statue.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"beginning": "res://dialogic_stuff/beginning.dtl"
+"beginning": "res://dialogic_stuff/beginning.dtl",
+"statue1": "res://dialogic_stuff/statue1.dtl"
 }
 layout/style_directory={}
 layout/style_list=[]
 layout/default_style="Default"
+variables={}
 
 [display]
 
