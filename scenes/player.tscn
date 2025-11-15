@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn0tlhd5tao8g"]
+
+[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://scenes/interaction_manager.tscn" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://cdeqsaenebwgw" path="res://scenes/player.gd" id="1_g2els"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g2els")
+
+[node name="InteractionManager" parent="." instance=ExtResource("1_3vyb7")]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-31, -36, 19, -36, 15, 16, -43, 18)
+
+[editable path="InteractionManager"]
