@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-
+@onready var animation_tree = $AnimationTree
+@onready var animation_state = animation_tree.get("parameters/playback")
 @export var speed = 300.0
 @export var accel = 40.0
 
@@ -24,6 +25,13 @@ func _moving(delta: float) -> void:
 	#if direction.x > 0:
 		#sprite.scale.x = -abs(sprite.scale.x)
 	
+	if direction != Vector2.ZERO:
+		animation_tree.set("parameters/Idle/blend_position", direction)
+		animation_tree.set("parameters/Walk/blend_position", direction)
+		animation_state.travel("Walk")
+	else:
+		animation_state.travel("Idle")
+		velocity = Vector2.ZERO
 	# Animations
 	#if direction.x == 0 and direction.y == 0:
 		#sprite.play("idle")
