@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://4bgbybc07veg" path="res://assets/pixelart/protagonist.png" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(64, 20)
 
 [sub_resource type="Animation" id="Animation_qhqgy"]
 resource_name = "down"
@@ -107,9 +108,11 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(59, 6)
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="InteractionManager" parent="." instance=ExtResource("1_3vyb7")]
@@ -130,10 +133,11 @@ parameters/Walk/blend_position = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0, -64)
+scale = Vector2(2, 2)
 texture = ExtResource("3_qhqgy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.25, 1.25)
 script = ExtResource("3_gmlin")
 
 [editable path="InteractionManager"]

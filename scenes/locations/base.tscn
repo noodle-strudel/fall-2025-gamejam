@@ -1,25 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0btc0h7pn1l2"]
+[gd_scene load_steps=2 format=3 uid="uid://c0btc0h7pn1l2"]
 
 [ext_resource type="Script" uid="uid://cxpcyyer0qgl6" path="res://scenes/locations/base.gd" id="1_2k5ee"]
-[ext_resource type="PackedScene" uid="uid://cn0tlhd5tao8g" path="res://scenes/player/player.tscn" id="2_2k5ee"]
 
 [node name="Base" type="Node"]
 script = ExtResource("1_2k5ee")
 
 [node name="LevelBoundary" type="StaticBody2D" parent="."]
-position = Vector2(340, 399)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelBoundary"]
 position = Vector2(11.88916, -6.989441)
 scale = Vector2(0.9780599, 1.0158132)
 build_mode = 1
 polygon = PackedVector2Array(-1500, -600, 1500, -600, 1500, 600, -1500, 600)
-
-[node name="Player" parent="." instance=ExtResource("2_2k5ee")]
-position = Vector2(-214, 423)
-
-[node name="Camera2D" parent="Player" index="3"]
-script = null
-
-[editable path="Player"]
-[editable path="Player/InteractionManager"]
