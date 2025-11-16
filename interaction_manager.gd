@@ -7,6 +7,7 @@ var current_interaction: InteractionManager
 func initiate_interaction() -> void:
 	if current_interaction != null:
 		current_interaction.receive_interaction()
+		
 
 func receive_interaction() -> void:
 	print("No interaction reception behavior defined.")
@@ -23,10 +24,13 @@ func _on_Interaction_Manager_area_exited(area):
 #pass in name of timeline
 func start_interaction(t) -> void:
 	Dialogic.timeline_ended.connect(end_interaction)
+	Global.player_state = Global.State.INTERACTING
 	var dialog = Dialogic.start(t)
 	add_child(dialog)
+	
 	$CollisionShape2D.disabled = true
 
 func end_interaction():
 	$CollisionShape2D.disabled = false
+	Global.player_state = Global.State.MOVING
 	Dialogic.timeline_ended.disconnect(end_interaction)

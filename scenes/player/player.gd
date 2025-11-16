@@ -5,8 +5,7 @@ extends CharacterBody2D
 @export var speed = 300.0
 @export var accel = 40.0
 
-
-func _physics_process(delta: float) -> void:
+func _moving(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Vector2(Input.get_axis("left", "right"), Input.get_axis("up", "down"))
@@ -43,3 +42,10 @@ func _physics_process(delta: float) -> void:
 	
 	#select_plant()
 	move_and_slide()
+
+func _physics_process(delta: float) -> void:
+	match (Global.player_state):
+		Global.State.MOVING:
+			_moving(delta)
+		Global.State.INTERACTING:
+			pass
