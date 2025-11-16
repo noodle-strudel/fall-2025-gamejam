@@ -1,48 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://cha332k32v757"]
+[gd_scene load_steps=5 format=3 uid="uid://cha332k32v757"]
 
 [ext_resource type="Script" uid="uid://dha7s783f4wo7" path="res://scenes/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://dyntogr5amvlx" path="res://fonts/elementary_gothic_bookhand/Elementary_Gothic_Bookhand.otf" id="2_ekxnf"]
 
-[node name="main_menu" type="Node"]
+[sub_resource type="Theme" id="Theme_bqqt6"]
+resource_local_to_scene = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_wu84c"]
+font = ExtResource("2_ekxnf")
+font_size = 40
+shadow_size = 0
+
+[node name="main_menu" type="PanelContainer"]
+custom_minimum_size = Vector2(1400, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
 script = ExtResource("1_l6cm7")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Control/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
+theme = SubResource("Theme_bqqt6")
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 75
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 4
 
-[node name="Play" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "Play"
-
-[node name="Quit" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "Quit"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer"]
-layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 128
-bbcode_enabled = true
-text = "[wave amp=50.0 freq=5.0 connected=1][center]Cool Title[/center][/wave]."
-
-[connection signal="pressed" from="Control/MarginContainer/CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+text = "Insert Title Here"
+label_settings = SubResource("LabelSettings_wu84c")
+horizontal_alignment = 1
