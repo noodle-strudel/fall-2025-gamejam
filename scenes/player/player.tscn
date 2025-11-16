@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cn0tlhd5tao8g"]
+[gd_scene load_steps=5 format=3 uid="uid://cn0tlhd5tao8g"]
 
 [ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://scenes/interaction_manager.tscn" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://cdeqsaenebwgw" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://cdeqsaenebwgw" path="res://scenes/player/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://c5u7mkhw121yl" path="res://scenes/player/camera_2d.gd" id="3_gmlin"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 
@@ -13,7 +14,14 @@ shape = SubResource("RectangleShape2D_g2els")
 
 [node name="InteractionManager" parent="." instance=ExtResource("1_3vyb7")]
 
+[node name="CollisionShape2D" parent="InteractionManager" index="0"]
+position = Vector2(-0.75, 5.5)
+
 [node name="Polygon2D" type="Polygon2D" parent="."]
 polygon = PackedVector2Array(-31, -36, 19, -36, 15, 16, -43, 18)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.25, 1.25)
+script = ExtResource("3_gmlin")
 
 [editable path="InteractionManager"]
