@@ -30,9 +30,8 @@ func dialogic_signals(arg) -> void:
 			vignette.play_backwards("fade_out")
 	else: # arg is dictionary
 		var functions = arg.keys()
-		if functions[0] == "drip":
-			#SoundEffects.play(arg["drip"])
-			pass
+		if functions[0] == "drip_sfx":
+			SoundEffects.drip_sfx(arg["drip_sfx"])
 	
 func end_beginning_dialog():
 	Global.player_state = Global.State.MOVING
