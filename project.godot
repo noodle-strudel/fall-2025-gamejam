@@ -35,6 +35,7 @@ layout/style_directory={}
 layout/style_list=[]
 layout/default_style="Default"
 variables={}
+glossary/default_case_sensitive=true
 
 [display]
 
