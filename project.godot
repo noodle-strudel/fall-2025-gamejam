@@ -25,10 +25,12 @@ Global="*res://scripts/global.gd"
 directories/dch_directory={
 "aqua": "res://dialogic_stuff/characters/aqua.dch",
 "child": "res://dialogic_stuff/characters/child.dch",
+"environment": "res://dialogic_stuff/characters/environment.dch",
 "father": "res://dialogic_stuff/characters/father.dch",
 "grandfather": "res://dialogic_stuff/characters/grandfather.dch",
 "ignis": "res://dialogic_stuff/characters/ignis.dch",
 "mother": "res://dialogic_stuff/characters/mother.dch",
+"narrator": "res://dialogic_stuff/characters/narrator.dch",
 "protagonist": "res://dialogic_stuff/characters/protagonist.dch",
 "statue": "res://dialogic_stuff/characters/statue.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
@@ -77,10 +79,16 @@ audio/channel_defaults={
 "loop": false,
 "volume": 0.0
 },
+"Env_SFX": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
 "music": {
 "audio_bus": "",
 "fade_length": 0.0,
-"loop": true,
+"loop": false,
 "volume": 0.0
 }
 }
