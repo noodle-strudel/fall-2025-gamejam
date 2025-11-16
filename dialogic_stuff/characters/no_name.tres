@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=13 format=3 uid="uid://c5vxptv17aoeq"]
+
+[ext_resource type="Resource" uid="uid://b0tyry3mp8ad" path="res://dialogic_stuff/styles/vn_style.tres" id="1_t31jc"]
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_u2kyx"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="3_bqsh0"]
+
+[sub_resource type="Resource" id="Resource_clucr"]
+script = ExtResource("2_u2kyx")
+
+[sub_resource type="Resource" id="Resource_gjm8c"]
+script = ExtResource("2_u2kyx")
+
+[sub_resource type="Resource" id="Resource_fov3x"]
+script = ExtResource("2_u2kyx")
+
+[sub_resource type="Resource" id="Resource_6e253"]
+script = ExtResource("2_u2kyx")
+
+[sub_resource type="Resource" id="Resource_kkxor"]
+script = ExtResource("2_u2kyx")
+overrides = {
+"name_label_box_modulate": "Color(0, 0, 0, 0)",
+"name_label_custom_color": "Color(1, 1, 1, 0)"
+}
+
+[sub_resource type="Resource" id="Resource_sfcaq"]
+script = ExtResource("2_u2kyx")
+
+[sub_resource type="Resource" id="Resource_3pas6"]
+script = ExtResource("2_u2kyx")
+
+[sub_resource type="Resource" id="Resource_3vvdf"]
+script = ExtResource("2_u2kyx")
+
+[sub_resource type="Resource" id="Resource_m2gpb"]
+script = ExtResource("2_u2kyx")
+
+[resource]
+script = ExtResource("3_bqsh0")
+name = "no_name"
+inherits = ExtResource("1_t31jc")
+layer_list = Array[String](["10", "12", "11", "17", "13", "14", "15", "16"])
+layer_info = {
+"": SubResource("Resource_clucr"),
+"10": SubResource("Resource_gjm8c"),
+"11": SubResource("Resource_6e253"),
+"12": SubResource("Resource_fov3x"),
+"13": SubResource("Resource_sfcaq"),
+"14": SubResource("Resource_3pas6"),
+"15": SubResource("Resource_3vvdf"),
+"16": SubResource("Resource_m2gpb"),
+"17": SubResource("Resource_kkxor")
+}
+metadata/_latest_layer = "17"
