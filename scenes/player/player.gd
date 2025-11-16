@@ -42,7 +42,6 @@ func _moving(delta: float) -> void:
 	
 	#select_plant()
 	move_and_slide()
-
 func _physics_process(delta: float) -> void:
 	match (Global.player_state):
 		Global.State.MOVING:
