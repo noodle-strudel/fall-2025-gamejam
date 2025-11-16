@@ -1,12 +1,48 @@
-[gd_scene load_steps=12 format=3 uid="uid://tj7j6vpb85h4"]
+[gd_scene load_steps=15 format=3 uid="uid://tj7j6vpb85h4"]
 
 [ext_resource type="PackedScene" uid="uid://cn0tlhd5tao8g" path="res://scenes/player/player.tscn" id="1_lrgy0"]
 [ext_resource type="Script" uid="uid://b8i7ned3d0luq" path="res://scenes/locations/outside.gd" id="1_lrykw"]
 [ext_resource type="PackedScene" uid="uid://m6l41cpxrnhl" path="res://scenes/objects/statue/statue.tscn" id="2_eu6yl"]
 [ext_resource type="PackedScene" uid="uid://c0btc0h7pn1l2" path="res://scenes/locations/base.tscn" id="2_lrykw"]
 [ext_resource type="PackedScene" uid="uid://bpljyaycxfvn8" path="res://scenes/objects/door/door.tscn" id="5_helgo"]
-[ext_resource type="PackedScene" path="res://scenes/SceneTransitionRect.tscn" id="6_p0frc"]
+[ext_resource type="PackedScene" uid="uid://cfodgjujhgrdm" path="res://scenes/SceneTransitionRect.tscn" id="6_p0frc"]
 [ext_resource type="Shader" uid="uid://t4dsok2qd56a" path="res://shaders/vignette.gdshader" id="7_8inc5"]
+
+[sub_resource type="Animation" id="Animation_paeaj"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_l5tjf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d5687"]
+_data = {
+&"RESET": SubResource("Animation_l5tjf"),
+&"fade_out": SubResource("Animation_paeaj")
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8inc5"]
 shader = ExtResource("7_8inc5")
@@ -61,13 +97,33 @@ boundary_top = -1000
 position = Vector2(54, -215)
 
 [node name="Player" parent="." instance=ExtResource("1_lrgy0")]
+z_index = 1
 
 [node name="Door" parent="." instance=ExtResource("5_helgo")]
 position = Vector2(0, -768)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 
+[node name="BlackButPlayer" type="ColorRect" parent="."]
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1200.0
+offset_top = -1344.0
+offset_right = 1288.0
+offset_bottom = 760.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BlackButPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_d5687")
+}
+
 [node name="SceneTransitionRect" parent="." instance=ExtResource("6_p0frc")]
+z_index = 2
 offset_left = -1160.0
 offset_top = -1312.0
 offset_right = 1152.0
@@ -92,3 +148,5 @@ grow_vertical = 2
 libraries = {
 &"": SubResource("AnimationLibrary_jpnwy")
 }
+
+[editable path="SceneTransitionRect"]

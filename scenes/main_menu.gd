@@ -10,7 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-# connect quit button with this
 func _on_quit_pressed() -> void:
 	get_tree().quit()
 
