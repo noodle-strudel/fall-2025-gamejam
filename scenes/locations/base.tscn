@@ -1,25 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0btc0h7pn1l2"]
+[gd_scene load_steps=4 format=3 uid="uid://c0btc0h7pn1l2"]
 
 [ext_resource type="Script" uid="uid://cxpcyyer0qgl6" path="res://scenes/locations/base.gd" id="1_2k5ee"]
 [ext_resource type="PackedScene" uid="uid://cn0tlhd5tao8g" path="res://scenes/player/player.tscn" id="2_2k5ee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsmf7"]
+size = Vector2(1152, 865)
 
 [node name="Base" type="Node"]
 script = ExtResource("1_2k5ee")
 
 [node name="LevelBoundary" type="StaticBody2D" parent="."]
 position = Vector2(340, 399)
+collision_layer = 9
+collision_mask = 9
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelBoundary"]
 position = Vector2(11.88916, -6.989441)
 scale = Vector2(0.9780599, 1.0158132)
 build_mode = 1
-polygon = PackedVector2Array(-1500, -600, 1500, -600, 1500, 600, -1500, 600)
+polygon = PackedVector2Array(-358.96558, -384.40915, 2641.0386, -384.40915, 2641.0386, 815.5908, -358.96558, 815.5908)
 
 [node name="Player" parent="." instance=ExtResource("2_2k5ee")]
-position = Vector2(-214, 423)
+position = Vector2(655, 568)
 
-[node name="Camera2D" parent="Player" index="3"]
+[node name="Camera2D" parent="Player" index="5"]
 script = null
+
+[node name="Area2D" type="Area2D" parent="Player/Camera2D" index="0"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Camera2D/Area2D"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_vsmf7")
 
 [editable path="Player"]
 [editable path="Player/InteractionManager"]

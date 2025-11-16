@@ -1,6 +1,6 @@
 extends Node
 
-var boundary_left = -700
+var boundary_left = $LevelBoundary/CollisionPolygon2D.polygon.get(0)
 var boundary_right = 700
 var boundary_top = 400
 var boundary_bottom = -400
@@ -8,7 +8,8 @@ var boundary_bottom = -400
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	set_camera_limits()
+	pass
+	#set_camera_limits()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
