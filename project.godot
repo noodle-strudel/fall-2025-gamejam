@@ -39,7 +39,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "beginning": "res://dialogic_stuff/beginning.dtl",
 "statue1": "res://dialogic_stuff/statue1.dtl",
-"statue2": "res://dialogic_stuff/statue2.dtl"
+"statue2": "res://dialogic_stuff/statue2.dtl",
+"statue_intro": "res://dialogic_stuff/statue_intro.dtl"
 }
 layout/style_directory={
 "": "res://dialogic_stuff/styles/vn_style.tres",
