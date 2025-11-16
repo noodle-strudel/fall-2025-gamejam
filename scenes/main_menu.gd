@@ -10,10 +10,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+# connect quit button with this
+func _on_quit_pressed() -> void:
+	get_tree().quit()
 
-func _on_play_pressed() -> void:
+func _on_button_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/locations/outside.tscn")
 
 
-func _on_quit_pressed() -> void:
-	get_tree().quit()
+func _on_button_sound_pressed() -> void:
+	pass # Replace with function body.
