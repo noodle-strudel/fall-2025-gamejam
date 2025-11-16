@@ -1,18 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://cha332k32v757"]
+[gd_scene load_steps=7 format=3 uid="uid://cha332k32v757"]
 
 [ext_resource type="Script" uid="uid://dha7s783f4wo7" path="res://scenes/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="FontFile" uid="uid://dyntogr5amvlx" path="res://fonts/elementary_gothic_bookhand/Elementary_Gothic_Bookhand.otf" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://bt8bd5ivcu7nd" path="res://fonts/libre-baskerville/LibreBaskerville-Regular.ttf" id="3_bqqt6"]
 
 [sub_resource type="Theme" id="Theme_bqqt6"]
 resource_local_to_scene = true
 
 [sub_resource type="LabelSettings" id="LabelSettings_wu84c"]
 font = ExtResource("2_ekxnf")
-font_size = 40
+font_size = 76
 shadow_size = 0
 
+[sub_resource type="Theme" id="Theme_wu84c"]
+
 [node name="main_menu" type="PanelContainer"]
-custom_minimum_size = Vector2(1400, 1080)
+custom_minimum_size = Vector2(1186, 890)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -27,14 +30,54 @@ theme = SubResource("Theme_bqqt6")
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 75
 theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 75
+theme_override_constants/margin_bottom = 100
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 4
+theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Insert Title Here"
 label_settings = SubResource("LabelSettings_wu84c")
 horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_wu84c")
+theme_override_fonts/font = ExtResource("3_bqqt6")
+theme_override_font_sizes/font_size = 32
+text = "Play Game"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 37
+
+[node name="Sound" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_bqqt6")
+theme_override_font_sizes/font_size = 32
+text = "Sound ON"
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 37
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_bqqt6")
+theme_override_font_sizes/font_size = 32
+text = "Quit Game"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Sound" to="." method="_on_button_sound_pressed"]
