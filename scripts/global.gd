@@ -1,6 +1,7 @@
 extends Node
 var rec_points = 0
 var con_points = 0
+var prev_scene
 enum State {MOVING, INTERACTING}
 var player_state = State.MOVING
 
