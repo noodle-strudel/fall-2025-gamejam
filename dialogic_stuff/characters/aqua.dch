@@ -1,0 +1,31 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.36914063, 0.6967964, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "regular",
+"suffix": ""
+},
+&"default_portrait": "Beta/Portrait",
+&"description": "",
+&"display_name": "Aqua",
+&"mirror": false,
+&"nicknames": ["Aqua"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"Beta/Portrait": {
+"export_overrides": {
+"image": "\"res://dialogic_stuff/portraits/auqu_beta.png\""
+},
+"mirror": false,
+"offset": Vector2(100, 0),
+"scale": 0.8,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+}
+},
+&"scale": 1.0
+}
