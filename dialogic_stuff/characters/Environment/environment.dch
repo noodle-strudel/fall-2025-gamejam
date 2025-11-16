@@ -7,11 +7,11 @@
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "",
+"style": "regular",
 "suffix": ""
 },
 &"default_portrait": "",
-&"description": "",
+&"description": "Environmental descriptions",
 &"display_name": "",
 &"mirror": false,
 &"nicknames": [""],

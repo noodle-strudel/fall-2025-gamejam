@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s8pmfnx7pr2j"
-path="res://.godot/imported/auqu_beta.png-97c38fdcc074e36877e6c25f4e05defd.ctex"
+uid="uid://bhxcg6qxepvl1"
+path="res://.godot/imported/ignisportrait.png-f45637949aee4075003eb3530eb62cbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialogic_stuff/portraits/auqu_beta.png"
-dest_files=["res://.godot/imported/auqu_beta.png-97c38fdcc074e36877e6c25f4e05defd.ctex"]
+source_file="res://dialogic_stuff/characters/Ignis/ignisportrait.png"
+dest_files=["res://.godot/imported/ignisportrait.png-f45637949aee4075003eb3530eb62cbf.ctex"]
 
 [params]
 
