@@ -25,9 +25,7 @@ func _on_Interaction_Manager_area_exited(area):
 func start_interaction(t) -> void:
 	Dialogic.timeline_ended.connect(end_interaction)
 	Global.player_state = Global.State.INTERACTING
-	var dialog = Dialogic.start(t)
-	add_child(dialog)
-	
+	Dialogic.start(t)
 	$CollisionShape2D.disabled = true
 
 func end_interaction():
