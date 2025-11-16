@@ -22,11 +22,17 @@ func set_camera_limits():
 func _physics_process(delta: float) -> void:
 	pass
 
-func dialogic_signals(arg: String) -> void:
-	if arg == "vignette_fade_out":
-		vignette.play("fade_out")
-	if arg == "vignette_fade_in":
-		vignette.play_backwards("fade_out")
+func dialogic_signals(arg) -> void:
+	if arg is String:
+		if arg == "vignette_fade_out":
+			vignette.play("fade_out")
+		if arg == "vignette_fade_in":
+			vignette.play_backwards("fade_out")
+	else: # arg is dictionary
+		var functions = arg.keys()
+		if functions[0] == "drip":
+			#SoundEffects.play(arg["drip"])
+			pass
 	
 func end_beginning_dialog():
 	Global.player_state = Global.State.MOVING

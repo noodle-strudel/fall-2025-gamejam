@@ -77,6 +77,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="Vignette" type="ColorRect" parent="CanvasLayer"]
 z_index = -1
