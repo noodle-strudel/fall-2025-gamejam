@@ -24,29 +24,29 @@ SoundEffects="*res://scenes/sound_effects.tscn"
 [dialogic]
 
 directories/dch_directory={
-"aqua": "res://dialogic_stuff/characters/aqua.dch",
-"child": "res://dialogic_stuff/characters/child.dch",
-"environment": "res://dialogic_stuff/characters/environment.dch",
-"father": "res://dialogic_stuff/characters/father.dch",
-"grandfather": "res://dialogic_stuff/characters/grandfather.dch",
-"ignis": "res://dialogic_stuff/characters/ignis.dch",
-"mother": "res://dialogic_stuff/characters/mother.dch",
-"narrator": "res://dialogic_stuff/characters/narrator.dch",
-"protagonist": "res://dialogic_stuff/characters/protagonist.dch",
-"statue": "res://dialogic_stuff/characters/statue.dch",
+"aqua": "res://dialogic_stuff/characters/Aqua/aqua.dch",
+"child": "res://dialogic_stuff/characters/Child/child.dch",
+"environment": "res://dialogic_stuff/characters/Environment/environment.dch",
+"father": "res://dialogic_stuff/characters/Father/father.dch",
+"grandfather": "res://dialogic_stuff/characters/Grandfather/grandfather.dch",
+"ignis": "res://dialogic_stuff/characters/Ignis/ignis.dch",
+"key": "res://dialogic_stuff/object/key.dch",
+"mother": "res://dialogic_stuff/characters/Mother/mother.dch",
+"narrator": "res://dialogic_stuff/characters/Narrator/narrator.dch",
+"protagonist": "res://dialogic_stuff/characters/Protagonist/protagonist.dch",
+"statue": "res://dialogic_stuff/characters/Statue/statue.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"beginning": "res://dialogic_stuff/beginning.dtl",
-"statue1": "res://dialogic_stuff/statue1.dtl",
-"statue2": "res://dialogic_stuff/statue2.dtl",
-"statue_intro": "res://dialogic_stuff/statue_intro.dtl"
+"beginning": "res://dialogic_stuff/timelines/beginning/beginning.dtl",
+"statue1": "res://dialogic_stuff/timelines/statue_1/statue1.dtl",
+"statue2": "res://dialogic_stuff/timelines/statue_2/statue2.dtl",
+"statue_intro": "res://dialogic_stuff/timelines/statue_intro/statue_intro.dtl"
 }
 layout/style_directory={
-"": "res://dialogic_stuff/styles/vn_style.tres",
-"regular": "res://dialogic_stuff/styles/vn_style.tres"
+"regular": "res://dialogic_stuff/default_style/vn_style.tres"
 }
-layout/style_list=["res://dialogic_stuff/styles/vn_style.tres"]
+layout/style_list=["res://dialogic_stuff/default_style/vn_style.tres"]
 layout/default_style="res://dialogic_stuff/styles/vn_style.tres"
 variables={
 "consumption": 0,

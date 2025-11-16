@@ -1,6 +1,8 @@
 extends Node
-var rec_points = 0
-var con_points = 0
+var rec_points = 0 #progress toward reconciliation ending
+var con_points = 0 #progress toward consumption ending
+var has_key = false #whether the protag has the key to the door
+var progress = 0 #the number of 'scenes' the player has experienced
 var prev_scene
 enum State {MOVING, INTERACTING}
 var player_state = State.MOVING

@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 &"_translation_id": "",
-&"color": Color(0.36914063, 0.6967964, 1, 1),
+&"color": Color(1, 0.328125, 0.328125, 1),
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
@@ -10,16 +10,25 @@
 "style": "regular",
 "suffix": ""
 },
-&"default_portrait": "Beta/Portrait",
+&"default_portrait": "beta/ignis_base",
 &"description": "",
-&"display_name": "Aqua",
+&"display_name": "Masked Man",
 &"mirror": false,
-&"nicknames": ["Aqua"],
+&"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"Beta/Portrait": {
+"beta/concept_art": {
 "export_overrides": {
-"image": "\"res://dialogic_stuff/portraits/auqu_beta.png\""
+"image": "\"res://dialogic_stuff/portraits/ignis_beta.png\""
+},
+"mirror": false,
+"offset": Vector2(-100, 0),
+"scale": 0.8,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"beta/ignis_base": {
+"export_overrides": {
+"image": "\"res://dialogic_stuff/characters/Ignis/ignisportrait.png\""
 },
 "mirror": false,
 "offset": Vector2(100, 0),

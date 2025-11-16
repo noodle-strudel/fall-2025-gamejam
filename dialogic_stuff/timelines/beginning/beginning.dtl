@@ -1,4 +1,3 @@
-join protagonist center
 [signal arg_type="dict" arg="{"drip_sfx":2}"]
 environment: *Drip. Drip.*
 [signal arg_type="dict" arg="{"drip_sfx":2}"]
