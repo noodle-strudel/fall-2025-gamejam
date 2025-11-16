@@ -86,3 +86,4 @@ next_scene_path = "uid://tj7j6vpb85h4"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_button_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Sound" to="." method="_on_button_sound_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -7,12 +7,12 @@ extends ColorRect
 @onready var _anim_player := $AnimationPlayer
 
 func _ready():
-	_anim_player.play_backwards("Fade")
+	if Global.awaken_first == true:
+		_anim_player.play_backwards("Fade")
 
 func transition_to(_next_scene = next_scene_path) -> void:
 	# Plays the Fade animation and wait until it finishes
 
-	
 	# if you're not in the main menu, make the previous scene the current scene
 	if get_parent().name != "main_menu":
 		Global.prev_scene = get_tree().get_current_scene().get_name()
