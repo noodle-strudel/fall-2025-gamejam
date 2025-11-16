@@ -23,19 +23,67 @@ Global="*res://scripts/global.gd"
 [dialogic]
 
 directories/dch_directory={
-"protagonist": "res://dialogic_stuff/protagonist.dch",
-"statue": "res://dialogic_stuff/statue.dch",
+"aqua": "res://dialogic_stuff/characters/aqua.dch",
+"child": "res://dialogic_stuff/characters/child.dch",
+"father": "res://dialogic_stuff/characters/father.dch",
+"grandfather": "res://dialogic_stuff/characters/grandfather.dch",
+"ignis": "res://dialogic_stuff/characters/ignis.dch",
+"mother": "res://dialogic_stuff/characters/mother.dch",
+"protagonist": "res://dialogic_stuff/characters/protagonist.dch",
+"statue": "res://dialogic_stuff/characters/statue.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "beginning": "res://dialogic_stuff/beginning.dtl",
-"statue1": "res://dialogic_stuff/statue1.dtl"
+"statue1": "res://dialogic_stuff/statue1.dtl",
+"statue2": "res://dialogic_stuff/statue2.dtl"
 }
-layout/style_directory={}
-layout/style_list=[]
-layout/default_style="Default"
-variables={}
+layout/style_directory={
+"": "res://dialogic_stuff/styles/vn_style.tres",
+"regular": "res://dialogic_stuff/styles/vn_style.tres"
+}
+layout/style_list=["res://dialogic_stuff/styles/vn_style.tres"]
+layout/default_style="res://dialogic_stuff/styles/vn_style.tres"
+variables={
+"consumption": 0,
+"reconciliation": 0
+}
 glossary/default_case_sensitive=true
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.5
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autocolor_names=true
+animations/join_default="Fade In Up"
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
 
 [display]
 

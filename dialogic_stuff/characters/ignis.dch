@@ -1,0 +1,31 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 0.328125, 0.328125, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "regular",
+"suffix": ""
+},
+&"default_portrait": "beta/Portrait",
+&"description": "",
+&"display_name": "Ignis",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"beta/Portrait": {
+"export_overrides": {
+"image": "\"res://dialogic_stuff/portraits/ignis_beta.png\""
+},
+"mirror": false,
+"offset": Vector2(-100, 0),
+"scale": 0.8,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+}
+},
+&"scale": 1.0
+}

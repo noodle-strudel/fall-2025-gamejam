@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cn0tlhd5tao8g"]
+[gd_scene load_steps=29 format=3 uid="uid://cn0tlhd5tao8g"]
 
 [ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://scenes/interaction_manager.tscn" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cdeqsaenebwgw" path="res://scenes/player/player.gd" id="1_g2els"]
@@ -7,20 +7,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 
-[sub_resource type="Animation" id="Animation_g2els"]
-resource_name = "up"
-
 [sub_resource type="Animation" id="Animation_qhqgy"]
 resource_name = "down"
-
-[sub_resource type="Animation" id="Animation_dqkch"]
-resource_name = "left"
-
-[sub_resource type="Animation" id="Animation_qlg0r"]
-resource_name = "right"
-
-[sub_resource type="Animation" id="Animation_tuyoq"]
-resource_name = "idleup"
 
 [sub_resource type="Animation" id="Animation_fjrip"]
 resource_name = "idledown"
@@ -30,6 +18,18 @@ resource_name = "idleleft"
 
 [sub_resource type="Animation" id="Animation_ur7pv"]
 resource_name = "idleright"
+
+[sub_resource type="Animation" id="Animation_tuyoq"]
+resource_name = "idleup"
+
+[sub_resource type="Animation" id="Animation_dqkch"]
+resource_name = "left"
+
+[sub_resource type="Animation" id="Animation_qlg0r"]
+resource_name = "right"
+
+[sub_resource type="Animation" id="Animation_g2els"]
+resource_name = "up"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y4r1p"]
 _data = {
