@@ -114,13 +114,9 @@ shape = SubResource("RectangleShape2D_g2els")
 
 [node name="InteractionManager" parent="." instance=ExtResource("1_3vyb7")]
 
-<<<<<<< HEAD:scenes/player/player.tscn
 [node name="CollisionShape2D" parent="InteractionManager" index="0"]
 position = Vector2(-0.75, 5.5)
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(-31, -36, 19, -36, 15, 16, -43, 18)
-=======
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_y4r1p")
@@ -135,7 +131,6 @@ parameters/Walk/blend_position = Vector2(0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("3_qhqgy")
->>>>>>> main:scenes/player.tscn
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.25, 1.25)
