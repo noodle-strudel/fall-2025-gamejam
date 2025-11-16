@@ -3,46 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://cn0tlhd5tao8g" path="res://scenes/player/player.tscn" id="1_lrgy0"]
 [ext_resource type="Script" uid="uid://b8i7ned3d0luq" path="res://scenes/locations/outside.gd" id="1_lrykw"]
 [ext_resource type="PackedScene" uid="uid://m6l41cpxrnhl" path="res://scenes/objects/statue/statue.tscn" id="2_eu6yl"]
+[ext_resource type="PackedScene" uid="uid://c0btc0h7pn1l2" path="res://scenes/locations/base.tscn" id="2_lrykw"]
+[ext_resource type="PackedScene" uid="uid://bpljyaycxfvn8" path="res://scenes/objects/door/door.tscn" id="5_helgo"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_lrgy0"]
-a = Vector2(-700, 0)
-b = Vector2(700, 0)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_eu6yl"]
-a = Vector2(-700, 0)
-b = Vector2(700, 0)
-
-[node name="Outside" type="Node"]
+[node name="Outside" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_lrykw")
 
-[node name="Player" parent="." instance=ExtResource("1_lrgy0")]
-position = Vector2(-214, 423)
+[node name="Base" parent="." instance=ExtResource("2_lrykw")]
+boundary_top = -1000
 
 [node name="Statue" parent="." instance=ExtResource("2_eu6yl")]
-position = Vector2(618, 326)
+position = Vector2(54, -215)
 
-[node name="LevelBoundary" type="StaticBody2D" parent="."]
-position = Vector2(340, 399)
+[node name="Player" parent="." instance=ExtResource("1_lrgy0")]
 
-[node name="LevelBoundaryRight" type="CollisionShape2D" parent="LevelBoundary"]
-position = Vector2(555, 75)
-rotation = -1.5707964
-scale = Vector2(0.5, 1)
-shape = SubResource("SegmentShape2D_lrgy0")
-
-[node name="LevelBoundaryDown" type="CollisionShape2D" parent="LevelBoundary"]
-position = Vector2(0, 400)
-shape = SubResource("SegmentShape2D_lrgy0")
-
-[node name="LevelBoundaryUp" type="CollisionShape2D" parent="LevelBoundary"]
-position = Vector2(0, -400)
-shape = SubResource("SegmentShape2D_eu6yl")
-
-[node name="LevelBoundaryLeft" type="CollisionShape2D" parent="LevelBoundary"]
-position = Vector2(-705, 0)
-rotation = -1.5707964
-scale = Vector2(0.5, 1)
-shape = SubResource("SegmentShape2D_lrgy0")
-
-[editable path="Player"]
-[editable path="Player/InteractionManager"]
+[node name="Door" parent="." instance=ExtResource("5_helgo")]
+position = Vector2(0, -768)
