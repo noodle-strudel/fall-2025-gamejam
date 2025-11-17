@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cha332k32v757"]
+[gd_scene load_steps=9 format=3 uid="uid://cha332k32v757"]
 
 [ext_resource type="Script" uid="uid://dha7s783f4wo7" path="res://scenes/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://cuh2jkqnhbt51" path="res://assets/mainmenuplaceholder.png" id="2_8ln24"]
 [ext_resource type="FontFile" uid="uid://dyntogr5amvlx" path="res://fonts/elementary_gothic_bookhand/Elementary_Gothic_Bookhand.otf" id="2_ekxnf"]
 [ext_resource type="FontFile" uid="uid://bt8bd5ivcu7nd" path="res://fonts/libre-baskerville/LibreBaskerville-Regular.ttf" id="3_bqqt6"]
-[ext_resource type="PackedScene" uid="uid://cfodgjujhgrdm" path="res://scenes/SceneTransitionRect.tscn" id="4_wu84c"]
+[ext_resource type="PackedScene" path="res://scenes/SceneTransitionRect.tscn" id="4_wu84c"]
 
 [sub_resource type="Theme" id="Theme_bqqt6"]
 resource_local_to_scene = true
@@ -11,7 +12,9 @@ resource_local_to_scene = true
 [sub_resource type="LabelSettings" id="LabelSettings_wu84c"]
 font = ExtResource("2_ekxnf")
 font_size = 76
-shadow_size = 0
+shadow_size = 33
+shadow_color = Color(0, 0, 0, 0.654902)
+shadow_offset = Vector2(6, 6)
 
 [sub_resource type="Theme" id="Theme_wu84c"]
 
@@ -24,6 +27,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_stretch_ratio = 0.0
 script = ExtResource("1_l6cm7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_8ln24")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2

@@ -12,7 +12,6 @@ func _ready():
 
 func transition_to(_next_scene = next_scene_path) -> void:
 	# Plays the Fade animation and wait until it finishes
-
 	# if you're not in the main menu, make the previous scene the current scene
 	if get_parent().name != "main_menu":
 		Global.prev_scene = get_tree().get_current_scene().get_name()

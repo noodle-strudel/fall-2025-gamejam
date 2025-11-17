@@ -105,6 +105,7 @@ position = Vector2(0, -768)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 
 [node name="BlackButPlayer" type="ColorRect" parent="."]
+visible = false
 z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -123,6 +124,7 @@ libraries = {
 }
 
 [node name="SceneTransitionRect" parent="." instance=ExtResource("6_p0frc")]
+visible = false
 z_index = 2
 offset_left = -1160.0
 offset_top = -1312.0
@@ -131,9 +133,11 @@ offset_bottom = 736.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+next_scene_path = "<null>"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 0
+visible = false
 
 [node name="Vignette" type="ColorRect" parent="CanvasLayer"]
 z_index = -1
@@ -149,4 +153,5 @@ libraries = {
 &"": SubResource("AnimationLibrary_jpnwy")
 }
 
+[editable path="Door"]
 [editable path="SceneTransitionRect"]

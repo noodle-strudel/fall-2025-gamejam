@@ -4,7 +4,7 @@ environment: *Drip. Drip.*
 environment: *Drip. Drip.*
 narrator: The faint splatter of water droplets colliding with the ground echoes in your ears.
 narrator: Where is it coming from?
-[signal arg="vingette_fade_in"]
+[signal arg="player_fade_in"]
 narrator: ...
 [signal arg_type="dict" arg="{"drip_sfx":1}"]
 environment: *Drip.*
@@ -20,5 +20,5 @@ statue: …o… se….
 narrator: A dull hum reaches you. The sound is rusty, like the gears of an old clock scraping together. You think you can piece together human syllables, though what human could make such a noise is beyond you.
 statue: …Com… t… e….
 statue: …Come to me…
-[signal arg="vingette_fade_out"]
+[signal arg="vignette_fade_out"]
 [end_timeline]
