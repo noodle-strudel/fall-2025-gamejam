@@ -5,17 +5,19 @@
 [ext_resource type="Script" uid="uid://cpq0vxinm4syd" path="res://scenes/objects/door/door_interaction.gd" id="2_vijyo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrveb"]
-size = Vector2(65, 28)
+size = Vector2(40.333336, 73.66667)
 
 [node name="Door" type="StaticBody2D"]
+scale = Vector2(3, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2, -19)
 texture = ExtResource("1_vijyo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -6)
+position = Vector2(-2.5, -16.166668)
 shape = SubResource("RectangleShape2D_nrveb")
 
 [node name="InteractionManager" parent="." instance=ExtResource("1_0y005")]
+position = Vector2(0, 12.333334)
 script = ExtResource("2_vijyo")

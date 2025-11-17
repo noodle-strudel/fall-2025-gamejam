@@ -25,6 +25,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_qhqgy"]
 resource_name = "down"
+loop_mode = 1
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -101,6 +102,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_dqkch"]
 resource_name = "left"
+loop_mode = 1
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -117,6 +119,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_qlg0r"]
 resource_name = "right"
+loop_mode = 1
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -133,6 +136,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_g2els"]
 resource_name = "up"
+loop_mode = 1
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -222,7 +226,10 @@ graph_offset = Vector2(59, 6)
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
+scale = Vector2(2, 2)
 script = ExtResource("1_g2els")
+speed = 350.0
+accel = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)
