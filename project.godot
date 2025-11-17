@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Global="*res://scripts/global.gd"
-SoundEffects="*res://scenes/sound_effects.tscn"
+SoundEffects="*res://sound/sfx/sound_effects.tscn"
 
 [dialogic]
 

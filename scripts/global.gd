@@ -7,6 +7,7 @@ var prev_scene
 enum State {MOVING, INTERACTING}
 var player_state = State.MOVING
 
+var debug_mode = false # whether debug mode is on (skips some text, gives keys)
 # now onto vital game switches that determine progression!!!
 
 # has the player started the game?
