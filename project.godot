@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Global="*res://scripts/global.gd"
-SoundEffects="*res://scenes/sound_effects.tscn"
+SoundEffects="*res://sound/sfx/sound_effects.tscn"
 
 [dialogic]
 
@@ -30,7 +30,7 @@ directories/dch_directory={
 "father": "res://dialogic_stuff/characters/Father/father.dch",
 "grandfather": "res://dialogic_stuff/characters/Grandfather/grandfather.dch",
 "ignis": "res://dialogic_stuff/characters/Ignis/ignis.dch",
-"key": "res://dialogic_stuff/object/key.dch",
+"key": "res://dialogic_stuff/objects/key.dch",
 "mother": "res://dialogic_stuff/characters/Mother/mother.dch",
 "narrator": "res://dialogic_stuff/characters/Narrator/narrator.dch",
 "protagonist": "res://dialogic_stuff/characters/Protagonist/protagonist.dch",
@@ -40,6 +40,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "beginning": "res://dialogic_stuff/timelines/beginning/beginning.dtl",
+"garden_door_interact": "res://dialogic_stuff/timelines/door/garden_door_interact.dtl",
 "statue1": "res://dialogic_stuff/timelines/statue_1/statue1.dtl",
 "statue2": "res://dialogic_stuff/timelines/statue_2/statue2.dtl",
 "statue_intro": "res://dialogic_stuff/timelines/statue_intro/statue_intro.dtl",

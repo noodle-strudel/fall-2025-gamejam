@@ -57,17 +57,18 @@ scene = ExtResource("9_qn0d7")
 script = ExtResource("2_80jpr")
 scene = ExtResource("11_2qeov")
 overrides = {
-"bold_font": "\"res://fonts/libre-baskerville/LibreBaskerville-Bold.ttf\"",
+"bold_font": "\"res://assets/fonts/libre-baskerville/LibreBaskerville-Bold.ttf\"",
 "box_margin_bottom": "50.0",
 "box_size": "Vector2(900, 300)",
-"italics_font": "\"res://fonts/libre-baskerville/LibreBaskerville-Italic.ttf\"",
+"italics_font": "\"res://assets/fonts/libre-baskerville/LibreBaskerville-Italic.ttf\"",
 "name_label_box_offset": "Vector2(0, -25)",
 "name_label_custom_font_size": "40.0",
 "name_label_font": "\"res://fonts/caslon-antique/CaslonAntique-Bold.ttf\"",
 "name_label_use_global_font": "false",
 "name_label_use_global_font_size": "false",
-"normal_font": "\"res://fonts/libre-baskerville/LibreBaskerville-Regular.ttf\"",
+"normal_font": "\"res://assets/fonts/libre-baskerville/LibreBaskerville-Regular.ttf\"",
 "text_size": "30.0",
+"text_use_global_font": "false",
 "typing_sounds_enabled": "false"
 }
 
