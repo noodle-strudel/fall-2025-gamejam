@@ -7,16 +7,19 @@ extends Node
 @onready var vignette = $CanvasLayer/Vignette/AnimationPlayer
 
 func _ready() -> void:
-	
+	# First time awakening
+	if Global.awaken_first == false:
+		Global.player_state = Global.State.INTERACTING
+		Dialogic.start("beginning")
+		Dialogic.timeline_ended.connect(end_beginning_dialog)
+		Dialogic.signal_event.connect(dialogic_signals)
+		set_camera_limits()
 	# If you've already awaken
-	if Global.awaken_first:
+	else:
 		# No need to obscure everything
 		$BlackButPlayer.color = Color.TRANSPARENT
-	Global.player_state = Global.State.INTERACTING
-	Dialogic.start("beginning")
-	Dialogic.timeline_ended.connect(end_beginning_dialog)
-	Dialogic.signal_event.connect(dialogic_signals)
-	set_camera_limits()
+	
+	
 	
 func set_camera_limits():
 	$Player/Camera2D.limit_left = boundary_left

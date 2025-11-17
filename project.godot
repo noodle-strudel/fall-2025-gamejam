@@ -35,13 +35,15 @@ directories/dch_directory={
 "narrator": "res://dialogic_stuff/characters/Narrator/narrator.dch",
 "protagonist": "res://dialogic_stuff/characters/Protagonist/protagonist.dch",
 "statue": "res://dialogic_stuff/characters/Statue/statue.dch",
-"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
+"unit_test_character": "res://Tests/Resources/unit_test_character.dch",
+"unknown": "res://dialogic_stuff/characters/Unknown/unknown.dch"
 }
 directories/dtl_directory={
 "beginning": "res://dialogic_stuff/timelines/beginning/beginning.dtl",
 "statue1": "res://dialogic_stuff/timelines/statue_1/statue1.dtl",
 "statue2": "res://dialogic_stuff/timelines/statue_2/statue2.dtl",
-"statue_intro": "res://dialogic_stuff/timelines/statue_intro/statue_intro.dtl"
+"statue_intro": "res://dialogic_stuff/timelines/statue_intro/statue_intro.dtl",
+"statue_intro_finished": "res://dialogic_stuff/timelines/statue_intro/statue_intro_finished.dtl"
 }
 layout/style_directory={
 "regular": "res://dialogic_stuff/default_style/vn_style.tres"
