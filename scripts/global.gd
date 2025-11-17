@@ -6,7 +6,6 @@ var progress = 0 #the number of 'scenes' the player has experienced
 var prev_scene
 enum State {MOVING, INTERACTING}
 var player_state = State.MOVING
-var statue_talked_to = false #whether statue dialogue has run for this round
 
 # now onto vital game switches that determine progression!!!
 

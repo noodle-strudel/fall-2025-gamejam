@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cuh2jkqnhbt51" path="res://assets/mainmenuplaceholder.png" id="2_8ln24"]
 [ext_resource type="FontFile" uid="uid://dyntogr5amvlx" path="res://fonts/elementary_gothic_bookhand/Elementary_Gothic_Bookhand.otf" id="2_ekxnf"]
 [ext_resource type="FontFile" uid="uid://bt8bd5ivcu7nd" path="res://fonts/libre-baskerville/LibreBaskerville-Regular.ttf" id="3_bqqt6"]
-[ext_resource type="PackedScene" path="res://scenes/SceneTransitionRect.tscn" id="4_wu84c"]
+[ext_resource type="PackedScene" uid="uid://8eucll6x06um" path="res://scenes/SceneTransitionRect.tscn" id="4_wu84c"]
 
 [sub_resource type="Theme" id="Theme_bqqt6"]
 resource_local_to_scene = true
@@ -94,3 +94,5 @@ next_scene_path = "uid://tj7j6vpb85h4"
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_button_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Sound" to="." method="_on_button_sound_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+
+[editable path="SceneTransitionRect"]

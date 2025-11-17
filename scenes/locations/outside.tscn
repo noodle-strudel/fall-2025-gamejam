@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://m6l41cpxrnhl" path="res://scenes/objects/statue/statue.tscn" id="2_eu6yl"]
 [ext_resource type="PackedScene" uid="uid://c0btc0h7pn1l2" path="res://scenes/locations/base.tscn" id="2_lrykw"]
 [ext_resource type="PackedScene" uid="uid://bpljyaycxfvn8" path="res://scenes/objects/door/door.tscn" id="5_helgo"]
-[ext_resource type="PackedScene" path="res://scenes/SceneTransitionRect.tscn" id="6_p0frc"]
+[ext_resource type="PackedScene" uid="uid://8eucll6x06um" path="res://scenes/SceneTransitionRect.tscn" id="6_p0frc"]
 [ext_resource type="Shader" uid="uid://t4dsok2qd56a" path="res://shaders/vignette.gdshader" id="7_8inc5"]
 
 [sub_resource type="Animation" id="Animation_l5tjf"]
@@ -130,8 +130,6 @@ offset_right = 1152.0
 offset_bottom = 736.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
-next_scene_path = "<null>"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 0
