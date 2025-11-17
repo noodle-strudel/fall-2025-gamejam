@@ -13,8 +13,9 @@ func receive_interaction() -> void:
 	if Global.has_key == false:
 		pass
 	else:
-		$SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
-		$SceneTransitionRect.transition_to()
+		pass
+		#$SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
+		#$SceneTransitionRect.transition_to()
 		#scene transition!!!
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
