@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cn0tlhd5tao8g" path="res://scenes/player/player.tscn" id="3_vq6cu"]
 [ext_resource type="PackedScene" uid="uid://8eucll6x06um" path="res://scenes/SceneTransitionRect.tscn" id="4_y6yxv"]
 
-[node name="Location1" type="Node"]
+[node name="Room1" type="Node"]
 script = ExtResource("1_a5tic")
 
 [node name="Base" parent="." instance=ExtResource("2_ovqnd")]

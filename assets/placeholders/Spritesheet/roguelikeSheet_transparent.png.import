@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgxswalqi0trr"
-path="res://.godot/imported/doorsketch.png-f22afc6ff745c8cf7d8216562b854791.ctex"
+uid="uid://poolucvuvv5t"
+path="res://.godot/imported/roguelikeSheet_transparent.png-75fcd46616b7aa6a3035cded62e791ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixelart/doorsketch.png"
-dest_files=["res://.godot/imported/doorsketch.png-f22afc6ff745c8cf7d8216562b854791.ctex"]
+source_file="res://assets/placeholders/Spritesheet/roguelikeSheet_transparent.png"
+dest_files=["res://.godot/imported/roguelikeSheet_transparent.png-75fcd46616b7aa6a3035cded62e791ae.ctex"]
 
 [params]
 

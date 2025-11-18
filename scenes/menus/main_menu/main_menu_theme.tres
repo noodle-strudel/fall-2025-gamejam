@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cefnf5d45p322"]
+
+[ext_resource type="FontFile" uid="uid://bt8bd5ivcu7nd" path="res://assets/fonts/libre-baskerville/LibreBaskerville-Regular.ttf" id="1_gdhjp"]
+
+[resource]
+resource_name = "main_menu_theme"
+default_font = ExtResource("1_gdhjp")
+default_font_size = 40
