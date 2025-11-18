@@ -152,6 +152,4 @@ libraries = {
 }
 
 [editable path="Base"]
-[editable path="Statue"]
-[editable path="Statue/InteractionManager"]
 [editable path="SceneTransitionRect"]
