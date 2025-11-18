@@ -5,6 +5,7 @@ if {Global.has_key} == true:
 	[signal arg="lock_click_sfx"]
 	narrator: You slide the key into the lock and turn. You hear a click.
 	[signal arg="door_open_sfx"]
+	[wait time="0.2" hide_text="false"]
 	[signal arg="door_open_animation"]
 	narrator: The door slowly swings open. It's dark inside.
 	[wait time="1.0"]

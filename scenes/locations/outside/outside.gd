@@ -41,8 +41,9 @@ func dialogic_signals(arg) -> void:
 			vignette.play_backwards("fade_out")
 	else: # arg is dictionary
 		var functions = arg.keys()
-		if functions[0] == "drip_sfx":
-			SoundEffects.drip_sfx(arg["drip_sfx"])
+		for key in functions:
+			if key.ends_with("_sfx"):
+				SoundEffects.play_count(key.trim_suffix("_sfx"), arg[key])
 	
 func end_beginning_dialog():
 	if Global.awaken_first == false:

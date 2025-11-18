@@ -25,8 +25,9 @@ func _process(delta: float) -> void:
 func dialogic_signals(arg) -> void:
 	if arg is Dictionary:
 		var functions = arg.keys()
-		if functions[0] == "drip_sfx":
-			SoundEffects.drip_sfx(arg["drip_sfx"])
+		for key in functions:
+			if key.ends_with("_sfx"):
+				SoundEffects.play_count(key.trim_suffix("_sfx"), arg[key])
 
 func end_dialog() -> void:
 	Global.player_state = Global.State.MOVING

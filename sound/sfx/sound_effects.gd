@@ -1,16 +1,16 @@
 extends Node
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func drip_sfx(count: int) -> void:
+# Loops a sound effect a certain number of times
+func play_count(sfx_name: String, count: int = 1, time: float = 1.0):
 	for i in range(count):
-		$Drip.play()
-		await get_tree().create_timer(1.0).timeout
+		play(sfx_name)
+		await get_tree().create_timer(time).timeout
+
+func play(sfx_name: String):
+	match sfx_name:
+		"drip":
+			$Drip.play()
+		"door_open":
+			$DoorOpen.play()
+		"lock_click":
+			$LockClick.play()
