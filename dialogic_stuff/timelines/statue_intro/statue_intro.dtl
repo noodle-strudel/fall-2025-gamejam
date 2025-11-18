@@ -1,3 +1,12 @@
+if {Global.has_key} == true:
+	statue: Ya done talked to me already!
+	[end_timeline]
+if {Global.debug_mode} == true:
+	(Debug mode) Skip text and get key?
+	- Yes
+		set {Global.has_key} = true
+		[end_timeline]
+	- No
 narrator: A patch of pale moonlight illuminates the outline of an old statue.
 statue: C…e to me, c…ild… w…n’t you l..y down your wor…es into my capable ha….ds….
 narrator: Sit down?

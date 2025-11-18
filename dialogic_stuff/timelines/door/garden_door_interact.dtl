@@ -9,6 +9,7 @@ if {Global.has_key} == true:
 	narrator: The door slowly swings open. It's dark inside.
 	[wait time="1.0"]
 	narrator: You step over the threshold and into the house.
+	[signal arg="scene_transition"]
 else:
 	# Player doesn't have the key.
 	[signal arg="door_handle_sfx"]
@@ -16,3 +17,4 @@ else:
 	if {Global.progress} > 0.0:
 		# The player has been through the door before and hasn't retreived the key
 		narrator: You reach for the key, only to find your pockets empty.
+[end_timeline]

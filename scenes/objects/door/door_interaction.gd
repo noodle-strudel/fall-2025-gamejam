@@ -7,16 +7,15 @@ func _ready() -> void:
 
 func receive_interaction() -> void:
 	Global.player_state = Global.State.INTERACTING
-	
-	#Check if player got the key from the statue
+	var room
+	match Global.progress:
+		0: room = "ROOM1"
+		1: room = "ROOM2"
+		2: room = "ROOM3"
+		3: room = "ROOM4"
+		4: room = "ROOM5"
+	$SceneTransitionRect.next_scene_path = Global.location_path_root + Global.location_path[room]
 	start_interaction("garden_door_interact")
-	if Global.has_key == false:
-		pass
-	else:
-		pass
-		#$SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
-		#$SceneTransitionRect.transition_to()
-		#scene transition!!!
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -24,12 +23,11 @@ func _process(delta: float) -> void:
 
 func dialogic_signals(arg) -> void:
 	if arg is String:
-		pass
+		if arg == "scene_transition":
+			$SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
+			$SceneTransitionRect.transition_to()
 	else:
 		pass
-		#var functions = arg.keys()
-		#if functions[0] == "drip_sfx":
-			#SoundEffects.drip_sfx(arg["drip_sfx"])
 
 func end_dialog() -> void:
 	Global.player_state = Global.State.MOVING

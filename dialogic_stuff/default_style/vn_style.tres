@@ -67,7 +67,7 @@ overrides = {
 "name_label_use_global_font": "false",
 "name_label_use_global_font_size": "false",
 "normal_font": "\"res://assets/fonts/libre-baskerville/LibreBaskerville-Regular.ttf\"",
-"text_size": "30.0",
+"text_size": "25.0",
 "text_use_global_font": "false",
 "typing_sounds_enabled": "false"
 }

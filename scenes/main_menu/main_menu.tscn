@@ -52,6 +52,7 @@ script = ExtResource("1_l6cm7")
 
 [node name="SceneTransitionRect" parent="." instance=ExtResource("4_wu84c")]
 layout_mode = 2
+color = Color(0, 0, 0, 0)
 next_scene_path = "uid://tj7j6vpb85h4"
 
 [node name="TextureRect" type="TextureRect" parent="."]

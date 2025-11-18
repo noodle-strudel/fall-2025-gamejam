@@ -102,9 +102,20 @@ z_index = 1
 [node name="Door" parent="." instance=ExtResource("5_helgo")]
 position = Vector2(0, -768)
 
+[node name="SceneTransitionRect" parent="Door/InteractionManager" index="1" instance=ExtResource("6_p0frc")]
+offset_left = -308.33334
+offset_top = -251.33336
+offset_right = 333.33334
+offset_bottom = 232.66664
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+next_scene_path = "uid://csvuxpfq6r5sm"
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 
 [node name="BlackButPlayer" type="ColorRect" parent="."]
+visible = false
 z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -123,6 +134,7 @@ libraries = {
 }
 
 [node name="SceneTransitionRect" parent="." instance=ExtResource("6_p0frc")]
+visible = false
 z_index = 2
 offset_left = -1160.0
 offset_top = -1312.0
@@ -135,6 +147,7 @@ grow_vertical = 2
 layer = 0
 
 [node name="Vignette" type="ColorRect" parent="CanvasLayer"]
+visible = false
 z_index = -1
 material = SubResource("ShaderMaterial_8inc5")
 anchors_preset = 15
@@ -149,5 +162,8 @@ libraries = {
 }
 
 [editable path="Base"]
+[editable path="Statue"]
+[editable path="Statue/InteractionManager"]
 [editable path="Door"]
+[editable path="Door/InteractionManager/SceneTransitionRect"]
 [editable path="SceneTransitionRect"]
