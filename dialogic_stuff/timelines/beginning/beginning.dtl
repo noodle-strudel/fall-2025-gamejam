@@ -1,4 +1,12 @@
 [signal arg_type="dict" arg="{"drip_sfx":2}"]
+if {Global.debug_mode} == true:
+	(Debug mode) Skip intro text?
+	- Yes
+		[signal arg="player_fade_in"]
+		[signal arg="background_fade_in"]
+		[signal arg="vignette_fade_out"]
+		[end_timeline]
+	- No
 environment: *Drip. Drip.*
 [signal arg_type="dict" arg="{"drip_sfx":2}"]
 environment: *Drip. Drip.*

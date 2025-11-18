@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpljyaycxfvn8"]
+[gd_scene load_steps=6 format=3 uid="uid://bpljyaycxfvn8"]
 
 [ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://scenes/interaction_manager.tscn" id="1_0y005"]
 [ext_resource type="Texture2D" uid="uid://cgxswalqi0trr" path="res://assets/pixelart/doorsketch.png" id="1_vijyo"]
 [ext_resource type="Script" uid="uid://cpq0vxinm4syd" path="res://scenes/objects/door/door_interaction.gd" id="2_vijyo"]
+[ext_resource type="PackedScene" uid="uid://8eucll6x06um" path="res://scenes/SceneTransitionRect.tscn" id="4_nrveb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrveb"]
 size = Vector2(40.333336, 73.66667)
@@ -18,6 +19,19 @@ texture = ExtResource("1_vijyo")
 position = Vector2(-2.5, -16.166668)
 shape = SubResource("RectangleShape2D_nrveb")
 
-[node name="InteractionManager" parent="." instance=ExtResource("1_0y005")]
-position = Vector2(0, 12.333334)
+[node name="InteractionManager2" parent="." instance=ExtResource("1_0y005")]
+position = Vector2(0, 24.666668)
 script = ExtResource("2_vijyo")
+
+[node name="SceneTransitionRect" parent="InteractionManager2" instance=ExtResource("4_nrveb")]
+offset_left = -308.33334
+offset_top = -251.33336
+offset_right = 333.33334
+offset_bottom = 232.66664
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+next_scene_path = "uid://csvuxpfq6r5sm"
+metadata/_edit_use_anchors_ = true
+
+[editable path="InteractionManager2/SceneTransitionRect"]

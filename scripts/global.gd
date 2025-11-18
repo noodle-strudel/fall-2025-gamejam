@@ -7,6 +7,16 @@ var prev_scene
 enum State {MOVING, INTERACTING}
 var player_state = State.MOVING
 
+const location_path_root = "res://scenes/locations/"
+const location_path = {
+	"ROOM1": "room1/room1.tscn",
+	"ROOM2": "room2/room2.tscn",
+	"ROOM3": "room3/room3.tscn",
+	"ROOM4": "room4/room4.tscn",
+	"ROOM5": "room5/room5.tscn"
+}
+
+
 var debug_mode = false # whether debug mode is on (skips some text, gives keys)
 # now onto vital game switches that determine progression!!!
 

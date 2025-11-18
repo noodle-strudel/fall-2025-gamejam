@@ -28,6 +28,8 @@ func _on_debug_mode_toggled(toggled_on: bool) -> void:
 
 func _on_sound_toggled(toggled_on: bool) -> void:
 	if toggled_on:
+		$MarginContainer/VBoxContainer/Sound.text = "Sound OFF"
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
 	else:
+		$MarginContainer/VBoxContainer/Sound.text = "Sound ON"
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
