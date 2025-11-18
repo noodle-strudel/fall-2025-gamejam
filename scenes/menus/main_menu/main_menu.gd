@@ -14,8 +14,8 @@ func _on_quit_pressed() -> void:
 	get_tree().quit()
 
 func _on_button_play_pressed() -> void:
-	$SceneTransitionRect.transition_to()
-	
+	SceneManager.switch_scene(Global.scenes["OUTSIDE"])
+
 
 func _on_debug_mode_toggled(toggled_on: bool) -> void:
 	if toggled_on:

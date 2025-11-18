@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://m6l41cpxrnhl"]
 
-[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://scenes/interaction_manager.tscn" id="1_sxr8y"]
+[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://scenes/utility/interaction_manager.tscn" id="1_sxr8y"]
 [ext_resource type="Script" uid="uid://c2ekbt2665xwt" path="res://scenes/objects/statue/statue_interaction.gd" id="2_6wwjp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3nm2d"]

@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://cha332k32v757"]
+[gd_scene load_steps=11 format=3 uid="uid://cha332k32v757"]
 
-[ext_resource type="Script" uid="uid://dha7s783f4wo7" path="res://scenes/main_menu/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://dha7s783f4wo7" path="res://scenes/menus/main_menu/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://cuh2jkqnhbt51" path="res://assets/mainmenuplaceholder.png" id="2_8ln24"]
-[ext_resource type="FontFile" uid="uid://dyntogr5amvlx" path="res://assets/fonts/elementary_gothic_bookhand/Elementary_Gothic_Bookhand.otf" id="2_ekxnf"]
 [ext_resource type="FontFile" uid="uid://bt8bd5ivcu7nd" path="res://assets/fonts/libre-baskerville/LibreBaskerville-Regular.ttf" id="3_bqqt6"]
-[ext_resource type="PackedScene" uid="uid://8eucll6x06um" path="res://scenes/SceneTransitionRect.tscn" id="4_wu84c"]
-[ext_resource type="AudioStream" uid="uid://c1f16vyrxy1op" path="res://sound/music/statuegarden_test.mp3" id="6_3ovsr"]
+[ext_resource type="PackedScene" uid="uid://8eucll6x06um" path="res://scenes/utility/SceneTransitionRect.tscn" id="4_wu84c"]
+[ext_resource type="LabelSettings" uid="uid://dq3mh8ffjdnyp" path="res://scenes/menus/main_menu/title_theme.tres" id="5_0jpat"]
+[ext_resource type="Theme" uid="uid://cefnf5d45p322" path="res://scenes/menus/main_menu/main_menu_theme.tres" id="6_0jpat"]
+[ext_resource type="AudioStream" uid="uid://c1f16vyrxy1op" path="res://assets/music/statuegarden_test.mp3" id="6_3ovsr"]
 
 [sub_resource type="Theme" id="Theme_bqqt6"]
 resource_local_to_scene = true
@@ -16,17 +17,6 @@ CheckButton/icons/checked_disabled = null
 CheckButton/icons/checked_disabled_mirrored = null
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ln24"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_wu84c"]
-font = ExtResource("2_ekxnf")
-font_size = 76
-outline_size = 10
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 33
-shadow_color = Color(0, 0, 0, 0.654902)
-shadow_offset = Vector2(6, 6)
-
-[sub_resource type="Theme" id="Theme_wu84c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
 content_margin_left = 4.0
@@ -75,7 +65,7 @@ theme_override_constants/separation = 10
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8ln24")
 text = "Insert Title Here"
-label_settings = SubResource("LabelSettings_wu84c")
+label_settings = ExtResource("5_0jpat")
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
@@ -86,10 +76,8 @@ theme_override_constants/separation = 20
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme = SubResource("Theme_wu84c")
+theme = ExtResource("6_0jpat")
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("3_bqqt6")
-theme_override_font_sizes/font_size = 32
 text = "Play Game"
 
 [node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
@@ -100,9 +88,8 @@ theme_override_constants/separation = 37
 [node name="Sound" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("6_0jpat")
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("3_bqqt6")
-theme_override_font_sizes/font_size = 32
 toggle_mode = true
 text = "Sound ON"
 
@@ -114,9 +101,8 @@ theme_override_constants/separation = 37
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("6_0jpat")
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("3_bqqt6")
-theme_override_font_sizes/font_size = 32
 text = "Quit Game"
 
 [node name="HSeparator4" type="HSeparator" parent="MarginContainer/VBoxContainer"]
@@ -130,9 +116,9 @@ custom_minimum_size = Vector2(300, 50)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 8
+theme = ExtResource("6_0jpat")
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("3_bqqt6")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
 toggle_mode = true
 text = "Debug Mode OFF"

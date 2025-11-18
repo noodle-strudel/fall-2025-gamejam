@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://b61buhnqbbvxb"]
+
+[ext_resource type="LabelSettings" uid="uid://dq3mh8ffjdnyp" path="res://scenes/menus/main_menu/title_theme.tres" id="1_5l26w"]
+[ext_resource type="Script" uid="uid://k2kao8baectp" path="res://scenes/menus/options/options_menu.gd" id="1_m2bxk"]
+[ext_resource type="Theme" uid="uid://cefnf5d45p322" path="res://scenes/menus/main_menu/main_menu_theme.tres" id="2_5l26w"]
+
+[sub_resource type="Theme" id="Theme_jg3vo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5l26w"]
+bg_color = Color(0, 0, 0, 0.34117648)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pr7n4"]
+
+[node name="OptionsMenu" type="PanelContainer"]
+process_mode = 2
+custom_minimum_size = Vector2(1186, 890)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_jg3vo")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5l26w")
+script = ExtResource("1_m2bxk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Game Paused"
+label_settings = ExtResource("1_5l26w")
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+theme_override_styles/separator = SubResource("StyleBoxEmpty_pr7n4")
+
+[node name="resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_5l26w")
+theme_override_constants/outline_size = 10
+text = "Resume"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 37
+theme_override_styles/separator = SubResource("StyleBoxEmpty_pr7n4")
+
+[node name="sound" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_5l26w")
+theme_override_constants/outline_size = 10
+text = "Sound ON"
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 37
+theme_override_styles/separator = SubResource("StyleBoxEmpty_pr7n4")
+
+[node name="quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_5l26w")
+theme_override_constants/outline_size = 10
+text = "Quit to Main Menu"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/sound" to="." method="_on_sound_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://g4blun01sq8c"]
+
+[ext_resource type="Script" uid="uid://bqp2xcreqxmqa" path="res://interaction_manager.gd" id="1_0co0g"]
+
+[node name="DoorInteractionManager" type="Area2D"]
+script = ExtResource("1_0co0g")
+metadata/_custom_type_script = "uid://bqp2xcreqxmqa"

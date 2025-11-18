@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bpljyaycxfvn8"]
 
-[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://scenes/interaction_manager.tscn" id="1_0y005"]
-[ext_resource type="Texture2D" uid="uid://cgxswalqi0trr" path="res://assets/pixelart/doorsketch.png" id="1_vijyo"]
+[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://scenes/utility/interaction_manager.tscn" id="1_0y005"]
+[ext_resource type="Texture2D" uid="uid://cgxswalqi0trr" path="res://assets/sprites/doorsketch.png" id="1_vijyo"]
 [ext_resource type="Script" uid="uid://cpq0vxinm4syd" path="res://scenes/objects/door/door_interaction.gd" id="2_vijyo"]
-[ext_resource type="PackedScene" uid="uid://8eucll6x06um" path="res://scenes/SceneTransitionRect.tscn" id="4_nrveb"]
+[ext_resource type="PackedScene" uid="uid://8eucll6x06um" path="res://scenes/utility/SceneTransitionRect.tscn" id="4_nrveb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrveb"]
 size = Vector2(40.333336, 73.66667)
@@ -33,5 +33,3 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0)
 next_scene_path = "uid://csvuxpfq6r5sm"
 metadata/_edit_use_anchors_ = true
-
-[editable path="InteractionManager2/SceneTransitionRect"]
