@@ -9,7 +9,6 @@ extends Node
 func _ready() -> void:
 	# First time awakening
 	if Global.awaken_first == false:
-		
 		Global.player_state = Global.State.INTERACTING
 		Dialogic.start("beginning")
 		Dialogic.timeline_ended.connect(end_beginning_dialog)
