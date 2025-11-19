@@ -1,13 +1,13 @@
-extends Node
+extends LevelBase
 
-@onready var boundary_left = $Base.boundary_left
-@onready var boundary_right = $Base.boundary_right
-@onready var boundary_top = $Base.boundary_top
-@onready var boundary_bottom = $Base.boundary_bottom
+#@onready var boundary_left = $Base.boundary_left
+#@onready var boundary_right = $Base.boundary_right
+#@onready var boundary_top = $Base.boundary_top
+#@onready var boundary_bottom = $Base.boundary_bottom
 #@onready var vignette = $CanvasLayer/Vignette/AnimationPlayer
 
 func _ready() -> void:
-	set_camera_limits()
+	#set_camera_limits()
 	# First time awakening
 	if Global.awaken_first == false:
 		Global.player_state = Global.State.INTERACTING

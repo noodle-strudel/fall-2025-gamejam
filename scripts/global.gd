@@ -2,6 +2,7 @@ extends Node
 var prev_scene
 enum State {MOVING, INTERACTING}
 var player_state = State.MOVING
+var mute = false
 
 const scenes = {
 	"MAIN_MENU": "res://scenes/menus/main_menu/main_menu.tscn",

@@ -62,6 +62,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_5l26w")
 theme_override_constants/outline_size = 10
+toggle_mode = true
 text = "Sound ON"
 
 [node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer"]
@@ -77,5 +78,5 @@ theme_override_constants/outline_size = 10
 text = "Quit to Main Menu"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/sound" to="." method="_on_sound_pressed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/sound" to="." method="_on_sound_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
