@@ -1,9 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://csvuxpfq6r5sm"]
+[gd_scene load_steps=7 format=3 uid="uid://csvuxpfq6r5sm"]
 
 [ext_resource type="Script" uid="uid://droog0w31j4aw" path="res://scenes/rooms/room1/room_1.gd" id="1_a5tic"]
-[ext_resource type="PackedScene" uid="uid://b1shvfro6etsn" path="res://scenes/rooms/room_base.tscn" id="2_nmfp8"]
+[ext_resource type="PackedScene" uid="uid://c0btc0h7pn1l2" path="res://scenes/level_base/base.tscn" id="2_ovqnd"]
+[ext_resource type="PackedScene" uid="uid://2lm0v6bnvik4" path="res://scenes/utility/transition_effects.tscn" id="3_m8s30"]
+[ext_resource type="PackedScene" uid="uid://cn0tlhd5tao8g" path="res://scenes/player/player.tscn" id="3_vq6cu"]
+[ext_resource type="PackedScene" uid="uid://dtl8isxwubxct" path="res://scenes/rooms/events/event.tscn" id="5_7ob3t"]
+[ext_resource type="PackedScene" uid="uid://bpljyaycxfvn8" path="res://scenes/door/door.tscn" id="6_labrm"]
 
-[node name="Room1" type="Node"]
+[node name="Room1" type="Node2D"]
 script = ExtResource("1_a5tic")
 
-[node name="RoomBase" parent="." instance=ExtResource("2_nmfp8")]
+[node name="Base" parent="." instance=ExtResource("2_ovqnd")]
+
+[node name="CollisionPolygon2D" parent="Base/LevelBoundary" index="0"]
+position = Vector2(31, 254.99998)
+scale = Vector2(0.4338216, 1.1359847)
+
+[node name="Event" parent="." instance=ExtResource("5_7ob3t")]
+position = Vector2(5, -490)
+
+[node name="Player" parent="." instance=ExtResource("3_vq6cu")]
+position = Vector2(-189, 864)
+
+[node name="TransitionEffects" parent="." instance=ExtResource("3_m8s30")]
+
+[node name="Door" parent="." instance=ExtResource("6_labrm")]
+position = Vector2(-479, 875)
+
+[node name="CollisionShape2D" parent="Door" index="1"]
+position = Vector2(-2.5, 9.1666565)
+
+[node name="CollisionShape2D" parent="Door/InteractionManager" index="0"]
+position = Vector2(2.3841858e-07, -12.333342)
+
+[editable path="Base"]
+[editable path="TransitionEffects"]
+[editable path="Door"]
+[editable path="Door/InteractionManager"]

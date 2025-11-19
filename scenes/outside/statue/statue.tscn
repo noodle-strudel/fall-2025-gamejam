@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://m6l41cpxrnhl"]
 
-[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://scenes/utility/interaction_manager.tscn" id="1_sxr8y"]
+[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://interaction_manager.tscn" id="1_sxr8y"]
 [ext_resource type="Script" uid="uid://c2ekbt2665xwt" path="res://scenes/outside/statue/statue_interaction.gd" id="2_6wwjp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3nm2d"]
@@ -16,7 +16,7 @@ shape = SubResource("RectangleShape2D_3nm2d")
 script = ExtResource("2_6wwjp")
 
 [node name="CollisionShape2D" parent="InteractionManager" index="0"]
-position = Vector2(-3, 56.75)
+position = Vector2(-3, 84.125)
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 polygon = PackedVector2Array(-35, -28, -4, -46, 37, -25, 22, -6, 35, 58, -43, 60, -20, -4)

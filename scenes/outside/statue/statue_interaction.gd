@@ -8,15 +8,10 @@ func receive_interaction() -> void:
 	Dialogic.timeline_ended.connect(end_dialog)
 	match Global.progress:
 		0:
-			if !Global.has_key: #statue hasn't been talked to yet
-				start_interaction("statue_intro")
-			else:
-				start_interaction("statue_intro_finished")
+			start_interaction("statue_intro")
 		1:
-			if !Global.has_key:
-				start_interaction("statue1")
-			else:
-				start_interaction("statue1_finished")
+			start_interaction("statue1")
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

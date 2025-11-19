@@ -2,6 +2,7 @@ extends Node
 var prev_scene
 enum State {MOVING, INTERACTING}
 var player_state = State.MOVING
+var is_inside = false
 var mute = false
 
 const scenes = {
@@ -23,11 +24,11 @@ var awaken_first = false
 # the number of 'scenes' the player has experienced
 var progress = 0 
 # whether the protag has the key to the door
-var has_key = false 
+#var has_key = false 
 # progress toward reconciliation ending
 var rec_points = 0 
 # progress toward consumption ending
-var con_points = 0 
+var con_points = 0
 
 
 # Called when the node enters the scene tree for the first time.

@@ -9,7 +9,12 @@ func _ready() -> void:
 
 func receive_interaction() -> void:
 	Global.player_state = Global.State.INTERACTING
-	start_interaction("garden_door_interact")
+	if Global.is_inside:
+		print_debug("inside door interact")
+		start_interaction("inside_door_interact")
+	else:
+		print_debug("outside door interact")
+		start_interaction("outside_door_interact")
 
 
 func dialogic_signals(arg) -> void:

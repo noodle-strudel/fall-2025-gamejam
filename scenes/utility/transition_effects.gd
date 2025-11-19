@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var vignette_anim = $VignetteCanvasLayer/Vignette/AnimationPlayer
-@onready var black_but_player_anim = $BlackButPlayer/AnimationPlayer
+@onready var black_but_player_anim = $BlackButPlayerCanvasLayer/BlackButPlayer/AnimationPlayer
 @onready var scene_transition_anim = $SceneTransitionCanvasLayer/SceneTransitionRect/AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
