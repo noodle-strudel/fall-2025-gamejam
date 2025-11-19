@@ -1,5 +1,7 @@
 extends InteractionManager
 
+signal scene_transition
+signal fade_out
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -7,28 +9,17 @@ func _ready() -> void:
 
 func receive_interaction() -> void:
 	Global.player_state = Global.State.INTERACTING
-	var room
-	#$SceneTransitionRect.next_scene_path = Global.scene[room]
 	start_interaction("garden_door_interact")
-
-func scene_transition() -> void:
-	var room
-	match Global.progress:
-		0: room = "ROOM1"
-		1: room = "ROOM2"
-		2: room = "ROOM3"
-		3: room = "ROOM4"
-		4: room = "ROOM5"
-	SceneManager.switch_scene(Global.scenes[room])
 
 
 func dialogic_signals(arg) -> void:
 	if arg is String:
+		# Emitted when player is allowed to proceed
 		if arg == "scene_transition":
-			$SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
-			scene_transition()
-			#$SceneTransitionRect.transition_to()
-		# Play single sound effects
+			scene_transition.emit()
+		elif arg == "background_fade_out":
+			fade_out.emit()
+		# One-off sound effect signals
 		elif arg.ends_with("_sfx"):
 			SoundEffects.play(arg.trim_suffix("_sfx"))
 	else: # arg is dictionary

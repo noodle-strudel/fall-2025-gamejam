@@ -8,6 +8,7 @@ if {Global.has_key} == true:
 	[wait time="0.2" hide_text="false"]
 	[signal arg="door_open_animation"]
 	narrator: The door slowly swings open. It's dark inside.
+	[signal arg="background_fade_out"]
 	[wait time="1.0"]
 	narrator: You step over the threshold and into the house.
 	[signal arg="scene_transition"]
