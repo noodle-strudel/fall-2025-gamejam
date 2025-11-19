@@ -1,4 +1,6 @@
-extends Node
+extends Node2D
+
+class_name LevelBase
 
 @export var boundary_left = -700
 @export var boundary_right = 700
@@ -14,9 +16,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("options"):
-		pass
+	pass
 
 
 func set_boundary():
-	boundary_limits.polygon = PackedVector2Array([Vector2(boundary_left, boundary_top), Vector2(boundary_right, boundary_top), Vector2(boundary_right, boundary_bottom), Vector2(boundary_left, boundary_bottom)])
+	pass
+	#boundary_limits.polygon = PackedVector2Array([Vector2(boundary_left, boundary_top), Vector2(boundary_right, boundary_top), Vector2(boundary_right, boundary_bottom), Vector2(boundary_left, boundary_bottom)])
