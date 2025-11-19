@@ -6,12 +6,12 @@ var player_state = State.MOVING
 const scenes = {
 	"MAIN_MENU": "res://scenes/menus/main_menu/main_menu.tscn",
 	"OPTIONS_MENU": "res://scenes/menus/options/options_menu.tscn",
-	"OUTSIDE": "res://scenes/locations/outside/outside.tscn",
-	"ROOM1": "res://scenes/locations/room1/room1.tscn",
-	"ROOM2": "res://scenes/locations/room2/room2.tscn",
-	"ROOM3": "res://scenes/locations/room3/room3.tscn",
-	"ROOM4": "res://scenes/locations/room4/room4.tscn",
-	"ROOM5": "res://scenes/locations/room5/room5.tscn"
+	"OUTSIDE": "res://scenes/outside/outside.tscn",
+	"ROOM1": "res://scenes/rooms/room1/room1.tscn",
+	"ROOM2": "res://scenes/rooms/room2/room2.tscn",
+	"ROOM3": "res://scenes/rooms/room3/room3.tscn",
+	"ROOM4": "res://scenes/rooms/room4/room4.tscn",
+	"ROOM5": "res://scenes/rooms/room5/room5.tscn"
 }
 
 var debug_mode = false # whether debug mode is on (skips some text, gives keys)
@@ -27,8 +27,6 @@ var has_key = false
 var rec_points = 0 
 # progress toward consumption ending
 var con_points = 0 
-
-
 
 
 # Called when the node enters the scene tree for the first time.
