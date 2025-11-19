@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://tj7j6vpb85h4"]
+[gd_scene load_steps=9 format=3 uid="uid://tj7j6vpb85h4"]
 
 [ext_resource type="PackedScene" uid="uid://cn0tlhd5tao8g" path="res://scenes/player/player.tscn" id="1_lrgy0"]
 [ext_resource type="Script" uid="uid://b8i7ned3d0luq" path="res://scenes/outside/outside.gd" id="1_lrykw"]
@@ -8,11 +8,19 @@
 [ext_resource type="PackedScene" uid="uid://bpljyaycxfvn8" path="res://scenes/door/door.tscn" id="5_helgo"]
 [ext_resource type="PackedScene" uid="uid://2lm0v6bnvik4" path="res://scenes/utility/transition_effects.tscn" id="8_tb64g"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_albt5"]
+
 [node name="Outside" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_lrykw")
 
 [node name="Base" parent="." instance=ExtResource("2_lrykw")]
+
+[node name="CollisionPolygon2D" parent="Base/LevelBoundary" index="0"]
+material = SubResource("CanvasItemMaterial_albt5")
+position = Vector2(-598.1719, -81)
+scale = Vector2(0.85840493, 0.67405254)
+polygon = PackedVector2Array(-1500, -600, 168.16626, -600.00024, 167.6789, -2130.3977, 1499.9082, -2130.3977, 1500, 600, -1500, 600)
 
 [node name="Statue" parent="." instance=ExtResource("2_eu6yl")]
 position = Vector2(126, -249)
@@ -27,10 +35,14 @@ position = Vector2(119, -1129)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 
 [node name="TransitionEffects" parent="." instance=ExtResource("8_tb64g")]
-visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("2_albt5")]
 process_mode = 3
 metadata/_edit_use_anchors_ = true
+
+[editable path="Base"]
+[editable path="Door"]
+[editable path="Door/InteractionManager"]
+[editable path="TransitionEffects"]

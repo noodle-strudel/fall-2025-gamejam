@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://bpljyaycxfvn8"]
 
-[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://scenes/utility/interaction_manager.tscn" id="1_0y005"]
+[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://interaction_manager.tscn" id="1_0y005"]
 [ext_resource type="Texture2D" uid="uid://cgxswalqi0trr" path="res://assets/sprites/doorsketch.png" id="1_vijyo"]
 [ext_resource type="Script" uid="uid://cpq0vxinm4syd" path="res://scenes/door/door_interaction.gd" id="2_vijyo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrveb"]
-size = Vector2(40.333336, 73.66667)
+size = Vector2(40.333336, 11.499997)
 
 [node name="Door" type="StaticBody2D"]
 scale = Vector2(3, 3)
@@ -15,9 +15,14 @@ position = Vector2(-2, -19)
 texture = ExtResource("1_vijyo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, -16.166668)
+position = Vector2(-0.6666667, 9)
 shape = SubResource("RectangleShape2D_nrveb")
 
 [node name="InteractionManager" parent="." instance=ExtResource("1_0y005")]
 position = Vector2(0, 24.666668)
 script = ExtResource("2_vijyo")
+
+[node name="CollisionShape2D" parent="InteractionManager" index="0"]
+position = Vector2(-0.33333325, -11.41667)
+
+[editable path="InteractionManager"]

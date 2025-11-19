@@ -1,10 +1,10 @@
-if {Global.has_key} == true:
+if {has_key} == true:
 	statue: Ya done talked to me already!
 	[end_timeline]
 if {Global.debug_mode} == true:
 	(Debug mode) Skip text and get key?
 	- Yes
-		set {Global.has_key} = true
+		set {has_key} = true
 		[end_timeline]
 	- No
 narrator: A patch of pale moonlight illuminates the outline of an old statue.
@@ -54,5 +54,5 @@ statue: Walk through this place and witness what though hath wrought, then retur
 [wait time="1.5"]
 statue: Ah, one moment. You’ll need a key to enter through the doorway ahead.
 narrator: You obtained a key.
-set {Global.has_key} = true
+set {has_key} = true
 [end_timeline]

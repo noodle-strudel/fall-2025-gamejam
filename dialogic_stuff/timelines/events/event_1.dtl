@@ -1,0 +1,7 @@
+grandfather: Event 1
+if {has_interacted} == true:
+	grandfather: Already completed
+	[end_timeline]
+has_interacted = true
+set {has_interacted} = true
+[end_timeline]

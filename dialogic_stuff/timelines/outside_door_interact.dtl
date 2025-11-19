@@ -1,7 +1,7 @@
 # TODO: Put more dialogue here depending on player progress.
 narrator: You approach the door to the house.
 # Check if player has the key from the statue.
-if {Global.has_key} == true:
+if {has_key} == true:
 	[signal arg="lock_click_sfx"]
 	narrator: You slide the key into the lock and turn. You hear a click.
 	[signal arg="door_open_sfx"]

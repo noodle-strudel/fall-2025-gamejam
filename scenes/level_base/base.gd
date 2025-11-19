@@ -1,6 +1,5 @@
 extends Node2D
 
-class_name LevelBase
 
 @export var boundary_left = -700
 @export var boundary_right = 700
