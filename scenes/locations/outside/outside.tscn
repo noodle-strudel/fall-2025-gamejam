@@ -94,13 +94,13 @@ script = ExtResource("1_lrykw")
 boundary_top = -1000
 
 [node name="Statue" parent="." instance=ExtResource("2_eu6yl")]
-position = Vector2(54, -215)
+position = Vector2(3, -413)
 
 [node name="Player" parent="." instance=ExtResource("1_lrgy0")]
 z_index = 1
 
 [node name="Door" parent="." instance=ExtResource("5_helgo")]
-position = Vector2(0, -768)
+position = Vector2(0, -822)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 
