@@ -1,20 +1,3 @@
-[style name="regular"]
-join protagonist center
+placeholder: Statue description #1
 join statue center
-statue: What's up?
-protagonist: Huh
-statue: You know, that whole thing you just saw. Thoughts?
-join ignis rightmost [animation="Instant In"]
-ignis: Sup losers. You should let it all burn.
-join aqua leftmost [animation="Instant In"]
-aqua: What? No you shouldn't. peace and love ✌️
-What do you think?
-- Reconciliation
-	set {Global.rec_points} += 1.0
-	aqua: You're so right bestie
-- Consumption
-	set {Global.con_points} += 1.0
-	ignis: Hahahaha got em
-leave ignis
-leave aqua
-[end_timeline]
+placeholder: <Empty Text Event>

@@ -1,4 +1,3 @@
-[style name="regular"]
 join protagonist center
 join statue center
 statue: What's up?
@@ -22,5 +21,5 @@ join statue center
 statue: Well well well. You sure made a choice.
 statue: Go back inside now pls \:)
 statue: Here's the key
-set {has_kley} = true
+set {has_key} = true
 [end_timeline]

@@ -274,11 +274,17 @@ mouse_filter = 2
 theme_override_styles/panel = ExtResource("3_ssa84")
 metadata/_edit_layout_mode = 1
 
+[node name="TextureRect" type="TextureRect" parent="Anchor/AnimationParent/Sizer/DialogTextPanel"]
+self_modulate = Color(1, 1, 1, 0.4862745)
+layout_mode = 2
+texture = ExtResource("11_2p11n")
+expand_mode = 1
+
 [node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel"]
 layout_mode = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 50
+theme_override_constants/margin_left = 38
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 
 [node name="DialogicNode_DialogText" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer" node_paths=PackedStringArray("textbox_root")]
@@ -304,6 +310,7 @@ play_every_character = 0
 
 [node name="NextIndicator" type="Control" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/MarginContainer"]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.5372549)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -312,10 +319,6 @@ script = ExtResource("5_40a50")
 show_on_questions = true
 texture = ExtResource("6_uch03")
 metadata/_edit_layout_mode = 1
-
-[node name="TextureRect" type="TextureRect" parent="Anchor/AnimationParent/Sizer/DialogTextPanel"]
-layout_mode = 2
-texture = ExtResource("11_2p11n")
 
 [node name="AutoAdvanceProgressbar" type="ProgressBar" parent="Anchor/AnimationParent/Sizer/DialogTextPanel"]
 unique_name_in_owner = true

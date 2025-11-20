@@ -34,6 +34,7 @@ directories/dch_directory={
 "key": "res://dialogic_stuff/objects/key.dch",
 "mother": "res://dialogic_stuff/characters/Mother/mother.dch",
 "narrator": "res://dialogic_stuff/characters/Narrator/narrator.dch",
+"placeholder": "res://dialogic_stuff/characters/placeholder.dch",
 "protagonist": "res://dialogic_stuff/characters/Protagonist/protagonist.dch",
 "statue": "res://dialogic_stuff/characters/Statue/statue.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch",
@@ -44,9 +45,11 @@ directories/dtl_directory={
 "event_1": "res://dialogic_stuff/timelines/events/event_1.dtl",
 "inside_door_interact": "res://dialogic_stuff/timelines/inside_door_interact.dtl",
 "outside_door_interact": "res://dialogic_stuff/timelines/outside_door_interact.dtl",
+"statue": "res://dialogic_stuff/timelines/statue/statue.dtl",
 "statue1": "res://dialogic_stuff/timelines/statue/statue1.dtl",
 "statue2": "res://dialogic_stuff/timelines/statue/statue2.dtl",
-"statue_intro": "res://dialogic_stuff/timelines/statue/statue_intro.dtl"
+"statue_intro": "res://dialogic_stuff/timelines/statue/statue_intro.dtl",
+"statue_placeholder": "res://dialogic_stuff/timelines/statue/statue_placeholder.dtl"
 }
 layout/style_directory={
 "regular": "res://dialogic_stuff/default_style/vn_style.tres"

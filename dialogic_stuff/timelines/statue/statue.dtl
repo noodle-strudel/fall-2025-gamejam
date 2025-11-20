@@ -1,0 +1,17 @@
+if {has_key} == true:
+	statue: Ya done talked to me already!
+if {Global.debug_mode} == true:
+	placeholder: (Debug mode) Skip text and get key?
+	- Yes
+		set {has_key} = true
+		[end_timeline]
+	- No
+# Begin correct timeline based on progress
+if {Global.progress} == 0.0:
+	jump statue_intro/
+elif {Global.progress} == 1.0:
+	jump statue1/
+elif {Global.progress} == 2.0:
+	jump statue2/
+elif {Global.progress} == 3.0:
+elif {Global.progress} == 4.0:

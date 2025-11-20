@@ -58,17 +58,23 @@ script = ExtResource("2_80jpr")
 scene = ExtResource("11_2qeov")
 overrides = {
 "bold_font": "\"res://assets/fonts/libre-baskerville/LibreBaskerville-Bold.ttf\"",
-"box_margin_bottom": "50.0",
-"box_size": "Vector2(900, 300)",
+"box_color_custom": "Color(0, 0, 0, 0.9254902)",
+"box_color_use_global": "false",
+"box_margin_bottom": "20.0",
+"box_size": "Vector2(900, 240)",
 "italics_font": "\"res://assets/fonts/libre-baskerville/LibreBaskerville-Italic.ttf\"",
-"name_label_box_offset": "Vector2(0, -25)",
-"name_label_custom_font_size": "40.0",
-"name_label_font": "\"res://fonts/caslon-antique/CaslonAntique-Bold.ttf\"",
+"name_label_box_offset": "Vector2(0, -5)",
+"name_label_custom_font_size": "25.0",
+"name_label_font": "\"res://assets/fonts/caslon-antique/CaslonAntique.ttf\"",
 "name_label_use_global_font": "false",
 "name_label_use_global_font_size": "false",
+"next_indicator_size": "Vector2(20, 20)",
 "normal_font": "\"res://assets/fonts/libre-baskerville/LibreBaskerville-Regular.ttf\"",
-"text_size": "25.0",
+"text_custom_color": "Color(1, 1, 1, 0.8156863)",
+"text_size": "18.0",
+"text_use_global_color": "false",
 "text_use_global_font": "false",
+"text_use_global_size": "false",
 "typing_sounds_enabled": "false"
 }
 
