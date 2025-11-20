@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://qwj7o7bu2dn"]
+
+[ext_resource type="PackedScene" uid="uid://b61buhnqbbvxb" path="res://scenes/menus/options/options_menu.tscn" id="1_oqvnv"]
+[ext_resource type="PackedScene" uid="uid://degdwgegyvjuu" path="res://scenes/utility/debug.tscn" id="2_hr4u4"]
+
+[node name="Overlays" type="CanvasLayer"]
+
+[node name="OptionsMenu" parent="." instance=ExtResource("1_oqvnv")]
+process_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Debug" parent="." instance=ExtResource("2_hr4u4")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 400.0
+offset_bottom = 400.0
+grow_horizontal = 1
+grow_vertical = 1

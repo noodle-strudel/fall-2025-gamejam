@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://csvuxpfq6r5sm"]
+
+[ext_resource type="Script" uid="uid://droog0w31j4aw" path="res://scenes/levels/room1/room_1.gd" id="1_a5tic"]
+[ext_resource type="PackedScene" uid="uid://brh6j623ofyay" path="res://scenes/utility/level_boundary.tscn" id="2_5kd0n"]
+[ext_resource type="PackedScene" uid="uid://2lm0v6bnvik4" path="res://scenes/utility/transition_effects.tscn" id="3_m8s30"]
+[ext_resource type="PackedScene" uid="uid://cn0tlhd5tao8g" path="res://scenes/player/player.tscn" id="3_vq6cu"]
+[ext_resource type="PackedScene" uid="uid://dtl8isxwubxct" path="res://scenes/levels/events/event.tscn" id="5_7ob3t"]
+[ext_resource type="PackedScene" uid="uid://bpljyaycxfvn8" path="res://scenes/objects/door/door.tscn" id="6_labrm"]
+[ext_resource type="PackedScene" uid="uid://qwj7o7bu2dn" path="res://scenes/utility/overlays.tscn" id="7_ykxwi"]
+
+[node name="Room1" type="Node2D"]
+script = ExtResource("1_a5tic")
+
+[node name="LevelBoundary" parent="." instance=ExtResource("2_5kd0n")]
+
+[node name="CollisionPolygon2D" parent="LevelBoundary" index="0"]
+position = Vector2(-29.999996, 692)
+scale = Vector2(0.4281839, 0.38815686)
+
+[node name="Event" parent="." instance=ExtResource("5_7ob3t")]
+
+[node name="Player" parent="." instance=ExtResource("3_vq6cu")]
+position = Vector2(-556, 504)
+
+[node name="Door" parent="." instance=ExtResource("6_labrm")]
+position = Vector2(-555, 507)
+
+[node name="TransitionEffects" parent="." instance=ExtResource("3_m8s30")]
+
+[node name="Overlays" parent="." instance=ExtResource("7_ykxwi")]
+
+[editable path="LevelBoundary"]
+[editable path="TransitionEffects"]
