@@ -7,7 +7,8 @@ extends Node2D
 #@onready var vignette = $CanvasLayer/Vignette/AnimationPlayer
 
 func _ready() -> void:
-	#set_camera_limits()
+	if Global.debug_mode:
+		$CanvasLayer/Debug.show()
 	# First time awakening
 	if Global.awaken_first == false:
 		Global.player_state = Global.State.INTERACTING
@@ -20,8 +21,6 @@ func _ready() -> void:
 		Global.player_state = Global.State.MOVING
 		$TransitionEffects.lift_all()
 		# No need to obscure everything
-		#$TransitionEffects/BlackButPlayer.color = Color.TRANSPARENT
-		#$TransitionEffects/CanvasLayer/Vignette.color = Color.TRANSPARENT
 	
 	# Connect to door scene transition signals
 	$Door/InteractionManager.fade_out.connect(fade_out)

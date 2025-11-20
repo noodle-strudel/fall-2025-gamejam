@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://tj7j6vpb85h4"]
+[gd_scene load_steps=10 format=3 uid="uid://tj7j6vpb85h4"]
 
 [ext_resource type="PackedScene" uid="uid://cn0tlhd5tao8g" path="res://scenes/player/player.tscn" id="1_lrgy0"]
 [ext_resource type="Script" uid="uid://b8i7ned3d0luq" path="res://scenes/outside/outside.gd" id="1_lrykw"]
+[ext_resource type="PackedScene" uid="uid://degdwgegyvjuu" path="res://scenes/utility/debug.tscn" id="2_5i1aa"]
 [ext_resource type="PackedScene" uid="uid://b61buhnqbbvxb" path="res://scenes/menus/options/options_menu.tscn" id="2_albt5"]
 [ext_resource type="PackedScene" uid="uid://m6l41cpxrnhl" path="res://scenes/outside/statue/statue.tscn" id="2_eu6yl"]
 [ext_resource type="PackedScene" uid="uid://c0btc0h7pn1l2" path="res://scenes/level_base/base.tscn" id="2_lrykw"]
@@ -41,6 +42,16 @@ position = Vector2(119, -1129)
 [node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("2_albt5")]
 process_mode = 3
 metadata/_edit_use_anchors_ = true
+
+[node name="Debug" parent="CanvasLayer" instance=ExtResource("2_5i1aa")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 400.0
+offset_bottom = 400.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [editable path="Base"]
 [editable path="Door"]
