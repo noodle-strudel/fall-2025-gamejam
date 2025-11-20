@@ -18,9 +18,7 @@ func _ready() -> void:
 		Global.is_inside = false
 		Global.player_state = Global.State.MOVING
 		# No need to obscure everything
-		$TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
-		$TransitionEffects/BlackButPlayer/AnimationPlayer.play("fade_out")
-		$TransitionEffects/SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
+		lift_all_effects()
 		
 	
 	Dialogic.signal_event.connect(_dialogic_signals)

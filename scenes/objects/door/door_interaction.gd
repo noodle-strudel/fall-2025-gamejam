@@ -2,6 +2,8 @@ extends InteractionManager
 
 signal scene_transition
 signal fade_out
+signal blur
+signal unblur
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,6 +26,10 @@ func _dialogic_signals(arg) -> void:
 			scene_transition.emit()
 		elif arg == "background_fade_out":
 			fade_out.emit()
+		elif arg == "blur":
+			blur.emit()
+		elif arg == "unblur":
+			unblur.emit()
 		# One-off sound effect signals
 		elif arg.ends_with("_sfx"):
 			SoundEffects.play(arg.trim_suffix("_sfx"))

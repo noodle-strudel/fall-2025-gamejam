@@ -6,12 +6,7 @@ func _ready() -> void:
 
 func receive_interaction() -> void:
 	Dialogic.timeline_ended.connect(_end_dialog)
-	match int(Global.progress):
-		0:
-			start_interaction("statue_intro")
-		1:
-			start_interaction("statue1")
-
+	start_interaction("statue")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -10,18 +10,33 @@ class_name Level extends Node2D
 # - Overlays
 
 func _ready() -> void:
+	$TransitionEffects/Blur.hide()
 	if Global.debug_mode:
 		$Overlays/Debug.show()
 		$Player.speed = 1000
 	else:
 		$Overlays/Debug.hide()
 	$Door/InteractionManager.fade_out.connect(_fade_out)
+	$Door/InteractionManager.blur.connect(_blur)
+	$Door/InteractionManager.unblur.connect(_unblur)
 
 
 # Called when door signals to fade out
 func _fade_out() -> void:
 	$TransitionEffects/SceneTransitionRect/AnimationPlayer.play("Fade")
-	$Door/InteractionManager.fade_out.disconnect(_fade_out)	
+	$Door/InteractionManager.fade_out.disconnect(_fade_out)
+
+func _blur() -> void:
+	$TransitionEffects/Blur/AnimationPlayer.play_backwards("fade_out")
+
+func _unblur() -> void:
+	$TransitionEffects/Blur/AnimationPlayer.play("fade_out")	
+
+
+func lift_all_effects() -> void:
+	$TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
+	$TransitionEffects/BlackButPlayer/AnimationPlayer.play("fade_out")
+	$TransitionEffects/SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
 
 
 # Fade in scene transition layer and switch to new scene
@@ -55,6 +70,10 @@ func _dialogic_signals(arg) -> void:
 				"vignette_fade_in":
 					#$TransitionEffects.vignette_anim.play_backwards("fade_out")
 					$TransitionEffects/Vignette/AnimationPlayer.play_backwards("fade_out")
+				"blur":
+					$TransitionEffects/Blur/AnimationPlayer.play_backwards("fade_out")
+				"unblur":
+					$TransitionEffects/Blur/AnimationPlayer.play("fade_out")
 					
 	elif arg is Dictionary:
 		var functions = arg.keys()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://2lm0v6bnvik4"]
+[gd_scene load_steps=14 format=3 uid="uid://2lm0v6bnvik4"]
 
 [ext_resource type="Script" uid="uid://bsbvaeirs40u6" path="res://scenes/utility/transition_effects.gd" id="1_rk4p6"]
 [ext_resource type="Shader" uid="uid://t4dsok2qd56a" path="res://shaders/vignette.gdshader" id="2_rk4p6"]
+[ext_resource type="Shader" uid="uid://dr6y5ra7jadeb" path="res://shaders/blur.gdshader" id="3_rk4p6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wycgm"]
 shader = ExtResource("2_rk4p6")
@@ -102,6 +103,12 @@ _data = {
 &"Fade": SubResource("1")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7f343"]
+shader = ExtResource("3_rk4p6")
+shader_parameter/blur_amount = 2.18000019855
+shader_parameter/mix_amount = 0.0
+shader_parameter/color_over = Color(0, 0, 0, 1)
+
 [node name="TransitionEffects" type="CanvasLayer"]
 script = ExtResource("1_rk4p6")
 
@@ -138,9 +145,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SceneTransitionRect"]
 libraries = {
 &"": SubResource("AnimationLibrary_euvb5")
+}
+
+[node name="Blur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_7f343")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Blur"]
+libraries = {
+&"": SubResource("AnimationLibrary_jpnwy")
 }

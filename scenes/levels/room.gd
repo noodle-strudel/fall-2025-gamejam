@@ -2,9 +2,10 @@ class_name Room extends Level
 
 func _ready() -> void: 
 	super._ready()
-	$TransitionEffects/Vignette.hide()
-	$TransitionEffects/BlackButPlayer.hide()
-	$TransitionEffects/SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
+	lift_all_effects()
+	#$TransitionEffects/Vignette.hide()
+	#$TransitionEffects/BlackButPlayer.hide()
+	#$TransitionEffects/SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
 	Global.player_state = Global.State.MOVING
 	$Door/InteractionManager.scene_transition.connect(_leave_room)
 

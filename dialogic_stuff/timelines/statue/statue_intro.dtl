@@ -6,6 +6,7 @@ narrator: Sit down?
 - No
 	[end_timeline]
 narrator: You sit down on the wet moss in front of the statue.
+[signal arg="blur"]
 join statue center [animation="Fade In Up"]
 statue: There, there. Now is not the time to despair. Tell me what ails you so.
 leave statue [animation="Fade Out Down"]
