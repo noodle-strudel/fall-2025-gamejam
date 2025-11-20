@@ -42,9 +42,14 @@ func _moving(delta: float) -> void:
 	
 	#select_plant()
 	move_and_slide()
+
+func _interact() -> void:
+	animation_state.travel("Idle")  
+	velocity = Vector2.ZERO
+	
 func _physics_process(delta: float) -> void:
 	match (Global.player_state):
 		Global.State.MOVING:
 			_moving(delta)
 		Global.State.INTERACTING:
-			pass
+			_interact()

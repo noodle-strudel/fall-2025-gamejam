@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bpljyaycxfvn8"]
 
-[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://interaction_manager.tscn" id="1_0y005"]
-[ext_resource type="Texture2D" uid="uid://cgxswalqi0trr" path="res://assets/sprites/doorsketch.png" id="1_vijyo"]
+[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://scenes/interaction_manager.tscn" id="1_0y005"]
+[ext_resource type="Texture2D" uid="uid://bc0bs1gjm0b3h" path="res://assets/pixelart/doorsketch_v2.png" id="1_vijyo"]
 [ext_resource type="Script" uid="uid://cpq0vxinm4syd" path="res://scenes/objects/door/door_interaction.gd" id="2_vijyo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrveb"]
@@ -14,6 +14,7 @@ size = Vector2(41.666668, 55)
 scale = Vector2(3, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-2, -19)
 texture = ExtResource("1_vijyo")
 
