@@ -1,0 +1,58 @@
+if {has_key} == true:
+	statue: Ya done talked to me already!
+	[end_timeline]
+if {Global.debug_mode} == true:
+	(Debug mode) Skip text and get key?
+	- Yes
+		set {has_key} = true
+		[end_timeline]
+	- No
+narrator: A patch of pale moonlight illuminates the outline of an old statue.
+statue: C…e to me, c…ild… w…n’t you l..y down your wor…es into my capable ha….ds….
+narrator: Sit down?
+- Yes
+	[signal arg="sit_down"]
+- No
+	[end_timeline]
+narrator: You sit down on the wet moss in front of the statue.
+join statue center [animation="Fade In Up"]
+statue: There, there. Now is not the time to despair. Tell me what ails you so.
+leave statue [animation="Fade Out Down"]
+join ignis right [animation="Fade In Up"]
+ignis: Ha! What “ails” you? How are you supposed to do that when you don’t even know who you are?
+join aqua left [animation="Fade In Up"]
+aqua: Stop that. These things take time.
+ignis: Always the bystander. That’s all you do, talk but never act!
+aqua: Goodness me. If you rush into things, you must be prepared for whatever consequences come your way.
+ignis: Of course I know that, I’m not stupid. The rush is what makes it all the sweeter.
+narrator: The strange masked man turns to address you.
+ignis: So, will you get on with what needs to be done?
+narrator: The owlish woman turns toward you as well. Her eyes remain closed but you can somehow feel her gaze.
+aqua: Take your time. But you must move forward, eventually.
+ignis: Oh, don’t patronize them.
+leave ignis [animation="Fade Out Down"]
+leave aqua [animation="Fade Out Down"]
+narrator: ...
+[signal arg_type="dict" arg="{"drip_sfx":3}"]
+environment: *Drip. Drip. Drip.*
+[wait time="1.0" hide_text="false"]
+join statue center
+statue: A once great house stands before you, now fallen into ruin.
+statue: You are not the sole arbiter of their doom, but you made certain they would be swallowed by desperation and despair.
+leave statue [animation="Fade Out Down"]
+join ignis right [animation="Fade In Up"]
+ignis: You did what you had to do. And wasn’t it electric, watching those animals suffer like you did?
+join aqua left [animation="Fade In Up"]
+aqua: Don’t listen to his ravings. A soul is a resilient thing. You mustn't relinquish to such cruelty.
+ignis: How sweet. But you cannot come back from where you’ve been. And why would you want to?
+leave ignis
+leave aqua
+join statue center
+statue: Quiet, you two. It is their journey to take.
+statue: Walk through this place and witness what though hath wrought, then return to me. You shall know your place in time.
+[signal arg="stand_up"]
+[wait time="1.5"]
+statue: Ah, one moment. You’ll need a key to enter through the doorway ahead.
+narrator: You obtained a key.
+set {has_key} = true
+[end_timeline]

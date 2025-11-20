@@ -1,0 +1,32 @@
+if {Global.debug_mode} == true:
+	(Debug mode) Skip intro text?
+	- Yes
+		[signal arg="player_fade_in"]
+		[signal arg="background_fade_in"]
+		[signal arg="vignette_fade_out"]
+		[end_timeline]
+	- No
+[signal arg_type="dict" arg="{"drip_sfx":2}"]
+environment: *Drip. Drip.*
+[signal arg_type="dict" arg="{"drip_sfx":2}"]
+environment: *Drip. Drip.*
+narrator: The faint splatter of water droplets colliding with the ground echoes in your ears.
+narrator: Where is it coming from?
+[signal arg="player_fade_in"]
+narrator: ...
+[signal arg_type="dict" arg="{"drip_sfx":1}"]
+environment: *Drip.*
+narrator: How long have you been resting here?
+narrator: ...
+[signal arg="background_fade_in"]
+narrator: You feel something soft beneath you. The pads of your fingertips brush against smooth blades of grass.
+narrator: Why have you arrived in this strange place?
+narrator: When you try to recall where you have come from, your head hurts. Your mind is blank but for a dull throbbing and a dense fog.
+[signal arg_type="dict" arg="{"drip_sfx":2}"]
+environment: *Drip. Drip.*
+statue: …o… se….
+narrator: A dull hum reaches you. The sound is rusty, like the gears of an old clock scraping together. You think you can piece together human syllables, though what human could make such a noise is beyond you.
+statue: …Com… t… e….
+statue: …Come to me…
+[signal arg="vignette_fade_out"]
+[end_timeline]

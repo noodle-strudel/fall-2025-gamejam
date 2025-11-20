@@ -1,36 +1,40 @@
 extends InteractionManager
 
+signal scene_transition
+signal fade_out
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Dialogic.signal_event.connect(dialogic_signals)
+	Dialogic.signal_event.connect(_dialogic_signals)
 
 func receive_interaction() -> void:
 	Global.player_state = Global.State.INTERACTING
-	
-	#Check if player got the key from the statue
-	start_interaction("garden_door_interact")
-	if Global.has_key == false:
-		pass
+	if Global.is_inside:
+		print_debug("inside door interact")
+		start_interaction("inside_door_interact")
 	else:
-		pass
-		#$SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
-		#$SceneTransitionRect.transition_to()
-		#scene transition!!!
+		print_debug("outside door interact")
+		start_interaction("outside_door_interact")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
-func dialogic_signals(arg) -> void:
+func _dialogic_signals(arg) -> void:
 	if arg is String:
-		pass
-	else:
-		pass
-		#var functions = arg.keys()
-		#if functions[0] == "drip_sfx":
-			#SoundEffects.drip_sfx(arg["drip_sfx"])
+		# Emitted when player is allowed to proceed
+		if arg == "scene_transition":
+			scene_transition.emit()
+		elif arg == "background_fade_out":
+			fade_out.emit()
+		# One-off sound effect signals
+		elif arg.ends_with("_sfx"):
+			SoundEffects.play(arg.trim_suffix("_sfx"))
+	else: # arg is dictionary
+		var functions = arg.keys()
+		for key in functions:
+			if key.ends_with("_sfx"):
+				SoundEffects.play_count(key.trim_suffix("_sfx"), arg[key])
+		#pass
 
-func end_dialog() -> void:
-	Global.player_state = Global.State.MOVING
-	Dialogic.timeline_ended.disconnect(end_dialog)
+
+#func _end_dialog() -> void:
+	#Global.player_state = Global.State.MOVING
+	#Dialogic.timeline_ended.disconnect(_end_dialog)

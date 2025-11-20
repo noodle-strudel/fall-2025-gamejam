@@ -1,13 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://bviskh24tpdoh"]
+[gd_scene load_steps=5 format=3 uid="uid://bviskh24tpdoh"]
 
-[ext_resource type="Script" uid="uid://bkw3rxfs6ifnj" path="res://scenes/sound_effects.gd" id="1_hnqyc"]
-[ext_resource type="AudioStream" uid="uid://b8knam4younq2" path="res://dialogic_stuff/sound_fx/water-drip-45622.mp3" id="2_x4e6e"]
+[ext_resource type="Script" uid="uid://bkw3rxfs6ifnj" path="res://sound/sfx/sound_effects.gd" id="1_hnqyc"]
+[ext_resource type="AudioStream" uid="uid://b8knam4younq2" path="res://assets/sound_fx/water-drip-45622.mp3" id="2_x4e6e"]
+[ext_resource type="AudioStream" uid="uid://bw8cdaxo8b6x3" path="res://assets/sound_fx/open-door-sound.mp3" id="3_apsx1"]
+[ext_resource type="AudioStream" uid="uid://dmnxdn3t2xvcu" path="res://assets/sound_fx/door-lock-82542.mp3" id="4_aoxs6"]
 
 [node name="SoundEffects" type="Node"]
 script = ExtResource("1_hnqyc")
 
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
 [node name="Drip" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_x4e6e")
 
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
+[node name="DoorOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_apsx1")
+
+[node name="LockClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_aoxs6")
+volume_db = -14.618
