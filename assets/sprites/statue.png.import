@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b875r6vk5hv3v"
-path="res://.godot/imported/statue.png-40d102ce573d6c80f87923a48205a1db.ctex"
+path="res://.godot/imported/statue.png-c46eaa03313501411856c4261326a7c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixelart/statue.png"
-dest_files=["res://.godot/imported/statue.png-40d102ce573d6c80f87923a48205a1db.ctex"]
+source_file="res://assets/sprites/statue.png"
+dest_files=["res://.godot/imported/statue.png-c46eaa03313501411856c4261326a7c4.ctex"]
 
 [params]
 
