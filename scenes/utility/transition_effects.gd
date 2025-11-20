@@ -6,10 +6,12 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
+# Doesn't work
 func lift_all() -> void:
-	$Vignette/AnimationPlayer.play_backwards("fade_out")
-	$BlackButPlayer/AnimationPlayer.play_backwards("fade out")
+	$Vignette/AnimationPlayer.play("fade_out")
+	$BlackButPlayer/AnimationPlayer.play("fade out")
 	$SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
+	$Blur/AnimationPlayer.play("fade_out")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
