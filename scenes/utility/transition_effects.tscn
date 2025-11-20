@@ -45,27 +45,6 @@ _data = {
 &"fade_out": SubResource("Animation_8inc5")
 }
 
-[sub_resource type="Animation" id="1"]
-resource_name = "Fade"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_euvb5"]
-_data = {
-&"Fade": SubResource("1")
-}
-
 [sub_resource type="Animation" id="Animation_l5tjf"]
 length = 0.001
 tracks/0/type = "value"
@@ -102,13 +81,31 @@ _data = {
 &"fade_out": SubResource("Animation_paeaj")
 }
 
-[node name="TransitionEffects" type="Node2D"]
+[sub_resource type="Animation" id="1"]
+resource_name = "Fade"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_euvb5"]
+_data = {
+&"Fade": SubResource("1")
+}
+
+[node name="TransitionEffects" type="CanvasLayer"]
 script = ExtResource("1_rk4p6")
 
-[node name="VignetteCanvasLayer" type="CanvasLayer" parent="."]
-layer = 0
-
-[node name="Vignette" type="ColorRect" parent="VignetteCanvasLayer"]
+[node name="Vignette" type="ColorRect" parent="."]
 z_index = -1
 material = SubResource("ShaderMaterial_wycgm")
 anchors_preset = 15
@@ -117,14 +114,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="VignetteCanvasLayer/Vignette"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Vignette"]
 libraries = {
 &"": SubResource("AnimationLibrary_jpnwy")
 }
 
-[node name="SceneTransitionCanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="SceneTransitionRect" type="ColorRect" parent="SceneTransitionCanvasLayer"]
+[node name="BlackButPlayer" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -132,22 +127,20 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SceneTransitionCanvasLayer/SceneTransitionRect"]
-libraries = {
-&"": SubResource("AnimationLibrary_euvb5")
-}
-
-[node name="BlackButPlayerCanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="BlackButPlayer" type="ColorRect" parent="BlackButPlayerCanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="BlackButPlayerCanvasLayer/BlackButPlayer"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BlackButPlayer"]
 libraries = {
 &"": SubResource("AnimationLibrary_d5687")
+}
+
+[node name="SceneTransitionRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SceneTransitionRect"]
+libraries = {
+&"": SubResource("AnimationLibrary_euvb5")
 }

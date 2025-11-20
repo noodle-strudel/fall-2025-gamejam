@@ -11,6 +11,7 @@ if {has_key} == true:
 	[signal arg="background_fade_out"]
 	[wait time="1.0"]
 	narrator: You step over the threshold and into the house.
+	[wait time="0.6"]
 	[signal arg="scene_transition"]
 else:
 	# Player doesn't have the key.

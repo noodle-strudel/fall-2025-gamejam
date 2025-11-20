@@ -5,7 +5,7 @@ signal fade_out
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Dialogic.signal_event.connect(dialogic_signals)
+	Dialogic.signal_event.connect(_dialogic_signals)
 
 func receive_interaction() -> void:
 	Global.player_state = Global.State.INTERACTING
@@ -17,7 +17,7 @@ func receive_interaction() -> void:
 		start_interaction("outside_door_interact")
 
 
-func dialogic_signals(arg) -> void:
+func _dialogic_signals(arg) -> void:
 	if arg is String:
 		# Emitted when player is allowed to proceed
 		if arg == "scene_transition":
@@ -32,9 +32,9 @@ func dialogic_signals(arg) -> void:
 		for key in functions:
 			if key.ends_with("_sfx"):
 				SoundEffects.play_count(key.trim_suffix("_sfx"), arg[key])
-		pass
+		#pass
 
 
-func end_dialog() -> void:
-	Global.player_state = Global.State.MOVING
-	Dialogic.timeline_ended.disconnect(end_dialog)
+#func _end_dialog() -> void:
+	#Global.player_state = Global.State.MOVING
+	#Dialogic.timeline_ended.disconnect(_end_dialog)
