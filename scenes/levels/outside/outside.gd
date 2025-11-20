@@ -8,6 +8,7 @@ func _ready() -> void:
 		Dialogic.start("beginning")
 		Dialogic.timeline_ended.connect(_end_beginning_dialog)
 		Dialogic.signal_event.connect(_dialogic_signals)
+		$Player.z_index = 1
 	# If you've already awaken
 	else:
 		Global.is_inside = false
@@ -40,6 +41,7 @@ func _enter_room() -> void:
 func _end_beginning_dialog():
 	if Global.awaken_first == false:
 		Global.awaken_first = true
+		$Player.z_index = 0
 	Global.player_state = Global.State.MOVING
 	Dialogic.timeline_ended.disconnect(_end_beginning_dialog)
 	Dialogic.signal_event.disconnect(_dialogic_signals)
