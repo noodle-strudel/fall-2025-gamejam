@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cn0tlhd5tao8g"]
+[gd_scene load_steps=34 format=3 uid="uid://cn0tlhd5tao8g"]
 
 [ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://interaction_manager.tscn" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cdeqsaenebwgw" path="res://scenes/player/player.gd" id="1_g2els"]
@@ -155,6 +155,21 @@ tracks/0/keys = {
 "values": [8, 9, 10, 11]
 }
 
+[sub_resource type="Animation" id="Animation_p47bc"]
+resource_name = "sit_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [20]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y4r1p"]
 _data = {
 &"RESET": SubResource("Animation_lvxji"),
@@ -165,6 +180,7 @@ _data = {
 &"idleup": SubResource("Animation_tuyoq"),
 &"left": SubResource("Animation_dqkch"),
 &"right": SubResource("Animation_qlg0r"),
+&"sit_down": SubResource("Animation_p47bc"),
 &"up": SubResource("Animation_g2els")
 }
 
@@ -214,6 +230,9 @@ blend_point_3/node = SubResource("AnimationNodeAnimation_f1ej7")
 blend_point_3/pos = Vector2(-1, 0)
 blend_mode = 1
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p47bc"]
+animation = &"sit_down"
+
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qhqgy"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dqkch"]
@@ -221,12 +240,14 @@ blend_mode = 1
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_i4ail"]
 states/End/position = Vector2(837.5, 89.5)
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_60mlk")
-states/Idle/position = Vector2(325.5, 98.586914)
+states/Idle/position = Vector2(323, 98.61377)
 states/Start/position = Vector2(180.5, 98.640625)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_oprun")
 states/Walk/position = Vector2(504.5, 98.56006)
+states/sit_down/node = SubResource("AnimationNodeAnimation_p47bc")
+states/sit_down/position = Vector2(323, 194)
 transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_qhqgy"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_dqkch")]
-graph_offset = Vector2(59, 6)
+graph_offset = Vector2(7, 55)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_75vfm"]
 shader = ExtResource("3_p47bc")
@@ -270,7 +291,7 @@ material = SubResource("ShaderMaterial_75vfm")
 position = Vector2(0, -64)
 scale = Vector2(2, 2)
 texture = ExtResource("3_qhqgy")
-hframes = 20
+hframes = 21
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_gmlin")

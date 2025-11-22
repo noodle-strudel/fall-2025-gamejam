@@ -46,6 +46,10 @@ func _moving(delta: float) -> void:
 func _interact() -> void:
 	animation_state.travel("Idle")  
 	velocity = Vector2.ZERO
+
+func _sitting() -> void:
+	animation_state.travel("sit_down")
+	velocity = Vector2.ZERO
 	
 func _physics_process(delta: float) -> void:
 	match (Global.player_state):
@@ -53,3 +57,5 @@ func _physics_process(delta: float) -> void:
 			_moving(delta)
 		Global.State.INTERACTING:
 			_interact()
+		Global.State.SITTING:
+			_sitting()

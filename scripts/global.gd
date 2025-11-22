@@ -1,6 +1,6 @@
 extends Node
 var prev_scene
-enum State {MOVING, INTERACTING}
+enum State {MOVING, INTERACTING, SITTING}
 var player_state = State.MOVING
 var is_inside = false
 var mute = false
