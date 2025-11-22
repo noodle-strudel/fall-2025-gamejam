@@ -2,27 +2,29 @@
 
 [ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://interaction_manager.tscn" id="1_sxr8y"]
 [ext_resource type="Script" uid="uid://c2ekbt2665xwt" path="res://scenes/objects/statue/statue_interaction.gd" id="2_6wwjp"]
-[ext_resource type="Texture2D" uid="uid://b875r6vk5hv3v" path="res://assets/pixelart/statue.png" id="3_gfwag"]
+[ext_resource type="Texture2D" uid="uid://b875r6vk5hv3v" path="res://assets/sprites/statue.png" id="3_gfwag"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3nm2d"]
-size = Vector2(62.5, 57.5)
+size = Vector2(88, 48)
 
 [node name="Statue" type="StaticBody2D"]
+y_sort_enabled = true
 scale = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3.25, 41.75)
 shape = SubResource("RectangleShape2D_3nm2d")
 
 [node name="InteractionManager" parent="." instance=ExtResource("1_sxr8y")]
+position = Vector2(0, -50)
 script = ExtResource("2_6wwjp")
 
 [node name="CollisionShape2D" parent="InteractionManager" index="0"]
-position = Vector2(-3, 84.125)
+position = Vector2(0, 64)
 
 [node name="Statue" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2, 2)
 texture = ExtResource("3_gfwag")
+offset = Vector2(0, -36)
 
 [editable path="InteractionManager"]

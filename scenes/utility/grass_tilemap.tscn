@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfl3gquombc40"]
+
+[ext_resource type="Texture2D" uid="uid://hy7ywds51sq4" path="res://assets/sprites/outside_tilemap.png" id="1_mghsd"]
+[ext_resource type="Shader" uid="uid://53nlfcv4myrf" path="res://shaders/wavy.gdshader" id="1_w53dv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w53dv"]
+shader = ExtResource("1_w53dv")
+shader_parameter/do_abs = false
+shader_parameter/do_quantize = false
+shader_parameter/quantize_to = 1.0
+shader_parameter/sine_amplitude = Vector2(1, 0)
+shader_parameter/sine_speed = Vector2(1, 0)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w53dv"]
+texture = ExtResource("1_mghsd")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+3:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_cd4bw"]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_w53dv")
+
+[node name="GrassTilemap" type="TileMapLayer"]
+z_index = -1
+texture_filter = 1
+material = SubResource("ShaderMaterial_w53dv")
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_cd4bw")
