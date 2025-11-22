@@ -8,8 +8,8 @@ func play(bgm_name: String):
 	current_anim = $AnimationPlayer.get_animation("fade_out")
 	match bgm_name:
 		"rain":
-			$Rain.volume_db = 0.0
-			$Rain.play()
+			$rain.volume_db = 0.0
+			$rain.play()
 			current_anim.track_set_path(0, "rain")
 		_:  # didn't match any bgm
 			print("Unable to play BGM of name", bgm_name)

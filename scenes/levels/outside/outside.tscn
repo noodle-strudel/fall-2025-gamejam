@@ -45,10 +45,8 @@ position = Vector2(128, -128)
 position = Vector2(119, -1129)
 
 [node name="TransitionEffects" parent="." instance=ExtResource("8_tb64g")]
-visible = false
 
 [node name="Overlays" parent="." instance=ExtResource("7_4r7jr")]
-visible = false
 
 [node name="RainParticles" parent="." instance=ExtResource("9_hyf1m")]
 z_index = 2
