@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://dlv4pjagtvclo"]
+[gd_scene load_steps=12 format=4 uid="uid://dlv4pjagtvclo"]
 
 [ext_resource type="Shader" uid="uid://b38yvbu3721d6" path="res://shaders/reflection.gdshader" id="1_ixml5"]
 [ext_resource type="PackedScene" uid="uid://cn0tlhd5tao8g" path="res://scenes/player/player.tscn" id="1_lrgy0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bpljyaycxfvn8" path="res://scenes/objects/door/door.tscn" id="5_helgo"]
 [ext_resource type="PackedScene" uid="uid://qwj7o7bu2dn" path="res://scenes/utility/overlays.tscn" id="7_4r7jr"]
 [ext_resource type="PackedScene" uid="uid://2lm0v6bnvik4" path="res://scenes/utility/transition_effects.tscn" id="8_tb64g"]
+[ext_resource type="PackedScene" uid="uid://drh7mfd8uw80t" path="res://scenes/utility/rain_particles.tscn" id="9_hyf1m"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hyf1m"]
 shader = ExtResource("1_ixml5")
@@ -46,6 +47,11 @@ position = Vector2(119, -1129)
 [node name="TransitionEffects" parent="." instance=ExtResource("8_tb64g")]
 
 [node name="Overlays" parent="." instance=ExtResource("7_4r7jr")]
+
+[node name="RainParticles" parent="." instance=ExtResource("9_hyf1m")]
+z_index = 1
+position = Vector2(-835.00006, -2112)
+scale = Vector2(3.9999998, 3.9999998)
 
 [editable path="LevelBoundary"]
 [editable path="Door"]

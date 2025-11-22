@@ -21,6 +21,7 @@ SceneManager="*res://scene_manager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Global="*res://scripts/global.gd"
 SoundEffects="*res://sound/sfx/sound_effects.tscn"
+BackgroundMusic="*res://sound/music/background_music.tscn"
 
 [dialogic]
 
