@@ -16,19 +16,23 @@ func _ready() -> void:
 		$Player.speed = 1000
 	else:
 		$Overlays/Debug.hide()
+	# Connect to effects signals
 	$Door/InteractionManager.fade_out.connect(_fade_out)
 	$Door/InteractionManager.blur.connect(_blur)
 	$Door/InteractionManager.unblur.connect(_unblur)
 
 
-# Called when door signals to fade out
+# Fade out: Called when door signals to fade out
 func _fade_out() -> void:
 	$TransitionEffects/SceneTransitionRect/AnimationPlayer.play("Fade")
 	$Door/InteractionManager.fade_out.disconnect(_fade_out)
 
+
+# Blur: Called when dialogue signals to blur background
 func _blur() -> void:
 	$TransitionEffects/Blur/AnimationPlayer.play_backwards("fade_out")
 
+# Unblur: Called when dialogue signals to unblur background
 func _unblur() -> void:
 	$TransitionEffects/Blur/AnimationPlayer.play("fade_out")	
 

@@ -1,12 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://degdwgegyvjuu"]
+[gd_scene load_steps=4 format=3 uid="uid://degdwgegyvjuu"]
 
 [ext_resource type="Script" uid="uid://dquknjfe5hpa8" path="res://scenes/utility/debug.gd" id="1_dq0m0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sp33b"]
 
 [sub_resource type="Theme" id="Theme_dq0m0"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_0tg0d"]
 
 [node name="Debug" type="PanelContainer"]
 anchors_preset = 15
@@ -28,81 +26,6 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
-layout_mode = 2
-theme_override_constants/h_separation = 9
-theme_override_constants/v_separation = 4
-columns = 2
-
-[node name="progress_label" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-text = "progress"
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="progress" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="mute_label" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-text = "mute"
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="mute" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="is_inside_label" type="Label" parent="MarginContainer/GridContainer"]
+[node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "is_inside"
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="is_inside" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="has_key_label" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "has_key"
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="has_key" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="has_interacted_label" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "has_interacted"
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="has_interacted" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="consumption_label" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "con_points"
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="consumption" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="reconciliation_label" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "rec_points"
-label_settings = SubResource("LabelSettings_0tg0d")
-
-[node name="reconciliation" type="Label" parent="MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-label_settings = SubResource("LabelSettings_0tg0d")

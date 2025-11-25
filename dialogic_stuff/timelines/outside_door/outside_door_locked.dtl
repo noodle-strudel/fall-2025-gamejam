@@ -1,0 +1,6 @@
+jump outside_door_description/
+[signal arg="door_handle_sfx"]
+narrator: You try the handle. It's locked.
+if {Global.been_inside} == true:
+	narrator: You reach into your pocket to retrieve the key, but it's not there.
+[end_timeline]

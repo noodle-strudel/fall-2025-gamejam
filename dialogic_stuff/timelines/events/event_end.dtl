@@ -1,0 +1,2 @@
+set {Global.has_interacted} = true
+set {Global.has_key} = false

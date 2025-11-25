@@ -1,0 +1,14 @@
+jump outside_door_description/
+[signal arg="lock_click_sfx"]
+narrator: You slide the key into the lock and turn. You hear a click.
+[signal arg="door_open_sfx"]
+[wait time="0.2" hide_text="false"]
+[signal arg="door_open_animation"]
+narrator: The door slowly swings open. It's dark inside.
+[signal arg="background_fade_out"]
+[wait time="1.0"]
+narrator: You step over the threshold and into the house.
+[wait time="0.6"]
+set {Global.been_inside} = true
+[signal arg="scene_transition"]
+[end_timeline]
