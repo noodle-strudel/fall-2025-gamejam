@@ -1,4 +1,5 @@
-narrator: A patch of pale moonlight illuminates the outline of an old statue.
+jump statue_debug/
+jump statue_description/intro
 statue: C…e to me, c…ild… w…n’t you l..y down your wor…es into my capable ha….ds….
 narrator: Sit down?
 - Yes
@@ -46,5 +47,6 @@ statue: Walk through this place and witness what though hath wrought, then retur
 [wait time="1.5"]
 statue: Ah, one moment. You’ll need a key to enter through the doorway ahead.
 narrator: You obtained a key.
-set {has_key} = true
+set {Global.awaken_first} = true
+set {Global.has_key} = true
 [end_timeline]

@@ -1,0 +1,18 @@
+label intro
+narrator: A patch of pale moonlight illuminates the outline of an old statue.
+return
+label 1
+narrator: Statue description #1
+return
+label 2
+narrator: Statue description #2
+return
+label 3
+narrator: Statue description #3
+return
+label 4
+narrator: Statue description #4
+return
+label 5
+narrator: Statue description #5
+return

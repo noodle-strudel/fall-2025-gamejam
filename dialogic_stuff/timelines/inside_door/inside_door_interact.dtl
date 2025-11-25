@@ -1,0 +1,10 @@
+if {Global.has_interacted} == true:
+	narrator: progress += 1
+else:
+	narrator: haven't progressed
+[signal arg="door_open_sfx"]
+[wait time="0.2" hide_text="false"]
+[signal arg="door_open_animation"]
+[signal arg="background_fade_out"]
+[wait time="1.0"]
+[signal arg="scene_transition"]

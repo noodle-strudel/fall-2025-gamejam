@@ -26,31 +26,48 @@ BackgroundMusic="*res://sound/music/background_music.tscn"
 [dialogic]
 
 directories/dch_directory={
-"aqua": "res://dialogic_stuff/characters/Aqua/aqua.dch",
-"child": "res://dialogic_stuff/characters/Child/child.dch",
-"environment": "res://dialogic_stuff/characters/Environment/environment.dch",
-"father": "res://dialogic_stuff/characters/Father/father.dch",
-"grandfather": "res://dialogic_stuff/characters/Grandfather/grandfather.dch",
-"ignis": "res://dialogic_stuff/characters/Ignis/ignis.dch",
-"key": "res://dialogic_stuff/objects/key.dch",
-"mother": "res://dialogic_stuff/characters/Mother/mother.dch",
-"narrator": "res://dialogic_stuff/characters/Narrator/narrator.dch",
+"aqua": "res://dialogic_stuff/characters/aqua.dch",
+"child": "res://dialogic_stuff/characters/child.dch",
+"environment": "res://dialogic_stuff/characters/environment.dch",
+"father": "res://dialogic_stuff/characters/father.dch",
+"grandfather": "res://dialogic_stuff/characters/grandfather.dch",
+"ignis": "res://dialogic_stuff/characters/ignis.dch",
+"key": "res://dialogic_stuff/characters/key.dch",
+"mother": "res://dialogic_stuff/characters/mother.dch",
+"narrator": "res://dialogic_stuff/characters/narrator.dch",
 "placeholder": "res://dialogic_stuff/characters/placeholder.dch",
-"protagonist": "res://dialogic_stuff/characters/Protagonist/protagonist.dch",
-"statue": "res://dialogic_stuff/characters/Statue/statue.dch",
+"protagonist": "res://dialogic_stuff/characters/protagonist.dch",
+"statue": "res://dialogic_stuff/characters/statue.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch",
-"unknown": "res://dialogic_stuff/characters/Unknown/unknown.dch"
+"unknown": "res://dialogic_stuff/characters/unknown.dch"
 }
 directories/dtl_directory={
 "beginning": "res://dialogic_stuff/timelines/beginning.dtl",
-"event_1": "res://dialogic_stuff/timelines/events/event_1.dtl",
-"inside_door_interact": "res://dialogic_stuff/timelines/inside_door_interact.dtl",
-"outside_door_interact": "res://dialogic_stuff/timelines/outside_door_interact.dtl",
-"statue": "res://dialogic_stuff/timelines/statue/statue.dtl",
+"event": "res://dialogic_stuff/timelines/events/event.dtl",
+"event1": "res://dialogic_stuff/timelines/events/event1.dtl",
+"event2": "res://dialogic_stuff/timelines/events/event2.dtl",
+"event3": "res://dialogic_stuff/timelines/events/event3.dtl",
+"event4": "res://dialogic_stuff/timelines/events/event4.dtl",
+"event5": "res://dialogic_stuff/timelines/events/event5.dtl",
+"event_already_interacted": "res://dialogic_stuff/timelines/events/event_already_interacted.dtl",
+"event_end": "res://dialogic_stuff/timelines/events/event_end.dtl",
+"finale": "res://dialogic_stuff/timelines/statue/finale.dtl",
+"inside_door_interact": "res://dialogic_stuff/timelines/inside_door/inside_door_interact.dtl",
+"outside_door_description": "res://dialogic_stuff/timelines/outside_door/outside_door_description.dtl",
+"outside_door_interact": "res://dialogic_stuff/timelines/outside_door/outside_door_interact.dtl",
+"outside_door_locked": "res://dialogic_stuff/timelines/outside_door/outside_door_locked.dtl",
+"outside_door_unlock": "res://dialogic_stuff/timelines/outside_door/outside_door_unlock.dtl",
 "statue1": "res://dialogic_stuff/timelines/statue/statue1.dtl",
 "statue2": "res://dialogic_stuff/timelines/statue/statue2.dtl",
-"statue_intro": "res://dialogic_stuff/timelines/statue/statue_intro.dtl",
-"statue_placeholder": "res://dialogic_stuff/timelines/statue/statue_placeholder.dtl"
+"statue3": "res://dialogic_stuff/timelines/statue/statue3.dtl",
+"statue4": "res://dialogic_stuff/timelines/statue/statue4.dtl",
+"statue5": "res://dialogic_stuff/timelines/statue/statue5.dtl",
+"statue_already_interacted": "res://dialogic_stuff/timelines/statue/statue_already_interacted.dtl",
+"statue_debug": "res://dialogic_stuff/timelines/statue/statue_debug.dtl",
+"statue_description": "res://dialogic_stuff/timelines/statue/statue_description.dtl",
+"statue_end": "res://dialogic_stuff/timelines/statue/statue_end.dtl",
+"statue_go_back": "res://dialogic_stuff/timelines/statue/statue_go_back.dtl",
+"statue_intro": "res://dialogic_stuff/timelines/statue/statue_intro.dtl"
 }
 layout/style_directory={
 "regular": "res://dialogic_stuff/default_style/vn_style.tres"
@@ -106,7 +123,7 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
-save/autosave=true
+save/autosave=false
 
 [display]
 

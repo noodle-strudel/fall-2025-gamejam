@@ -1,0 +1,12 @@
+if {Global.debug_mode} == true:
+	placeholder: (Debug mode) Skip text and get key?
+	- Yes
+		# First time talking to statue
+		if {Global.awaken_first} == false:
+			set {Global.has_key} = true
+			set {Global.awaken_first} = true
+		else:
+			jump statue_end/
+		[end_timeline]
+	- No
+		return

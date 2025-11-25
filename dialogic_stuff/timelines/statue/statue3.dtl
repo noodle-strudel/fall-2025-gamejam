@@ -1,7 +1,7 @@
 jump statue_debug/
-jump statue_description/1
+jump statue_description/3
 join protagonist center
-statue: [b]Statue dialogue #1[/b]
+statue: [b]Statue dialogue #3[/b]
 join statue center
 statue: What's up?
 protagonist: Huh
@@ -14,11 +14,9 @@ aqua: What? No you shouldn't. peace and love ✌️
 narrator: What do you think?
 - Reconciliation
 	set {Global.reconciliation} += 1.0
-	# Increased reconciliation value
 	aqua: You're so right bestie
 - Consumption
 	set {Global.consumption} += 1.0
-	# Increased consumption value
 	ignis: Hahahaha got em
 leave ignis
 leave aqua

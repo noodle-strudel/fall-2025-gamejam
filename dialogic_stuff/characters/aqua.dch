@@ -1,0 +1,40 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.36914063, 0.6967964, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "regular",
+"suffix": ""
+},
+&"default_portrait": "Beta/aqua_base",
+&"description": "",
+&"display_name": "Owl-like Woman",
+&"mirror": false,
+&"nicknames": ["Aqua"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"Beta/aqua_base": {
+"export_overrides": {
+"image": "\"res://assets/portraits/aqua/aquaportrait.png\""
+},
+"mirror": false,
+"offset": Vector2(-100, 0),
+"scale": 0.8,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"Beta/concept_art": {
+"export_overrides": {
+"image": "\"res://assets/portraits/aqua/auqu_beta.png\""
+},
+"mirror": false,
+"offset": Vector2(100, 0),
+"scale": 0.8,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+}
+},
+&"scale": 1.0
+}

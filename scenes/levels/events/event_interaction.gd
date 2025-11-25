@@ -5,12 +5,17 @@ func _ready() -> void:
 
 func receive_interaction() -> void:
 	Global.player_state = Global.State.INTERACTING
-	match Global.progress:
-		0: start_interaction("event_1")
-		1: start_interaction("event_2")
-		2: start_interaction("event_3")
-		3: start_interaction("event_4")
-		4: start_interaction("event_5")
+	# Player has been inside but hasn't watched event
+	if Global.has_interacted:
+		start_interaction("event_already_interacted")
+	# Player hasn't been inside yet
+	else: 
+		match Global.progress:
+			1: start_interaction("event1")
+			2: start_interaction("event2")
+			3: start_interaction("event3")
+			4: start_interaction("event4")
+			5: start_interaction("event5")
 
 func dialogic_signals(arg) -> void:
 	pass

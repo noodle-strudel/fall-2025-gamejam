@@ -1,5 +1,7 @@
-[style name="regular"]
+jump statue_debug/
+jump statue_description/2
 join protagonist center
+statue: [b]Statue dialogue #2[/b]
 join statue center
 statue: What's up?
 protagonist: Huh
@@ -9,12 +11,12 @@ join ignis right [animation="Instant In"]
 ignis: Sup losers. You should let it all burn.
 join aqua left [animation="Instant In"]
 aqua: What? No you shouldn't. peace and love ✌️
-What do you think?
+narrator: What do you think?
 - Reconciliation
-	set {Global.rec_points} += 1.0
+	set {Global.reconciliation} += 1.0
 	aqua: You're so right bestie
 - Consumption
-	set {Global.con_points} += 1.0
+	set {Global.consumption} += 1.0
 	ignis: Hahahaha got em
 leave ignis
 leave aqua
@@ -22,5 +24,5 @@ join statue center
 statue: Well well well. You sure made a choice.
 statue: Go back inside now pls \:)
 statue: Here's the key
-set {has_kley} = true
-[end_timeline]
+narrator: You obtained a key.
+jump statue_end/

@@ -9,14 +9,22 @@ signal unblur
 func _ready() -> void:
 	Dialogic.signal_event.connect(_dialogic_signals)
 
+
 func receive_interaction() -> void:
 	Global.player_state = Global.State.INTERACTING
-	if Global.is_inside:
-		print_debug("inside door interact")
-		start_interaction("inside_door_interact")
+	if !Global.is_inside:
+		# Player has been inside but not interacted: let player in without repeating unlock dialogue
+		if Global.has_key and Global.been_inside:
+			SoundEffects.play("door_open")
+			scene_transition.emit()
+		# First time unlocking door this phase
+		elif Global.has_key:
+			start_interaction("outside_door_unlock")
+		# Player doesn't have key. Different dialogue if player has been inside and lost the key
+		else:
+			start_interaction("outside_door_locked")
 	else:
-		print_debug("outside door interact")
-		start_interaction("outside_door_interact")
+		start_interaction("inside_door_interact")
 
 
 func _dialogic_signals(arg) -> void:
@@ -38,9 +46,3 @@ func _dialogic_signals(arg) -> void:
 		for key in functions:
 			if key.ends_with("_sfx"):
 				SoundEffects.play_count(key.trim_suffix("_sfx"), arg[key])
-		#pass
-
-
-#func _end_dialog() -> void:
-	#Global.player_state = Global.State.MOVING
-	#Dialogic.timeline_ended.disconnect(_end_dialog)

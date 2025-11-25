@@ -1,0 +1,4 @@
+set {Global.progress} += 2.0
+set {Global.has_interacted} = false
+set {Global.has_key} = true
+set {Global.been_inside} = false

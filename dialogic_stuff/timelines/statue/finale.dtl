@@ -1,0 +1,12 @@
+statue: Wow you've played the whole game. Great job.
+statue: Let's see what ending you got
+narrator: drumroll....
+if {Global.consumption} > {Global.reconciliation}:
+	statue: Congrats bestie, you've been consumed by the rot!
+elif {Global.reconciliation} > {Global.consumption}:
+	statue: Ahhhh, you've reconciled! Get out of here, you lil' scamp!
+else:
+	How did you manage this?
+leave statue
+[signal arg="end_game"]
+[end_timeline]
