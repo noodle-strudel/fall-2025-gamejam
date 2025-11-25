@@ -1,10 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://cn0tlhd5tao8g"]
+[gd_scene load_steps=35 format=3 uid="uid://cn0tlhd5tao8g"]
 
 [ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://interaction_manager.tscn" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cdeqsaenebwgw" path="res://scenes/player/player.gd" id="1_g2els"]
 [ext_resource type="Script" uid="uid://c5u7mkhw121yl" path="res://scenes/player/camera_2d.gd" id="3_gmlin"]
-[ext_resource type="Shader" uid="uid://b38yvbu3721d6" path="res://shaders/reflection.gdshader" id="3_p47bc"]
 [ext_resource type="Texture2D" uid="uid://4bgbybc07veg" path="res://assets/sprites/protagonist.png" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://cgqc4s3bugg5h" path="res://assets/sprites/protagonist_lying_down.png" id="7_qek5x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(64, 20)
@@ -138,6 +138,21 @@ tracks/0/keys = {
 "values": [16, 17, 18, 19]
 }
 
+[sub_resource type="Animation" id="Animation_p47bc"]
+resource_name = "sit_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [20]
+}
+
 [sub_resource type="Animation" id="Animation_g2els"]
 resource_name = "up"
 loop_mode = 1
@@ -153,21 +168,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [8, 9, 10, 11]
-}
-
-[sub_resource type="Animation" id="Animation_p47bc"]
-resource_name = "sit_down"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [20]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y4r1p"]
@@ -237,6 +237,10 @@ animation = &"sit_down"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dqkch"]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_75vfm"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0owmy"]
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_i4ail"]
 states/End/position = Vector2(837.5, 89.5)
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_60mlk")
@@ -246,17 +250,8 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_oprun")
 states/Walk/position = Vector2(504.5, 98.56006)
 states/sit_down/node = SubResource("AnimationNodeAnimation_p47bc")
 states/sit_down/position = Vector2(323, 194)
-transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_qhqgy"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_dqkch")]
-graph_offset = Vector2(7, 55)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_75vfm"]
-shader = ExtResource("3_p47bc")
-shader_parameter/hFrames = 1
-shader_parameter/vFrames = 1
-shader_parameter/enableMovement = true
-shader_parameter/displacementPixels = 1
-shader_parameter/timeGap = 0.4
-shader_parameter/speed = 1.25
+transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_qhqgy"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_dqkch"), "Idle", "sit_down", SubResource("AnimationNodeStateMachineTransition_75vfm"), "sit_down", "Idle", SubResource("AnimationNodeStateMachineTransition_0owmy")]
+graph_offset = Vector2(-54, 17)
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(2, 2)
@@ -286,8 +281,8 @@ parameters/Idle/blend_position = Vector2(-0.0011376739, -0.008928537)
 parameters/Walk/blend_position = Vector2(0.0011376143, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 1
-material = SubResource("ShaderMaterial_75vfm")
 position = Vector2(0, -64)
 scale = Vector2(2, 2)
 texture = ExtResource("3_qhqgy")
@@ -295,5 +290,11 @@ hframes = 21
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_gmlin")
+
+[node name="LayingDown" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -24)
+scale = Vector2(2, 2)
+texture = ExtResource("7_qek5x")
 
 [editable path="InteractionManager"]

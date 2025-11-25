@@ -8,6 +8,7 @@ func _ready() -> void:
 		Dialogic.start("beginning")
 		Dialogic.timeline_ended.connect(_end_beginning_dialog)
 		Dialogic.signal_event.connect(_dialogic_signals)
+		Dialogic.signal_event.connect(_wake_protag)
 		$Player.z_index = 1
 	# If you've already awaken
 	else:
@@ -48,3 +49,7 @@ func _end_beginning_dialog():
 	Global.player_state = Global.State.MOVING
 	Dialogic.timeline_ended.disconnect(_end_beginning_dialog)
 	Dialogic.signal_event.disconnect(_dialogic_signals)
+
+func _wake_protag(arg):
+	if arg is String and arg == "get_up":
+		$Player.get_up()
