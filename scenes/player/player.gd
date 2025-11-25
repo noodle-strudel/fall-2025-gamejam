@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var animation_tree = $AnimationTree
 @onready var animation_state = animation_tree.get("parameters/playback")
+@onready var shake_shader: Material = preload("res://shaders/shake_material.tres")
 @export var speed = 300.0
 @export var accel = 40.0
 
@@ -50,6 +51,13 @@ func _interact() -> void:
 func _sitting() -> void:
 	animation_state.travel("sit_down")
 	velocity = Vector2.ZERO
+
+func get_up() -> void:
+	$LayingDown.material = shake_shader
+	await get_tree().create_timer(0.5).timeout
+	$LayingDown.material = null
+	$LayingDown.hide()
+	$Sprite2D.show()
 	
 func _physics_process(delta: float) -> void:
 	match (Global.player_state):
