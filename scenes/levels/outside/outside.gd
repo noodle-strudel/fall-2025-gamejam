@@ -10,6 +10,7 @@ func _ready() -> void:
 		Dialogic.signal_event.connect(_dialogic_signals)
 		Dialogic.signal_event.connect(_wake_protag)
 		$Player.z_index = 1
+		$Player.lay_down()
 	# If you've already awaken
 	else:
 		# Move player to outside door

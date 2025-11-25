@@ -52,6 +52,10 @@ func _sitting() -> void:
 	animation_state.travel("sit_down")
 	velocity = Vector2.ZERO
 
+func lay_down() -> void:
+	$Sprite2D.hide()
+	$LayingDown.show()
+
 func get_up() -> void:
 	$LayingDown.material = shake_shader
 	await get_tree().create_timer(0.5).timeout
