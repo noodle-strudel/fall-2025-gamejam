@@ -18,8 +18,10 @@ func _ready() -> void:
 		$Overlays/Debug.hide()
 	# Connect to effects signals
 	$Door/InteractionManager.fade_out.connect(_fade_out)
-	$Door/InteractionManager.blur.connect(_blur)
-	$Door/InteractionManager.unblur.connect(_unblur)
+	#$Door/InteractionManager.blur.connect(_blur)
+	#$Door/InteractionManager.unblur.connect(_unblur)
+	$Statue/InteractionManager.blur.connect(_blur)
+	$Statue/InteractionManager.unblur.connect(_unblur)
 
 
 # Fade out: Called when door signals to fade out
@@ -34,13 +36,14 @@ func _blur() -> void:
 
 # Unblur: Called when dialogue signals to unblur background
 func _unblur() -> void:
-	$TransitionEffects/Blur/AnimationPlayer.play("fade_out")	
+	$TransitionEffects/Blur/AnimationPlayer.play("fade_out")
 
 
 func lift_all_effects() -> void:
 	$TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
 	$TransitionEffects/BlackButPlayer/AnimationPlayer.play("fade_out")
 	$TransitionEffects/SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
+	$TransitionEffects/Blur/AnimationPlayer.play("fade_out")
 
 
 # Fade in scene transition layer and switch to new scene
