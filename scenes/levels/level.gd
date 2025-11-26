@@ -35,6 +35,8 @@ func go_to_scene(level: String) -> void:
 
 
 # Common dialogic signals
+# Add all generic or multi-purpose dialogic signal implementations here
+# e.g. sound effects, transition effects, sprite animations, etc.
 func _dialogic_signals(arg) -> void:
 	if arg is String:
 		# One-off sound effect
@@ -68,10 +70,10 @@ func _dialogic_signals(arg) -> void:
 					$Player.get_up()
 					Global.player_state = Global.State.INTERACTING
 				"end_game":
-					SceneManager.switch_scene(Global.scenes["MAIN_MENU"])
-					
+					SceneManager.switch_scene(Global.scenes["MAIN_MENU"])		
 					
 	elif arg is Dictionary:
+		# Looping sound effects
 		var functions = arg.keys()
 		for key in functions:
 			if key.ends_with("_sfx"):
