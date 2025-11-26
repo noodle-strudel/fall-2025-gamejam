@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://bt8bd5ivcu7nd" path="res://assets/fonts/libre-baskerville/LibreBaskerville-Regular.ttf" id="3_bqqt6"]
 [ext_resource type="LabelSettings" uid="uid://dq3mh8ffjdnyp" path="res://scenes/menus/main_menu/title_theme.tres" id="5_0jpat"]
 [ext_resource type="Theme" uid="uid://cefnf5d45p322" path="res://scenes/menus/main_menu/main_menu_theme.tres" id="6_0jpat"]
-[ext_resource type="AudioStream" uid="uid://c1f16vyrxy1op" path="res://assets/music/statuegarden_test.mp3" id="6_3ovsr"]
+[ext_resource type="AudioStream" uid="uid://b8ppixf70mm2b" path="res://assets/music/menu-music.mp3" id="6_x31ro"]
 
 [sub_resource type="Theme" id="Theme_bqqt6"]
 resource_local_to_scene = true
@@ -119,7 +119,8 @@ text = "Debug Mode OFF"
 icon_alignment = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_3ovsr")
+stream = ExtResource("6_x31ro")
+volume_db = 8.667
 autoplay = true
 parameters/looping = true
 

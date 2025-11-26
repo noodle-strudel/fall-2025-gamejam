@@ -11,7 +11,7 @@ func lift_all() -> void:
 	$Vignette/AnimationPlayer.play("fade_out")
 	$BlackButPlayer/AnimationPlayer.play("fade out")
 	$SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
-	$Blur/AnimationPlayer.play("fade_out")
+	$Blur/AnimationPlayer.play("Blur/fade_out")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

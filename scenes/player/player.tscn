@@ -288,6 +288,7 @@ texture = ExtResource("3_qhqgy")
 hframes = 21
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -67.5)
 script = ExtResource("3_gmlin")
 
 [node name="LayingDown" type="Sprite2D" parent="."]

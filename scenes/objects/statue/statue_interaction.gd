@@ -1,6 +1,8 @@
 extends InteractionManager
 
 signal end_game
+signal blur
+signal unblur
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,6 +36,10 @@ func dialogic_signals(arg) -> void:
 	if arg is String:
 		if arg == "end_game":
 			end_game.emit()
+		elif arg == "blur":
+			blur.emit()
+		elif arg == "unblur":
+			unblur.emit()
 	if arg is Dictionary:
 		var functions = arg.keys()
 		for key in functions:

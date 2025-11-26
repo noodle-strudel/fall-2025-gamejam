@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://2lm0v6bnvik4"]
+[gd_scene load_steps=17 format=3 uid="uid://2lm0v6bnvik4"]
 
 [ext_resource type="Script" uid="uid://bsbvaeirs40u6" path="res://scenes/utility/transition_effects.gd" id="1_rk4p6"]
 [ext_resource type="Shader" uid="uid://t4dsok2qd56a" path="res://shaders/vignette.gdshader" id="2_rk4p6"]
@@ -11,6 +11,7 @@ shader_parameter/inner_radius = 0.0
 shader_parameter/outer_radius = 1.0
 
 [sub_resource type="Animation" id="Animation_jpnwy"]
+resource_name = "RESET"
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -105,9 +106,45 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7f343"]
 shader = ExtResource("3_rk4p6")
-shader_parameter/blur_amount = 2.18000019855
+shader_parameter/blur_amount = 1.0000001424999998
 shader_parameter/mix_amount = 0.0
 shader_parameter/color_over = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_rk4p6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/blur_amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0000001424999998]
+}
+
+[sub_resource type="Animation" id="Animation_7f343"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/blur_amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0000001424999998, 9.499999986672947e-08]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k4fl8"]
+_data = {
+&"RESET": SubResource("Animation_rk4p6"),
+&"fade_out": SubResource("Animation_7f343")
+}
 
 [node name="TransitionEffects" type="CanvasLayer"]
 script = ExtResource("1_rk4p6")
@@ -163,5 +200,5 @@ color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Blur"]
 libraries = {
-&"": SubResource("AnimationLibrary_jpnwy")
+&"": SubResource("AnimationLibrary_k4fl8")
 }
