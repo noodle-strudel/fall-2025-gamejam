@@ -4,6 +4,7 @@ if {Global.debug_mode} == true:
 		[signal arg="player_fade_in"]
 		[signal arg="background_fade_in"]
 		[signal arg="vignette_fade_out"]
+		[signal arg="stand_up"]
 		[end_timeline]
 	- No
 [signal arg_type="dict" arg="{"drip_sfx":2}"]
@@ -29,4 +30,5 @@ narrator: A dull hum reaches you. The sound is rusty, like the gears of an old c
 statue: …Com… t… e….
 statue: …Come to me…
 [signal arg="vignette_fade_out"]
+[signal arg="stand_up"]
 [end_timeline]

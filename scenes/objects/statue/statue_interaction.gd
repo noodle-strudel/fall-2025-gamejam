@@ -1,12 +1,12 @@
 extends InteractionManager
 
-signal end_game
-signal blur
-signal unblur
+signal dialogic_signals(arg: String)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Dialogic.signal_event.connect(dialogic_signals)
+	Dialogic.signal_event.connect(_dialogic_signals)
+
 
 func receive_interaction() -> void:
 	Global.player_state = Global.State.INTERACTING
@@ -32,20 +32,11 @@ func receive_interaction() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func dialogic_signals(arg) -> void:
+func _dialogic_signals(arg) -> void:
 	if arg is String:
-		if arg == "end_game":
-			end_game.emit()
-		elif arg == "blur":
-			blur.emit()
-		elif arg == "unblur":
-			unblur.emit()
+		dialogic_signals.emit(arg)
 	if arg is Dictionary:
 		var functions = arg.keys()
 		for key in functions:
 			if key.ends_with("_sfx"):
 				SoundEffects.play_count(key.trim_suffix("_sfx"), arg[key])
-
-#func _end_dialog() -> void:
-	#Global.player_state = Global.State.MOVING
-	#Dialogic.timeline_ended.disconnect(_end_dialog)
