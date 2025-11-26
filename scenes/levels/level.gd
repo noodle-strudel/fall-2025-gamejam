@@ -16,27 +16,6 @@ func _ready() -> void:
 		$Player.speed = 1000
 	else:
 		$Overlays/Debug.hide()
-	# Connect to effects signals
-	$Door/InteractionManager.fade_out.connect(_fade_out)
-	#$Door/InteractionManager.blur.connect(_blur)
-	#$Door/InteractionManager.unblur.connect(_unblur)
-	$Statue/InteractionManager.blur.connect(_blur)
-	$Statue/InteractionManager.unblur.connect(_unblur)
-
-
-# Fade out: Called when door signals to fade out
-func _fade_out() -> void:
-	$TransitionEffects/SceneTransitionRect/AnimationPlayer.play("Fade")
-	$Door/InteractionManager.fade_out.disconnect(_fade_out)
-
-
-# Blur: Called when dialogue signals to blur background
-func _blur() -> void:
-	$TransitionEffects/Blur/AnimationPlayer.play_backwards("fade_out")
-
-# Unblur: Called when dialogue signals to unblur background
-func _unblur() -> void:
-	$TransitionEffects/Blur/AnimationPlayer.play("fade_out")
 
 
 func lift_all_effects() -> void:
@@ -71,6 +50,8 @@ func _dialogic_signals(arg) -> void:
 				"background_fade_in":
 					#$TransitionEffects.black_but_player_anim.play("fade_out")
 					$TransitionEffects/BlackButPlayer/AnimationPlayer.play("fade_out")
+				"background_fade_out":
+					$TransitionEffects/SceneTransitionRect/AnimationPlayer.play("Fade")
 				"vignette_fade_out":
 					#$TransitionEffects.vignette_anim.play("fade_out")
 					$TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
@@ -81,6 +62,14 @@ func _dialogic_signals(arg) -> void:
 					$TransitionEffects/Blur/AnimationPlayer.play_backwards("fade_out")
 				"unblur":
 					$TransitionEffects/Blur/AnimationPlayer.play("fade_out")
+				"sit_down":
+					Global.player_state = Global.State.SITTING
+				"stand_up": 
+					$Player.get_up()
+					Global.player_state = Global.State.INTERACTING
+				"end_game":
+					SceneManager.switch_scene(Global.scenes["MAIN_MENU"])
+					
 					
 	elif arg is Dictionary:
 		var functions = arg.keys()
