@@ -1,5 +1,5 @@
 if {Global.has_interacted} == true:
-	narrator: progress += 1
+	narrator: lost key
 else:
 	narrator: haven't progressed
 [signal arg="door_open_sfx"]

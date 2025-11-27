@@ -20,15 +20,15 @@ func _ready() -> void:
 
 func lift_all_effects() -> void:
 	$TransitionEffects/TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
-	$TransitionEffects/TransitionEffects/BlackButPlayer/AnimationPlayer.play("fade_out")
+	$TransitionEffects/TransitionEffects/FullBlack/AnimationPlayer.play("fade_out")
 	$TransitionEffects/TransitionEffects/Blur/AnimationPlayer.play("fade_out")
 
 
 # Fade in scene transition layer and switch to new scene
 func go_to_scene(level: String) -> void:
-	var transition_anim = $TransitionEffects/SceneTransitionRect
+	var transition_anim = $TransitionEffects/TransitionEffects/FullBlack
 	if transition_anim.visible == false: # Check if screen is already black
-		transition_anim.AnimationPlayer.play("Fade")
+		transition_anim.AnimationPlayer.play_backwards("Fade")
 		# TODO test this
 	SceneManager.switch_scene(Global.scenes[level])
 
@@ -45,33 +45,16 @@ func _dialogic_signals(arg) -> void:
 			BackgroundMusic.play(arg.trim_suffix("_bgm"))
 		else:
 			match arg:
-				"player_fade_in":
-					#$TransitionEffects.scene_transition_anim.play_backwards("Fade")
-					$TransitionEffects/TransitionEffects/BlackButPlayer/AnimationPlayer.play("fade_out")
-				"player_fade_out":
-					$TransitionEffects/TransitionEffects/BlackButPlayer/AnimationPlayer.play_backwards("fade_out")
-				"background_fade_in":
-					#$TransitionEffects.black_but_player_anim.play("fade_out")
-					$TransitionEffects/BackgroundBlack/AnimationPlayer.play("Fade")
-				"background_fade_out":
-					$TransitionEffects/BackgroundBlack/AnimationPlayer.play_backwards("Fade")
-				"vignette_fade_out":
-					#$TransitionEffects.vignette_anim.play("fade_out")
-					$TransitionEffects/TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
-				"vignette_fade_in":
-					#$TransitionEffects.vignette_anim.play_backwards("fade_out")
-					$TransitionEffects/TransitionEffects/Vignette/AnimationPlayer.play_backwards("fade_out")
-				"blur":
-					$TransitionEffects/TransitionEffects/Blur/AnimationPlayer.play_backwards("fade_out")
-				"unblur":
-					$TransitionEffects/TransitionEffects/Blur/AnimationPlayer.play("fade_out")
 				"sit_down":
 					Global.player_state = Global.State.SITTING
 				"stand_up": 
 					$Player.get_up()
 					Global.player_state = Global.State.INTERACTING
 				"end_game":
-					SceneManager.switch_scene(Global.scenes["MAIN_MENU"])		
+					SceneManager.switch_scene(Global.scenes["MAIN_MENU"])
+				# Transition effects
+				_:
+					$TransitionEffects.play_effect(arg)
 					
 	elif arg is Dictionary:
 		# Looping sound effects

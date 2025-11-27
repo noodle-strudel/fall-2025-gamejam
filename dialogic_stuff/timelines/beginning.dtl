@@ -19,7 +19,7 @@ narrator: ...
 [signal arg_type="dict" arg="{"drip_sfx":1}"]
 environment: *Drip.*
 narrator: How long have you been resting here?
-[signal arg="background_fade_out"]
+[signal arg="background_fade_in"]
 narrator: ...
 narrator: You feel something soft beneath you. The pads of your fingertips brush against smooth blades of grass.
 narrator: Why have you arrived in this strange place?
