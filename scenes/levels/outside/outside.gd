@@ -10,6 +10,7 @@ func _ready() -> void:
 		Dialogic.signal_event.connect(_dialogic_signals)
 		$Player.z_index = 1
 		$Player.lay_down()
+		$TransitionEffects/BackgroundBlack.color = Color.BLACK
 	# If you've already awaken
 	else:
 		# Move player to outside door

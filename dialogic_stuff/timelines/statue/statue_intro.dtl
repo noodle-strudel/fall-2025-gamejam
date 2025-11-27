@@ -49,4 +49,5 @@ statue: Ah, one moment. You’ll need a key to enter through the doorway ahead.
 narrator: You obtained a key.
 set {Global.awaken_first} = true
 set {Global.has_key} = true
+[signal arg="unblur"]
 [end_timeline]

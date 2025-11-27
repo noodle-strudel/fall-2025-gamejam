@@ -10,3 +10,4 @@ if {Global.debug_mode} == true:
 		[end_timeline]
 	- No
 		return
+return

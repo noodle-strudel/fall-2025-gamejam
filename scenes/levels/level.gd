@@ -10,7 +10,7 @@ class_name Level extends Node2D
 # - Overlays
 
 func _ready() -> void:
-	$TransitionEffects/Blur.hide()
+	#$TransitionEffects/TransitionEffects/Blur.hide()
 	if Global.debug_mode:
 		$Overlays/Debug.show()
 		$Player.speed = 1000
@@ -19,10 +19,9 @@ func _ready() -> void:
 
 
 func lift_all_effects() -> void:
-	$TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
-	$TransitionEffects/BlackButPlayer/AnimationPlayer.play("fade_out")
-	$TransitionEffects/SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
-	$TransitionEffects/Blur/AnimationPlayer.play("fade_out")
+	$TransitionEffects/TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
+	$TransitionEffects/TransitionEffects/BlackButPlayer/AnimationPlayer.play("fade_out")
+	$TransitionEffects/TransitionEffects/Blur/AnimationPlayer.play("fade_out")
 
 
 # Fade in scene transition layer and switch to new scene
@@ -42,28 +41,30 @@ func _dialogic_signals(arg) -> void:
 		# One-off sound effect
 		if arg.ends_with("_sfx"):
 			SoundEffects.play(arg.trim_suffix("_sfx"))
+		elif arg.ends_with("_bgm"):
+			BackgroundMusic.play(arg.trim_suffix("_sfx"))
 		else:
 			match arg:
 				"player_fade_in":
 					#$TransitionEffects.scene_transition_anim.play_backwards("Fade")
-					$TransitionEffects/SceneTransitionRect/AnimationPlayer.play_backwards("Fade")
+					$TransitionEffects/TransitionEffects/BlackButPlayer/AnimationPlayer.play("fade_out")
 				"player_fade_out":
-					$TransitionEffects/SceneTransitionRect/AnimationPlayer.play("Fade")
+					$TransitionEffects/TransitionEffects/BlackButPlayer/AnimationPlayer.play_backwards("fade_out")
 				"background_fade_in":
 					#$TransitionEffects.black_but_player_anim.play("fade_out")
-					$TransitionEffects/BlackButPlayer/AnimationPlayer.play("fade_out")
+					$TransitionEffects/BackgroundBlack/AnimationPlayer.play("Fade")
 				"background_fade_out":
-					$TransitionEffects/SceneTransitionRect/AnimationPlayer.play("Fade")
+					$TransitionEffects/BackgroundBlack/AnimationPlayer.play_backwards("Fade")
 				"vignette_fade_out":
 					#$TransitionEffects.vignette_anim.play("fade_out")
-					$TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
+					$TransitionEffects/TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
 				"vignette_fade_in":
 					#$TransitionEffects.vignette_anim.play_backwards("fade_out")
-					$TransitionEffects/Vignette/AnimationPlayer.play_backwards("fade_out")
+					$TransitionEffects/TransitionEffects/Vignette/AnimationPlayer.play_backwards("fade_out")
 				"blur":
-					$TransitionEffects/Blur/AnimationPlayer.play_backwards("fade_out")
+					$TransitionEffects/TransitionEffects/Blur/AnimationPlayer.play_backwards("fade_out")
 				"unblur":
-					$TransitionEffects/Blur/AnimationPlayer.play("fade_out")
+					$TransitionEffects/TransitionEffects/Blur/AnimationPlayer.play("fade_out")
 				"sit_down":
 					Global.player_state = Global.State.SITTING
 				"stand_up": 
