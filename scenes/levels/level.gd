@@ -42,7 +42,7 @@ func _dialogic_signals(arg) -> void:
 		if arg.ends_with("_sfx"):
 			SoundEffects.play(arg.trim_suffix("_sfx"))
 		elif arg.ends_with("_bgm"):
-			BackgroundMusic.play(arg.trim_suffix("_sfx"))
+			BackgroundMusic.play(arg.trim_suffix("_bgm"))
 		else:
 			match arg:
 				"player_fade_in":

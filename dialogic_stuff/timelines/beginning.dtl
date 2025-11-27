@@ -11,6 +11,7 @@ if {Global.debug_mode} == true:
 environment: *Drip. Drip.*
 [signal arg_type="dict" arg="{"drip_sfx":2}"]
 environment: *Drip. Drip.*
+[signal arg="rain_bgm"]
 narrator: The faint splatter of water droplets colliding with the ground echoes in your ears.
 narrator: Where is it coming from?
 [signal arg="player_fade_in"]
