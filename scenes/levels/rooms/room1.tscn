@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://csvuxpfq6r5sm"]
+[gd_scene load_steps=13 format=4 uid="uid://csvuxpfq6r5sm"]
 
 [ext_resource type="PackedScene" uid="uid://brh6j623ofyay" path="res://scenes/utility/level_boundary.tscn" id="1_4q6tq"]
 [ext_resource type="Script" uid="uid://bhamyguwi3cdm" path="res://scenes/levels/rooms/room.gd" id="1_55m40"]
@@ -9,6 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://qwj7o7bu2dn" path="res://scenes/utility/overlays.tscn" id="6_wbuud"]
 [ext_resource type="PackedScene" uid="uid://c1nb6a6prtbj6" path="res://scenes/levels/rooms/fog_reigon.tscn" id="8_ffvqi"]
 [ext_resource type="PackedScene" uid="uid://cfl3gquombc40" path="res://scenes/utility/grass_tilemap.tscn" id="9_e5got"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5got"]
+resource_local_to_scene = true
+size = Vector2(234, 158.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pq3l1"]
+resource_local_to_scene = true
+size = Vector2(259, 71.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffvqi"]
 resource_local_to_scene = true
@@ -29,6 +37,12 @@ polygon = PackedVector2Array(-1489.4272, -867.60547, 1522.5262, -867.60547, 1522
 
 [node name="Event" parent="." instance=ExtResource("2_55m40")]
 position = Vector2(-551, -1942)
+
+[node name="CollisionShape2D" parent="Event" index="0"]
+shape = SubResource("RectangleShape2D_e5got")
+
+[node name="CollisionShape2D" parent="Event/InteractionManager" index="0"]
+shape = SubResource("RectangleShape2D_pq3l1")
 
 [node name="Player" parent="." instance=ExtResource("3_ffvqi")]
 position = Vector2(-556, 504)

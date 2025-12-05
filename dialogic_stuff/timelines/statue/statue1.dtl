@@ -1,6 +1,5 @@
 jump statue_debug/
 jump statue_description/1
-join protagonist center
 statue: [b]Statue dialogue #1[/b]
 join statue center
 statue: What's up?

@@ -1,7 +1,3 @@
-if {Global.has_interacted} == true:
-	narrator: lost key
-else:
-	narrator: haven't progressed
 [signal arg="door_open_sfx"]
 [wait time="0.2" hide_text="false"]
 [signal arg="door_open_animation"]

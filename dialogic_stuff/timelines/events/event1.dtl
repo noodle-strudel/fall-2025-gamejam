@@ -1,10 +1,16 @@
+if {Global.debug_mode} == true:
+	jump event_debug/
+[signal arg="blur"]
+[wait time="1.0"]
 narrator: A lone carriage docks at an ornate chateau, its solitary cargo a scrawny figure with stringy locks of ebony hair long enough to brush their collarbone.
 narrator: The passenger descends from the carriage and wordlessly tosses a coin toward the driver.
+join protagonist left [animation="Fade In Up"]
 narrator: They are dressed in drab, loosely fitting clothing. Their movement is graceful, yet with a rugged surety borne from the life of a working individual.
 narrator: You feel a pang of sharp pain in the back of your skull.
 narrator: It’s… you.\
 [n+]...\
-[n+]But that can’t be right. Surely it isn’t you.
+[n+]But that can’t be right. Surely not.
+leave protagonist
 [signal arg="whip_crack_sfx"]
 [signal arg="horse_hoof_sfx"]
 narrator: The carriage peels off into the fog.
@@ -13,11 +19,54 @@ narrator: They wear the attire of ordinary house servants, yet their greyish ski
 narrator: The woman’s hair is pale and impossibly thin, like sparse wisps of spider silk.
 narrator: The man’s fingers are blackened and gaunt, too corpselike to belong to any living human.
 narrator: The maid speaks, her voice hoarse and creaking. Though she addresses the passenger, her sickly gaze does not leave your face.
+join maid left
 maid: You’re the one they sent? I suppose you’ll do.
 narrator: The servant speaks as well, croaking out a question in a similar deathly manner.
+join servant right
 servant: Pardon my asking, but why on earth are you wearing men’s clothing?
 narrator: The passenger winces, but does not respond.
 narrator: The servant lets out a choking, gurgling sound that you guess is supposed to be a laugh. The sound echoes in your ears.
 servant: Oh, forgive me, I was under the impression that you were… well…
 maid: Mustn’t be late. The master doesn’t like that, and neither do the horses.
+leave maid
+leave servant
+narrator: The newcomer walks past the servants and enters the chateau
+narrator: The room they step into is much grander than the entrance. An ornate ceiling opens up to the heavens, cherubs and nymphs dancing in its golden luster.
+narrator: Underneath the painted sky, a family stands before the passenger. They look exactly like the portrait they stand before, save for the little girl huddling behind her mother’s skirt, who appears to be slightly older than her portrait.
+narrator: The maid and servant are already inside. You didn't see them enter.
+narrator: A prideful looking man with a mustache is the first to speak.
+join father right
+father: So. You must be the new stagehand from… where did they say you were from?
+join servant left [mirrored="true"]
+servant: Normandy, sir.
+father: Yes, Normandy.
+leave servant
+narrator: He smiles, but it appears as little more than skin deep. A frightening set of pearlescent teeth shine under the bristles of his mustache.
+narrator: The man is handsome, dressed in fine aristocratic clothing, yet his eyes are sharp and cruel. He carries himself with a confidence that threatens to extinguish any opposition to his rule as patriarch.
+join  center
+narrator: His eyes graze the passenger from head to toe and back, as if sizing up his prey.
+father: Good. I’ve always liked Normandy.
+father: The loft in the barn should have been attended to.
+narrator: The passenger nods and stiffly bows their head.
+father: Do you have a god-given name?
+narrator: The passenger does not open their mouth to reply. You notice them glance toward the little girl, who promptly retreats behind her mother’s dress.
+narrator: Her mother, a well-kept and expensive looking woman, taps her foot on the ground, a sour expression on her face.
+join mother left
+mother: Excuse me. Do you know how to speak?
+narrator: ...
+mother: …Hm. I don’t appreciate this insolence, young…
+narrator: The woman hesitates as her eyes scan the passenger’s body. Her eyes flash with disdain, then she waves her hand dismissively and looks away.
+mother: Well, whatever you are.
+father: There is no use in pushing the subject. What I care more about is the wellbeing of the horses.
+father: As long as you can do your job, I don’t care if you can speak or even write. If anything, it makes things easier for us if you cannot.
+narrator: The woman scoffs.
+mother: It’s unbecoming of a household to have staff that cannot speak or write. I hardly think that we will avoid gossip for it.
+narrator: A low chuckle vibrates from behind the man. Your focus is now drawn to the older man in the chair, the skin under his eyes nearly wasted to the bone. He laughs, and the room falls silent.
+leave mother
+join grandfather left
+grandfather: You brought in a stranger… an unruly stranger with yellow eyes, you foolish boy…
+narrator: The moustached man’s face flares with rage, and he glares at the older man. His wife looks disgruntled as well, flapping her fan angrily.
+father: All of you. Leave us! Take the new stablehand to the stable and acquaint him. Go!
+leave father
+leave grandfather
 jump event_end/

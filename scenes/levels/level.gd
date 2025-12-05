@@ -27,10 +27,10 @@ func lift_effects() -> void:
 
 # Fade in scene transition layer and switch to new scene
 func go_to_scene(level: String) -> void:
-	var transition_anim = $TransitionEffects/TransitionEffects/FullBlack
-	if transition_anim.visible == false: # Check if screen is already black
-		transition_anim.AnimationPlayer.play_backwards("Fade")
-		# TODO test this
+	#var transition_anim = $TransitionEffects/TransitionEffects/FullBlack
+	#if transition_anim.visible == false: # Check if screen is already black
+	#	transition_anim.AnimationPlayer.play_backwards("fade_out")
+	#	# TODO test this
 	SceneManager.switch_scene(Global.scenes[level])
 
 

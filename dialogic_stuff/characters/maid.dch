@@ -10,12 +10,22 @@
 "style": "regular",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "maid_base",
 &"description": "",
-&"display_name": "maid",
+&"display_name": "Maid",
 &"mirror": false,
-&"nicknames": ["Maid"],
+&"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"maid_base": {
+"export_overrides": {
+"image": "\"res://assets/portraits/maid/maidsilhouette.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 0.9,
+"scene": ""
+}
+},
 &"scale": 1.0
 }
