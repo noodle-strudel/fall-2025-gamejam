@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cha332k32v757"]
 
 [ext_resource type="Script" uid="uid://dha7s783f4wo7" path="res://scenes/menus/main_menu/main_menu.gd" id="1_l6cm7"]
-[ext_resource type="Texture2D" uid="uid://cuh2jkqnhbt51" path="res://assets/mainmenuplaceholder.png" id="2_8ln24"]
+[ext_resource type="Texture2D" uid="uid://b8k7jxdknje0b" path="res://assets/mainmenu.png" id="2_x31ro"]
 [ext_resource type="FontFile" uid="uid://bt8bd5ivcu7nd" path="res://assets/fonts/libre-baskerville/LibreBaskerville-Regular.ttf" id="3_bqqt6"]
 [ext_resource type="LabelSettings" uid="uid://dq3mh8ffjdnyp" path="res://scenes/menus/main_menu/title_theme.tres" id="5_0jpat"]
 [ext_resource type="Theme" uid="uid://cefnf5d45p322" path="res://scenes/menus/main_menu/main_menu_theme.tres" id="6_0jpat"]
@@ -41,7 +41,7 @@ script = ExtResource("1_l6cm7")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
-texture = ExtResource("2_8ln24")
+texture = ExtResource("2_x31ro")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -58,7 +58,7 @@ theme_override_constants/separation = 10
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8ln24")
-text = "Insert Title Here"
+text = "House of Wolves"
 label_settings = ExtResource("5_0jpat")
 horizontal_alignment = 1
 
