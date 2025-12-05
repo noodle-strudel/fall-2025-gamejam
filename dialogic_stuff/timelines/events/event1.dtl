@@ -43,7 +43,7 @@ father: Yes, Normandy.
 leave servant
 narrator: He smiles, but it appears as little more than skin deep. A frightening set of pearlescent teeth shine under the bristles of his mustache.
 narrator: The man is handsome, dressed in fine aristocratic clothing, yet his eyes are sharp and cruel. He carries himself with a confidence that threatens to extinguish any opposition to his rule as patriarch.
-join  center
+join protagonist left
 narrator: His eyes graze the passenger from head to toe and back, as if sizing up his prey.
 father: Good. I’ve always liked Normandy.
 father: The loft in the barn should have been attended to.
@@ -51,6 +51,7 @@ narrator: The passenger nods and stiffly bows their head.
 father: Do you have a god-given name?
 narrator: The passenger does not open their mouth to reply. You notice them glance toward the little girl, who promptly retreats behind her mother’s dress.
 narrator: Her mother, a well-kept and expensive looking woman, taps her foot on the ground, a sour expression on her face.
+leave protagonist
 join mother left
 mother: Excuse me. Do you know how to speak?
 narrator: ...
