@@ -32,4 +32,3 @@ position = Vector2(-555, 507)
 [node name="Overlays" parent="." instance=ExtResource("6_wbuud")]
 
 [editable path="LevelBoundary"]
-[editable path="TransitionEffects"]

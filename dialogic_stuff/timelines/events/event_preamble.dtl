@@ -1,0 +1,35 @@
+# Event 1: Introduction to protagonist and family.
+label 1
+[signal arg="horse_hoof_sfx"]
+[wait time="1.0"]
+[signal arg="horse_whinny_sfx"]
+[wait time="1.0"]
+[signal arg="background_fade_in"]
+narrator: Event preamble #1
+return
+# Event 2: N/A
+label 2
+narrator: Event preamble #2
+return
+# Event 3: Argument between man and woman.
+label 3
+[signal arg="cough_sfx"]
+[wait time="1.0"]
+[signal arg="door_slam_sfx"]
+[wait time="1.0"]
+[signal arg="background_fade_in"]
+narrator: Event preamble #3
+return
+# Event 4: N/A
+label 4
+narrator: Event preamble #4
+return
+# Event 5: Little girl and dog
+label 5
+[signal arg="gasp_sfx"]
+[wait time="1.0"]
+[signal arg="dog_whine_sfx"]
+[wait time="1.0"]
+[signal arg="background_fade_in"]
+narrator: Event preamble #5
+return

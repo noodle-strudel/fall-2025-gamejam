@@ -51,6 +51,7 @@ directories/dtl_directory={
 "event5": "res://dialogic_stuff/timelines/events/event5.dtl",
 "event_already_interacted": "res://dialogic_stuff/timelines/events/event_already_interacted.dtl",
 "event_end": "res://dialogic_stuff/timelines/events/event_end.dtl",
+"event_preamble": "res://dialogic_stuff/timelines/events/event_preamble.dtl",
 "finale": "res://dialogic_stuff/timelines/statue/finale.dtl",
 "inside_door_interact": "res://dialogic_stuff/timelines/inside_door/inside_door_interact.dtl",
 "outside_door_description": "res://dialogic_stuff/timelines/outside_door/outside_door_description.dtl",
