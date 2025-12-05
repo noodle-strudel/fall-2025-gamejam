@@ -22,9 +22,7 @@ func _ready() -> void:
 		$Player/AnimationPlayer.play("idledown")
 		Global.is_inside = false
 		Global.player_state = Global.State.MOVING
-		
-		
-		
+
 	# Connect to statue dialogue effects
 	$Statue/InteractionManager.dialogic_signals.connect(_dialogic_signals)
 	# Connect to door scene transition signals

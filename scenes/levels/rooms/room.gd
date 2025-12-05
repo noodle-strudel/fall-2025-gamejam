@@ -15,11 +15,13 @@ func _ready() -> void:
 		Global.player_state = Global.State.MOVING
 		$TransitionEffects.play_effect("player_fade_in")
 
-	# Connect to door signals when leaving room
+	# Connect to door signals for leaving room
 	$Door/InteractionManager.scene_transition.connect(_leave_room)
 	$Door/InteractionManager.dialogic_signals.connect(_dialogic_signals)
-
-
+	
+	# Connect to event signals
+	$Event/InteractionManager.dialogic_signals.connect(_dialogic_signals)
+	
 func _leave_room() -> void:
 	$Door/InteractionManager.scene_transition.disconnect(_leave_room)
 	SceneManager.switch_scene(Global.scenes["OUTSIDE"])
