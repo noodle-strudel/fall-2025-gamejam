@@ -1,5 +1,5 @@
 if {Global.debug_mode} == true:
-	jump event_end/
+	jump event_debug/
 [signal arg="blur"]
 join child center
 child: Oh, Rufus… you’re my best friend.

@@ -1,8 +1,8 @@
 if {Global.debug_mode} == true:
-	jump event_end/
+	jump event_debug/
 [signal arg="blur"]
 narrator: Out of the fog appears a dimly lit but ornate study.
-narrator: He slams the door, pinching the bridge of his nose in deep resignation.
+narrator: The man slams the door, pinching the bridge of his nose in deep resignation.
 join father left
 father: Two more on the outer farm have quit this week.
 narrator: His wife’s eyes do not move from the fish bowl her attention is engrossed in.
