@@ -57,4 +57,3 @@ scale = Vector2(3.9999998, 3.9999998)
 [editable path="LevelBoundary"]
 [editable path="Door"]
 [editable path="Door/InteractionManager"]
-[editable path="TransitionEffects"]

@@ -13,14 +13,17 @@ func _ready() -> void:
 		$TransitionEffects/BackgroundBlack.color = Color.BLACK
 	# If you've already awaken
 	else:
+		# No need to obscure everything
+		lift_effects()
+		$TransitionEffects.play_effect("player_fade_in")
 		# Move player to outside door
 		$Player.position = Vector2(119.0, -983.0)
 		# TODO player facing down after exiting door
 		$Player/AnimationPlayer.play("idledown")
 		Global.is_inside = false
 		Global.player_state = Global.State.MOVING
-		# No need to obscure everything
-		lift_all_effects()
+		
+		
 		
 	# Connect to statue dialogue effects
 	$Statue/InteractionManager.dialogic_signals.connect(_dialogic_signals)

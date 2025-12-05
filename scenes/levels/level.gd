@@ -18,10 +18,11 @@ func _ready() -> void:
 		$Overlays/Debug.hide()
 
 
-func lift_all_effects() -> void:
-	$TransitionEffects/TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
-	$TransitionEffects/TransitionEffects/FullBlack/AnimationPlayer.play("fade_out")
-	$TransitionEffects/TransitionEffects/Blur/AnimationPlayer.play("fade_out")
+func lift_effects() -> void:
+	$TransitionEffects.lift_all()
+	#$TransitionEffects/TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
+	#$TransitionEffects/TransitionEffects/FullBlack/AnimationPlayer.play("fade_out")
+	#$TransitionEffects/TransitionEffects/Blur/AnimationPlayer.play("fade_out")
 
 
 # Fade in scene transition layer and switch to new scene
