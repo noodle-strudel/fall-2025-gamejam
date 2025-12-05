@@ -3,8 +3,10 @@ class_name Room extends Level
 func _ready() -> void: 
 	super._ready()
 	lift_effects()
+		
 	# Play event preamble
 	if !Global.been_inside:
+		Dialogic.signal_event.connect(_dialogic_signals)
 		Dialogic.timeline_ended.connect(_end_preamble)
 		Global.player_state = Global.State.INTERACTING
 		Dialogic.start("event_preamble", str(Global.progress))

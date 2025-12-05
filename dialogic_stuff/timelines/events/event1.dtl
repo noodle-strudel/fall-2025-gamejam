@@ -1,2 +1,23 @@
-<Empty Text Event>
+narrator: A lone carriage docks at an ornate chateau, its solitary cargo a scrawny figure with stringy locks of ebony hair long enough to brush their collarbone.
+narrator: The passenger descends from the carriage and wordlessly tosses a coin toward the driver.
+narrator: They are dressed in drab, loosely fitting clothing. Their movement is graceful, yet with a rugged surety borne from the life of a working individual.
+narrator: You feel a pang of sharp pain in the back of your skull.
+narrator: It’s… you.\
+[n+]...\
+[n+]But that can’t be right. Surely it isn’t you.
+[signal arg="whip_crack_sfx"]
+[signal arg="horse_hoof_sfx"]
+narrator: The carriage peels off into the fog.
+narrator: Before the passenger stands two ghastly figures, whose visage makes the hairs on your neck bristle.
+narrator: They wear the attire of ordinary house servants, yet their greyish skin hangs from their bones, and their sickly yellow eyes pierce directly through the newcomer and into your own.
+narrator: The woman’s hair is pale and impossibly thin, like sparse wisps of spider silk.
+narrator: The man’s fingers are blackened and gaunt, too corpselike to belong to any living human.
+narrator: The maid speaks, her voice hoarse and creaking. Though she addresses the passenger, her sickly gaze does not leave your face.
+maid: You’re the one they sent? I suppose you’ll do.
+narrator: The servant speaks as well, croaking out a question in a similar deathly manner.
+servant: Pardon my asking, but why on earth are you wearing men’s clothing?
+narrator: The passenger winces, but does not respond.
+narrator: The servant lets out a choking, gurgling sound that you guess is supposed to be a laugh. The sound echoes in your ears.
+servant: Oh, forgive me, I was under the impression that you were… well…
+maid: Mustn’t be late. The master doesn’t like that, and neither do the horses.
 jump event_end/
