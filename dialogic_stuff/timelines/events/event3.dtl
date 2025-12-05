@@ -1,5 +1,6 @@
 if {Global.debug_mode} == true:
 	jump event_end/
+[signal arg="blur"]
 narrator: Out of the fog appears a dimly lit but ornate study.
 narrator: He slams the door, pinching the bridge of his nose in deep resignation.
 join father left
@@ -11,7 +12,7 @@ mother: Nonsense, I tell you. They’re just trying to get a scare out of you, d
 update father [mirrored="true"]
 father: I say! What a load of hogwash. If they end up on the street poor and filthy, it’s not my fault!
 mother: We tried to help them, we really did… Why they would quit on us is beyond me.
-father:  Indeed we did. After all I’ve done for them… I’m repaid with nothing but bad fortune.
+father: Indeed we did. After all I’ve done for them… I’m repaid with nothing but bad fortune.
 father: ...
 father: I must…confess something to you.
 [wait time="1.0"]
@@ -38,7 +39,7 @@ update mother [mirrored="false"]
 mother: We’re poor now. Have you run us into the ground?
 father: I do not control the weather. I do not control what horrible illness is being spread among the commonfolk like livestock. My priority has always been our family.
 update mother [mirrored="true"]
-mother:  No, [i]your[/i] priority has always been [i]you[/i].
+mother: No, [i]your[/i] priority has always been [i]you[/i].
 update father center [z_index="1"]
 father: You’d best watch your tongue, woman.
 [wait time="2.0"]

@@ -1,16 +1,17 @@
 if {Global.debug_mode} == true:
 	jump event_end/
+[signal arg="blur"]
 join child center
 child: Oh, Rufus… you’re my best friend.
 unknown: Arf!
 child: If I could I would take you with me. But Papa said it’s not worth the risk. You might be sick too.
 child: Maman’s been in her room for a while. I heard Papa talking about it. Her eyes turned yellow and she hasn’t stopped coughing.
-child:  I don’t like being sick. I used to get sick a lot when I was younger. But I got better, cause I’m strong and healthy.
+child: I don’t like being sick. I used to get sick a lot when I was younger. But I got better, cause I’m strong and healthy.
 update child [mirrored="true"]
 child: I hope Maman is okay.
 child: I don’t know what will happen to you. I hope that nice stablehand takes you.
 child: You like him, right? He always gives you scraps from the kitchen.
-child:  Um… actually, I don’t know if he’s a he. He just wears boys clothes, so I call him a he.
+child: Um… actually, I don’t know if he’s a he. He just wears boys clothes, so I call him a he.
 update child right [mirrored="true"]
 child: I like him too. He’s a little weird, but I think he’s nice.
 child: Maman gets the creeps from him. Says there’s something wrong about him, and that they only keep him around cause they can’t get anyone else.
@@ -18,7 +19,7 @@ child: I don’t want him to go away too. But if we leave, it’s just going to 
 narrator: The dog in her lap whines as if in sympathy.
 update child [mirrored="false"]
 child: Grandfather went away last week. The doctors took him.
-child:  Papa said there wasn’t anything he could do about it.
+child: Papa said there wasn’t anything he could do about it.
 update child center [mirrored="false"]
 child: I hope he comes back soon. But, for some reason… I feel like I won’t see him again.
 child: Maman says heaven is nice. I think Grandfather is going to heaven.
