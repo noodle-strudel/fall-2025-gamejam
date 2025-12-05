@@ -14,3 +14,5 @@ func play(sfx_name: String):
 			$DoorOpen.play()
 		"lock_click":
 			$LockClick.play()
+		"horse_hoof":
+			$HorseGallop.play()
