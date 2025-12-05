@@ -9,6 +9,5 @@ narrator: The door slowly swings open. It's dark inside.
 [wait time="1.0"]
 narrator: You step over the threshold and into the house.
 [wait time="0.6"]
-set {Global.been_inside} = true
 [signal arg="scene_transition"]
 [end_timeline]

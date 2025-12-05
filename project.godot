@@ -33,17 +33,18 @@ directories/dch_directory={
 "grandfather": "res://dialogic_stuff/characters/grandfather.dch",
 "ignis": "res://dialogic_stuff/characters/ignis.dch",
 "key": "res://dialogic_stuff/characters/key.dch",
+"maid": "res://dialogic_stuff/characters/maid.dch",
 "mother": "res://dialogic_stuff/characters/mother.dch",
 "narrator": "res://dialogic_stuff/characters/narrator.dch",
 "placeholder": "res://dialogic_stuff/characters/placeholder.dch",
 "protagonist": "res://dialogic_stuff/characters/protagonist.dch",
+"servant": "res://dialogic_stuff/characters/servant.dch",
 "statue": "res://dialogic_stuff/characters/statue.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch",
 "unknown": "res://dialogic_stuff/characters/unknown.dch"
 }
 directories/dtl_directory={
 "beginning": "res://dialogic_stuff/timelines/beginning.dtl",
-"event": "res://dialogic_stuff/timelines/events/event.dtl",
 "event1": "res://dialogic_stuff/timelines/events/event1.dtl",
 "event2": "res://dialogic_stuff/timelines/events/event2.dtl",
 "event3": "res://dialogic_stuff/timelines/events/event3.dtl",
