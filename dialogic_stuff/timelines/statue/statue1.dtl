@@ -12,6 +12,7 @@ aqua: There is no good in reliving the past, for it is done and the present is h
 ignis: But it is never too late to go back. A hungry flame burns in your heart!
 aqua: To understand what has come is to move forward. Seek not to destroy, but acknowledge.
 - Reconciliation
+	set {Global.reconciliation} += 1.0
 	leave ignis
 	leave aqua
 	join statue center
@@ -19,6 +20,7 @@ aqua: To understand what has come is to move forward. Seek not to destroy, but a
 	statue: The world was against you. But God graced you with this miracle.
 	statue: Do not squander it.
 - Consumption
+	set {Global.consumption} += 1.0
 	leave aqua
 	leave ignis
 	join statue center
