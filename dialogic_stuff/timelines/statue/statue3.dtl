@@ -1,28 +1,60 @@
 jump statue_debug/
 jump statue_description/3
-join protagonist center
-statue: [b]Statue dialogue #3[/b]
 join statue center
-statue: What's up?
-protagonist: Huh
-statue: You know, that whole thing you just saw. Thoughts?
-leave statue [animation="Fade Out Down"]
-join ignis right [animation="Instant In"]
-ignis: Sup losers. You should let it all burn.
-join aqua left [animation="Instant In"]
-aqua: What? No you shouldn't. peace and love ✌️
-narrator: What do you think?
-- Reconciliation
+statue: A terrible plague has seeped into the bones of this place.
+leave statue
+join aqua left
+aqua: What unfortunate circumstances. It could not be controlled.
+join ignis right
+ignis: Looking the other way, yes? Why not face it head on, if there is no fault?
+aqua: Your anger is misplaced. You risk infecting them with your bitterness.
+ignis: Bah! As if your murmurs didn’t bemuse them enough, hiding behind every word you speak.
+ignis: My rage is theirs. It is well deserved.
+leave aqua [length="0.1"]
+leave ignis
+join statue center
+statue: Truly, none shall bicker like you two. It puts those nobles to shame.
+leave statue
+join ignis right
+join aqua left
+if {Global.consumption} > {Global.reconciliation}:
+	ignis:  But they agree with me. No one noble is free of sin; you just accelerated their fate.
+else:
+	aqua: It is not my intention to dwell on this. Of course, you are not completely absolved of blame.
+narrator: The masked man turns to address you.
+ignis: Don’t lie to yourself. You knew this would happen, and you did it anyway. Nobody would blame you.
+ignis: You needed to protect yourself. This world corrupts all souls, so why resist?
+aqua: And you did survive. But there is no need to take glory in the mechanism of your escape.
+aqua: The rage is yours, there’s no use denying it. But reveling in it will only drag you beneath the soil of this unhallowed estate.
+aqua: You must move forward.
+leave aqua
+leave ignis
+join statue center
+statue: Do you desire redemption? It is your choice to make.
+- I do. I want to leave this place behind and atone.
+	leave statue
+	join aqua left
+	join ignis right
 	set {Global.reconciliation} += 1.0
-	aqua: You're so right bestie
-- Consumption
+	ignis: Hah. You say that like it’s so easy. This shall haunt you, even if you leave this place.
+	aqua: I won’t deny that. But a haunting may ease with time if you face it head on and move forward.
+	ignis: What kind of life is that? Running from your pain as long as you live?
+	narrator: The man’s words grow quiet, hissed through clenched teeth.
+	ignis: Do not run. Stay here, and embrace what you have become.
+- I do not require redemption. Their downfall was well deserved.
+	leave statue
+	join aqua left
+	join ignis right
 	set {Global.consumption} += 1.0
-	ignis: Hahahaha got em
+	aqua: Does anyone deserve what you wrought? Do you deserve this wound on your heart?
+	ignis: Who cares about “deserving”. And a stained heart is free from fear.
+	aqua: It is not free from anything, you fool.
+	narrator: The woman takes a deep breath.
+	aqua: It mistakes its bondage for freedom.
 leave ignis
 leave aqua
 join statue center
-statue: Well well well. You sure made a choice.
-statue: Go back inside now pls \:)
-statue: Here's the key
+statue: Well regardless, you must continue to walk these grounds. You must remember.
+statue: Return to the house, and come to me once again.
 narrator: You obtained a key.
 jump statue_end/

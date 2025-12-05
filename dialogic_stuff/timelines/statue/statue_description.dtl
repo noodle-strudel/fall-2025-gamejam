@@ -2,17 +2,17 @@ label intro
 narrator: A patch of pale moonlight illuminates the outline of an old statue.
 return
 label 1
-narrator: The statue stands before, yet something seems off about the appearance.
+narrator: The statue stands before you, looking somewhat weathered from time and the elements.
 return
 label 2
 narrator: Statue description #2
 return
 label 3
-narrator: Statue description #3
+narrator: The statue stands before you once again, now with moss growing from a great crack across its right eye.
 return
 label 4
 narrator: Statue description #4
 return
 label 5
-narrator: Statue description #5
+narrator: The statue stands before you, though it has begun the slow process of crumbling, rotting into the soft grass beneath it. Its face looks as contemplative as ever, yet the rain-worn tear stains adorning its face paint a sorrow that was not present before.
 return
