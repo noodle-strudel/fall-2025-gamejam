@@ -2,7 +2,7 @@ label intro
 narrator: A patch of pale moonlight illuminates the outline of an old statue.
 return
 label 1
-narrator: Statue description #1
+narrator: The statue stands before, yet something seems off about the appearance.
 return
 label 2
 narrator: Statue description #2
