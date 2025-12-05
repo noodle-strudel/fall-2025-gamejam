@@ -1,7 +1,9 @@
 extends InteractionManager
 
+signal dialogic_signals(arg: String)
+
 func _ready() -> void:
-	Dialogic.signal_event.connect(dialogic_signals)
+	Dialogic.signal_event.connect(_dialogic_signals)
 
 func receive_interaction() -> void:
 	Global.player_state = Global.State.INTERACTING
@@ -17,8 +19,9 @@ func receive_interaction() -> void:
 			4: start_interaction("event4")
 			5: start_interaction("event5")
 
-func dialogic_signals(arg) -> void:
-	pass
+func _dialogic_signals(arg) -> void:
+	if arg is String:
+		dialogic_signals.emit(arg)
 
 
 func end_dialog() -> void:

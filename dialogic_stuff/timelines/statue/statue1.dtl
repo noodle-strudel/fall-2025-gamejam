@@ -1,5 +1,6 @@
 jump statue_debug/
 jump statue_description/1
+statue: [b]Statue dialogue #1[/b]
 join statue center
 statue: One scene you have witnessed, for it portrays the beginning.
 join ignis right

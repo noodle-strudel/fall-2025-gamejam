@@ -1,25 +1,26 @@
 [gd_scene load_steps=6 format=3 uid="uid://bpljyaycxfvn8"]
 
-[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://scenes/interaction_manager.tscn" id="1_0y005"]
-[ext_resource type="Texture2D" uid="uid://bc0bs1gjm0b3h" path="res://assets/pixelart/doorsketch_v2.png" id="1_vijyo"]
+[ext_resource type="PackedScene" uid="uid://di01onvdd6476" path="res://interaction_manager.tscn" id="1_0y005"]
+[ext_resource type="Texture2D" uid="uid://bc0bs1gjm0b3h" path="res://assets/sprites/doorsketch_v2.png" id="1_vijyo"]
 [ext_resource type="Script" uid="uid://cpq0vxinm4syd" path="res://scenes/objects/door/door_interaction.gd" id="2_vijyo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrveb"]
-size = Vector2(40.333336, 11.499997)
+size = Vector2(40.333336, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vijyo"]
-size = Vector2(41.666668, 55)
+size = Vector2(41.666668, 76.91667)
 
 [node name="Door" type="StaticBody2D"]
 scale = Vector2(3, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-2, -19)
+position = Vector2(9.536743e-07, -29.666672)
+scale = Vector2(1.2145834, 1.2145835)
 texture = ExtResource("1_vijyo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.6666667, 9)
+position = Vector2(-1.6666667, 7.1666675)
 shape = SubResource("RectangleShape2D_nrveb")
 
 [node name="InteractionManager" parent="." instance=ExtResource("1_0y005")]
@@ -27,7 +28,7 @@ position = Vector2(0, 24.666668)
 script = ExtResource("2_vijyo")
 
 [node name="CollisionShape2D" parent="InteractionManager" index="0"]
-position = Vector2(-0.16666667, -17.166668)
+position = Vector2(-0.33333337, -25.666668)
 shape = SubResource("RectangleShape2D_vijyo")
 
 [editable path="InteractionManager"]

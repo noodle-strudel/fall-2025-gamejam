@@ -2,7 +2,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
+
 
 func play_effect(effect: String) -> void:
 	match effect:
@@ -25,9 +26,13 @@ func play_effect(effect: String) -> void:
 
 
 func lift_all() -> void:
-	$TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
-	$TransitionEffects/FullBlack/AnimationPlayer.play("fade_outout")
-	$TransitionEffects/Blur/AnimationPlayer.play("fade_out")
+	$TransitionEffects/Blur.material.set_shader_parameter("blur_amount", 0)
+	$TransitionEffects/Vignette.material.set_shader_parameter("alpha", 0)
+	$BackgroundBlack.color = Color("transparent")
+	#$TransitionEffects/FullBlack.color = Color("transparent")
+	#$TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
+	#$TransitionEffects/FullBlack/AnimationPlayer.play("fade_out")
+	#$TransitionEffects/Blur/AnimationPlayer.play("fade_out")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

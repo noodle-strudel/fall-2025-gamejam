@@ -1,2 +1,4 @@
+if {Global.debug_mode} == true:
+	jump event_end/
 grandfather: Event 3
 jump event_end/

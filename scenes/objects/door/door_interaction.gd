@@ -12,11 +12,11 @@ func receive_interaction() -> void:
 	Global.player_state = Global.State.INTERACTING
 	if !Global.is_inside:
 		# Player has been inside but not interacted: let player in without repeating unlock dialogue
-		if Global.has_key and Global.been_inside:
-			SoundEffects.play("door_open")
-			scene_transition.emit()
+		if Global.has_key:
+			#SoundEffects.play("door_open")
+			#scene_transition.emit()
 		# First time unlocking door this phase
-		elif Global.has_key:
+		#elif Global.has_key:
 			start_interaction("outside_door_unlock")
 		# Player doesn't have key. Different dialogue if player has been inside and lost the key
 		else:

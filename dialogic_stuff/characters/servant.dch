@@ -7,19 +7,19 @@
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "",
+"style": "regular",
 "suffix": ""
 },
-&"default_portrait": "child_base",
+&"default_portrait": "servant_base",
 &"description": "",
-&"display_name": "Child",
+&"display_name": "Servant",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"child_base": {
+"servant_base": {
 "export_overrides": {
-"image": "\"res://assets/portraits/child/lydieportrait.png\""
+"image": "\"res://assets/portraits/servant/servantsilhouette.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

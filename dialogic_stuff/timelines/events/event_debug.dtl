@@ -1,0 +1,5 @@
+narrator: (Debug mode) Skip text?
+- Yes
+	jump event_end/
+- No
+	return

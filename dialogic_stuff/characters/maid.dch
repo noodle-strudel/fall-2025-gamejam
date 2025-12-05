@@ -7,19 +7,19 @@
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "",
+"style": "regular",
 "suffix": ""
 },
-&"default_portrait": "child_base",
+&"default_portrait": "maid_base",
 &"description": "",
-&"display_name": "Child",
+&"display_name": "Maid",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"child_base": {
+"maid_base": {
 "export_overrides": {
-"image": "\"res://assets/portraits/child/lydieportrait.png\""
+"image": "\"res://assets/portraits/maid/maidsilhouette.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

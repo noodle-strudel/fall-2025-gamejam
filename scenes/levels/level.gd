@@ -18,18 +18,19 @@ func _ready() -> void:
 		$Overlays/Debug.hide()
 
 
-func lift_all_effects() -> void:
-	$TransitionEffects/TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
-	$TransitionEffects/TransitionEffects/FullBlack/AnimationPlayer.play("fade_out")
-	$TransitionEffects/TransitionEffects/Blur/AnimationPlayer.play("fade_out")
+func lift_effects() -> void:
+	$TransitionEffects.lift_all()
+	#$TransitionEffects/TransitionEffects/Vignette/AnimationPlayer.play("fade_out")
+	#$TransitionEffects/TransitionEffects/FullBlack/AnimationPlayer.play("fade_out")
+	#$TransitionEffects/TransitionEffects/Blur/AnimationPlayer.play("fade_out")
 
 
 # Fade in scene transition layer and switch to new scene
 func go_to_scene(level: String) -> void:
-	var transition_anim = $TransitionEffects/TransitionEffects/FullBlack
-	if transition_anim.visible == false: # Check if screen is already black
-		transition_anim.AnimationPlayer.play_backwards("Fade")
-		# TODO test this
+	#var transition_anim = $TransitionEffects/TransitionEffects/FullBlack
+	#if transition_anim.visible == false: # Check if screen is already black
+	#	transition_anim.AnimationPlayer.play_backwards("fade_out")
+	#	# TODO test this
 	SceneManager.switch_scene(Global.scenes[level])
 
 
