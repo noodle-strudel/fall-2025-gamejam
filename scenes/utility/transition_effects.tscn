@@ -1,8 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://2lm0v6bnvik4"]
+[gd_scene load_steps=20 format=3 uid="uid://2lm0v6bnvik4"]
 
 [ext_resource type="Script" uid="uid://bsbvaeirs40u6" path="res://scenes/utility/transition_effects.gd" id="1_rk4p6"]
 [ext_resource type="Shader" uid="uid://t4dsok2qd56a" path="res://shaders/vignette.gdshader" id="2_rk4p6"]
 [ext_resource type="Shader" uid="uid://dr6y5ra7jadeb" path="res://shaders/blur.gdshader" id="3_rk4p6"]
+[ext_resource type="Texture2D" uid="uid://cm2nxl7var107" path="res://assets/consumptionendcg.png" id="4_7f343"]
+[ext_resource type="Texture2D" uid="uid://dp6vb4g36umet" path="res://assets/reconciliationendcg.png" id="5_k4fl8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wycgm"]
 shader = ExtResource("2_rk4p6")
@@ -212,6 +214,18 @@ color = Color(0, 0, 0, 1)
 libraries = {
 &"": SubResource("AnimationLibrary_d5687")
 }
+
+[node name="ConsumptionEnd" type="TextureRect" parent="TransitionEffects"]
+visible = false
+offset_right = 1440.0
+offset_bottom = 1080.0
+texture = ExtResource("4_7f343")
+
+[node name="ReconciliationEnd" type="TextureRect" parent="TransitionEffects"]
+visible = false
+offset_right = 1440.0
+offset_bottom = 1080.0
+texture = ExtResource("5_k4fl8")
 
 [node name="BackgroundBlack" type="ColorRect" parent="."]
 z_index = -1

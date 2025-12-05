@@ -1,9 +1,14 @@
 statue: Wow you've played the whole game. Great job.
 statue: Let's see what ending you got
 narrator: drumroll....
+leave --All--
 if {Global.consumption} > {Global.reconciliation}:
+	[signal arg="consumption"]
+	[background arg="res://assets/consumptionendcg.png" fade="1.0"]
 	statue: Congrats bestie, you've been consumed by the rot!
 elif {Global.reconciliation} > {Global.consumption}:
+	[signal arg="reconciliation"]
+	[background arg="res://assets/reconciliationendcg.png" fade="1.0"]
 	statue: Ahhhh, you've reconciled! Get out of here, you lil' scamp!
 else:
 	How did you manage this?

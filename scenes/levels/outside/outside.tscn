@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dlv4pjagtvclo"]
+[gd_scene load_steps=14 format=4 uid="uid://dlv4pjagtvclo"]
 
 [ext_resource type="Shader" uid="uid://b38yvbu3721d6" path="res://shaders/reflection.gdshader" id="1_ixml5"]
 [ext_resource type="PackedScene" uid="uid://cn0tlhd5tao8g" path="res://scenes/player/player.tscn" id="1_lrgy0"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://qwj7o7bu2dn" path="res://scenes/utility/overlays.tscn" id="7_4r7jr"]
 [ext_resource type="PackedScene" uid="uid://2lm0v6bnvik4" path="res://scenes/utility/transition_effects.tscn" id="8_tb64g"]
 [ext_resource type="PackedScene" uid="uid://drh7mfd8uw80t" path="res://scenes/utility/rain_particles.tscn" id="9_hyf1m"]
+[ext_resource type="Texture2D" uid="uid://cm2nxl7var107" path="res://assets/consumptionendcg.png" id="10_aeeu4"]
+[ext_resource type="Texture2D" uid="uid://dp6vb4g36umet" path="res://assets/reconciliationendcg.png" id="11_k7ev4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hyf1m"]
 shader = ExtResource("1_ixml5")
@@ -48,6 +50,18 @@ position = Vector2(130, -1127)
 [node name="TransitionEffects" parent="." instance=ExtResource("8_tb64g")]
 
 [node name="Overlays" parent="." instance=ExtResource("7_4r7jr")]
+
+[node name="ConsumptionEnd" type="TextureRect" parent="Overlays"]
+visible = false
+offset_right = 1440.0
+offset_bottom = 1080.0
+texture = ExtResource("10_aeeu4")
+
+[node name="ReconciliationEnd" type="TextureRect" parent="Overlays"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("11_k7ev4")
 
 [node name="RainParticles" parent="." instance=ExtResource("9_hyf1m")]
 z_index = 2

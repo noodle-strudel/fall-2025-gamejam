@@ -1,4 +1,54 @@
 if {Global.debug_mode} == true:
 	jump event_end/
-grandfather: Event 3
+[signal arg="blur"]
+narrator: Out of the fog appears a dimly lit but ornate study.
+narrator: He slams the door, pinching the bridge of his nose in deep resignation.
+join father left
+father: Two more on the outer farm have quit this week.
+narrator: His wife’s eyes do not move from the fish bowl her attention is engrossed in.
+join mother rightmost
+mother: Tsk. It’s nonsense.
+mother: Nonsense, I tell you. They’re just trying to get a scare out of you, darling.
+update father [mirrored="true"]
+father: I say! What a load of hogwash. If they end up on the street poor and filthy, it’s not my fault!
+mother: We tried to help them, we really did… Why they would quit on us is beyond me.
+father: Indeed we did. After all I’ve done for them… I’m repaid with nothing but bad fortune.
+father: ...
+father: I must…confess something to you.
+[wait time="1.0"]
+mother: Go on.
+father: You know how deeply I wish to provide for you and Lydie. You two are all my life’s happiness, all I live to support.
+narrator: His words are hollow. Practiced. The same thing he’s been insisting for the last 8 years.
+father: With the recent… loss in our staff, I have decided. I will sell the chateau. We will move somewhere nice, near the coast. It will keep us from the raving madness outside our gates.
+narrator: She has been prodding at the fish in the bowl next to her. She stops.
+update mother right [mirrored="true"]
+mother: Sell…? The chateau? Are you out of your mind?!
+father: I have no other choice.
+father: We are losing crops by the day due to this wretched weather. We cannot upkeep this house with only three remaining staff. And that new one…
+father: I have had a bad feeling about that one. I have witnessed strange noises coming from the room down the hall in the middle of the night.
+mother: I don’t quite care what “bad feeling” you’re getting! We cannot sell the chateau!
+update father [animation="Shake X"]
+father: What else can we do?! My father is on his deathbed. At least that will be one less liability we must keep track of.
+update mother [animation="Shake X"]
+mother: To say something like that about your own father!
+father: You know as well as I do that he’s an old codger now. Whatever glory he had when I was a boy is gone.
+update mother [mirrored="true"]
+mother: Clearly he was right about some things. You really are a fool.
+father: This is for the sake of us. We will do better by it.
+update mother [mirrored="false"]
+mother: We’re poor now. Have you run us into the ground?
+father: I do not control the weather. I do not control what horrible illness is being spread among the commonfolk like livestock. My priority has always been our family.
+update mother [mirrored="true"]
+mother: No, [i]your[/i] priority has always been [i]you[/i].
+update father center [z_index="1"]
+father: You’d best watch your tongue, woman.
+[wait time="2.0"]
+mother: The yellowing eyes. Is it true?
+father: ...
+[wait time="0.5"]
+update father left
+father: That is the rumor among physicians in the city.
+update mother [mirrored="false"]
+narrator: She sighs.
+mother: Then perhaps you have doomed us all.
 jump event_end/
