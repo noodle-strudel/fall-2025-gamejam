@@ -23,6 +23,10 @@ func play_effect(effect: String) -> void:
 			$TransitionEffects/Blur/AnimationPlayer.play_backwards("fade_out")
 		"unblur":
 			$TransitionEffects/Blur/AnimationPlayer.play("fade_out")
+		"consumption":
+			$TransitionEffects/ConsumptionEnd.show()
+		"reconciliation":
+			$TransitionEffects/ReconciliationEnd.show()
 
 
 func lift_all() -> void:
