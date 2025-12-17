@@ -10,9 +10,9 @@ label 2
 jump end
 label 3
 # Event 3: Argument between man and woman.
-[signal arg="cough_sfx"]
-[wait time="1.0"]
-[signal arg="door_slam_sfx"]
+[signal arg="footsteps_sfx"]
+[wait time="4.0"]
+[signal arg="creaky_door_sfx"]
 [wait time="1.0"]
 [signal arg="background_fade_in"]
 jump end

@@ -2,6 +2,7 @@ if {Global.debug_mode} == true:
 	jump event_debug/
 [signal arg="blur"]
 narrator: Out of the fog appears a dimly lit but ornate study.
+[signal arg="door_slam_sfx"]
 narrator: The man slams the door, pinching the bridge of his nose in deep resignation.
 join father left
 father: Two more on the outer farm have quit this week.

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu0l6xhnxcpte"]
+
+[ext_resource type="Texture2D" uid="uid://6aaw7ye75uia" path="res://assets/sprites/interior_flooring.png" id="1_gvsnx"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq45h"]
+texture = ExtResource("1_gvsnx")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6yj3j"]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_kq45h")
+
+[node name="WoodFloorTilemap" type="TileMapLayer"]
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_6yj3j")
